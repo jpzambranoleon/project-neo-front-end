@@ -1,6 +1,6 @@
 import { Cancel, MailOutlined, NotificationsOutlined, Search } from "@mui/icons-material";
-import { alpha, AppBar, Avatar, Badge, Box, InputBase, Toolbar, Typography } from "@mui/material"
-import { createStyles, makeStyles, styled } from "@mui/styles";
+import { alpha, AppBar, Avatar, Badge, InputBase, Toolbar, Typography } from "@mui/material"
+import { makeStyles } from "@mui/styles";
 import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
         '&:hover': {
             backgroundColor: alpha("#e9ecef", 0.75),
         },
-        borderRadius: "2rem",
+        borderRadius: theme.shape.borderRadius,
         width: "50%",
         [theme.breakpoints.down("sm")]: {
             display: (props) => (props.open ? "flex" : "none"),
