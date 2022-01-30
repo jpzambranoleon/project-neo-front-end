@@ -1,22 +1,56 @@
 import { Cancel, MailOutlined, NotificationsOutlined, Search } from "@mui/icons-material";
-import { AppBar, Avatar, Badge, Box, InputBase, Toolbar, Typography } from "@mui/material"
+import { alpha, AppBar, Avatar, Badge, Box, InputBase, Toolbar, Typography } from "@mui/material"
 import { styled } from "@mui/styles";
+import { useState } from "react";
 
 const LogoLg = styled('div')(({ theme }) => ({
     display: "none",
     [theme.breakpoints.up("sm")]: {
         display: "block"
     }
-}))
+}));
 
 const LogoSm = styled('div')(({ theme }) => ({
     display: "block",
     [theme.breakpoints.up("sm")]: {
         display: "none"
     }
-}))
+}));
+
+const SearchBox = styled('div')(({ theme }) => ({
+    display: "flex",
+    alignItems: "center",
+    backgroundColor: alpha("#e9ecef", 1),
+    '&:hover': {
+        backgroundColor: alpha("#e9ecef", 0.75),
+    },
+    borderRadius: "2rem",
+    width: "50%",
+    [theme.breakpoints.down("sm")]: {
+        display: (props) => (props.open ? "flex" : "none"),
+        width: "70%",
+    }
+}));
+
+const CancelButton = styled('div')(({ theme }) => ({
+    [theme.breakpoints.up("sm")]: {
+        display: "none"
+    }
+}));
+
+const ButtonIcons = styled('div')({
+    alignItems: "center",
+    display: (props) => (props.open ? "none" : "flex")
+});
+
+const SearchButton = styled('div')(({ theme }) => ({
+    [theme.breakpoints.up("sm")]: {
+        display: "none"
+    }
+}));
 
 const Navbar = () => {
+    const [open, setOpen] = useState(false);
     return (
         <AppBar>
             <Toolbar 
@@ -34,21 +68,25 @@ const Navbar = () => {
                         NEO
                     </Typography>
                 </LogoSm>
-                <Box sx={{}}>
+                <SearchBox>
                     <Search />
-                    <InputBase placeholder="search" />
-                    <Cancel />
-                </Box>
-                <Box sx={{ alignItems: "center", display: (props) => (props.open ? "none": "flex") }}>
-                    <Search />
-                    <Badge>
+                    <InputBase placeholder="search" sx={{ ml: 1, width: "50vw", fontSize: "0.9rem"}}/>
+                    <CancelButton>
+                        <Cancel onClick={() => setOpen(false)} />
+                    </CancelButton>
+                </SearchBox>
+                <ButtonIcons>
+                    <SearchButton>
+                        <Search sx={{ mr: 2 }} onClick={() => setOpen(true)}/>
+                    </SearchButton>
+                    <Badge sx={{ mr: 2 }}>
                         <MailOutlined />
                     </Badge>
-                    <Badge>
+                    <Badge sx={{mr: 2}}>
                         <NotificationsOutlined />
                     </Badge>
                     <Avatar alt="Diana Ayi" />
-                </Box>
+                </ButtonIcons>
             </Toolbar>
         </AppBar>
     )
