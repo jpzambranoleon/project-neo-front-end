@@ -2,7 +2,7 @@ import { Card, CardMedia } from "@mui/material";
 
 const ProfileCard = () => {
     return (
-        <Card>
+        <Card sx={{ mr: 3 }}>
             <CardMedia 
                 component="img"
                 height="140"
