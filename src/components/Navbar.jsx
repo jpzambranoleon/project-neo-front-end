@@ -1,6 +1,6 @@
 import { Cancel, MailOutlined, NotificationsOutlined, Search } from "@mui/icons-material";
 import { alpha, AppBar, Avatar, Badge, Box, InputBase, Toolbar, Typography } from "@mui/material"
-import { styled } from "@mui/styles";
+import { createStyles, makeStyles, styled } from "@mui/styles";
 import { useState } from "react";
 
 const LogoLg = styled('div')(({ theme }) => ({
@@ -51,6 +51,7 @@ const SearchButton = styled('div')(({ theme }) => ({
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
+
     return (
         <AppBar>
             <Toolbar 
