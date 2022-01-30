@@ -55,7 +55,9 @@ const Navbar = () => {
             <Toolbar 
                 sx={{ 
                     display: "flex",
-                    justifyContent: "space-between", 
+                    justifyContent: "space-between",
+                    width: "80%",
+                    margin: "0 auto" 
                 }}>
                 <Typography variant="h6" className={classes.logoLg}>
                     Project-Neo
