@@ -6,7 +6,7 @@ const User = () => {
         <Card sx={{ mr: 3 }}>
             <CardMedia 
                 component="img"
-                height="140"
+                height="200"
                 image="/assets/cover/cover.jpg"
             />
             <CardContent sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", mt: -4 }}>
