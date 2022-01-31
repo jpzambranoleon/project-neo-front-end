@@ -1,13 +1,27 @@
 import { EmojiEmotions, Label, PermMedia, Room } from "@mui/icons-material";
-import { Button, Card, InputBase } from "@mui/material";
+import { Button, Card, InputBase, TextField} from "@mui/material";
+import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles((theme) => ({
+    inputBase: {
+        alignItems: "center",
+        padding: "0.4rem 1rem",
+        marginBottom: theme.spacing(2)
+    },
+    buttonGroup: {
+        marginLeft: theme.spacing(1),
+        marginBottom: theme.spacing(2)
+    }
+}))
 
 const Post = () => {
+    const classes = useStyles();
     return (
         <Card>
-            <div>
-                <InputBase placeholder="What's on your mind, Diana?" />
+            <div className={classes.inputBase}>
+                <InputBase multiline placeholder="What's on your mind?" sx={{ width: "100%" }}/>
             </div>
-            <div>
+            <div className={classes.buttonGroup}>
                 <Button size="small">
                     <PermMedia htmlColor="tomato"/>
                     Photo or Video
