@@ -1,9 +1,19 @@
 import { Box } from "@mui/material"
+import { makeStyles } from "@mui/styles";
 import ProfileCard from "./ProfileCard";
 
+const useStyles = makeStyles((theme) => ({
+    LeftbarBox: {
+        [theme.breakpoints.down("sm")]: {
+            display: "none",
+        }
+    },
+}));
+
 const Leftbar = () => {
+    const classes = useStyles();
     return (
-        <Box sx={{ paddingTop: 10 }}>
+        <Box className={classes.LeftbarBox} sx={{ paddingTop: 10 }}>
             <ProfileCard />
         </Box>
     );
