@@ -1,4 +1,5 @@
 import { Avatar, Button, Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
+import { grey } from "@mui/material/colors";
 import { makeStyles } from "@mui/styles";
 
 const User = () => {
@@ -9,16 +10,16 @@ const User = () => {
                 height="200"
                 image="/assets/cover/cover.jpg"
             />
-            <CardContent sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", mt: -4 }}>
-                <Avatar alt="Diana Ayi" src="/assets/person/diana.jpg" sx={{ width: 115, height: 115, bottom: 50 }}/>
+            <CardContent sx={{  }}>
+                <Avatar alt="Diana Ayi" src="/assets/person/diana.jpg" sx={{  }}/>
                 <Typography variant="h5">
                     Diana Ayi
-                    <Typography variant="h6" sx={{ color: "grey" }}>
+                    <Typography variant="h6" sx={{ color: grey[500] }}>
                         @dayi
                     </Typography>
                 </Typography>
             </CardContent>
-            <CardContent sx={{ mt: -5 }}>
+            <CardContent sx={{  }}>
                 <Typography variant="body2">
                     User Interface Designer and
                     Front-End Developer
