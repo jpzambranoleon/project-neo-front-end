@@ -14,7 +14,7 @@ const Feed = () => {
                     </IconButton>
                 }
                 title="Diana Ayi"
-                subheader="Dubai, 15 MINUTES AGO"
+                subheader="15 MINUTES AGO"
             />
             <CardMedia 
                 component="img"
