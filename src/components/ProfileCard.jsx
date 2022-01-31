@@ -18,8 +18,8 @@ const ProfileCard = () => {
                 height="140"
                 image="/assets/cover/cover.jpg"
             />
-            <CardContent>
-                <Avatar alt="Diana Ayi" src="/assets/person/diana.jpg" />
+            <CardContent sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", mt: -4 }}>
+                <Avatar alt="Diana Ayi" src="/assets/person/diana.jpg" sx={{ width: 115, height: 115, bottom: 50 }}/>
                 <Typography variant="h5">
                     Diana Ayi
                     <Typography variant="h6" sx={{ color: "grey" }}>
@@ -27,7 +27,7 @@ const ProfileCard = () => {
                     </Typography>
                 </Typography>
             </CardContent>
-            <CardContent>
+            <CardContent sx={{ mt: -5 }}>
                 <Typography variant="body2">
                     User Interface Designer and
                     Front-End Developer
