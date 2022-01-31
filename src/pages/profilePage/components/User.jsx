@@ -2,9 +2,19 @@ import { Avatar, Button, Card, CardActions, CardContent, CardMedia, Typography }
 import { grey } from "@mui/material/colors";
 import { makeStyles } from "@mui/styles";
 
+const useStyles = makeStyles((theme) => ({
+    card: {
+        marginRight: theme.spacing(3),
+        [theme.breakpoints.down("sm")]: {
+            marginRight: theme.spacing(0),
+        }
+    },
+}))
+
 const User = () => {
+    const classes = useStyles();
     return (
-        <Card sx={{ mr: 3 }}>
+        <Card className={classes.card}>
             <CardMedia 
                 component="img"
                 height="200"
