@@ -3,14 +3,27 @@ import Leftbar from "./components/Leftbar";
 import Middlebar from "./components/Middlebar";
 import Navbar from "../../components/Navbar";
 import Rightbar from "./components/Rightbar";
+import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles((theme) => ({
+    boxContainer: {
+        width: "80%",
+        margin:"0 auto",
+
+        [theme.breakpoints.down("sm")]: {
+            width: "100%"
+        }
+    },
+}))
 
 
 export default function Home() {
+    const classes = useStyles();
     return (
         <div>
             <Navbar />
-            <Box sx={{ gridTemplateColumns: "18vw auto 20vw", columnGap: "2rem", position: "relative" }}>
-                <Grid container sx={{ width: "80%", margin: "0 auto"}}>
+            <Box className={classes.boxContainer}>
+                <Grid container>
                     <Grid item sm={3}>
                         <Leftbar />
                     </Grid>
