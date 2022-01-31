@@ -14,7 +14,7 @@ export default function Home() {
                     <Grid item sm={3}>
                         <Leftbar />
                     </Grid>
-                    <Grid item sm={6}>
+                    <Grid item sm={6} xs={12}>
                         <Middlebar />
                     </Grid>
                     <Grid item sm={3}>
