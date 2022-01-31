@@ -3,7 +3,6 @@ import Navbar from "../../components/Navbar";
 import Leftbar from "./components/Leftbar";
 import Rightbar from "./components/Rightbar";
 
-
 export default function Profile() {
     return (
         <div>
