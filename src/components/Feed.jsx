@@ -1,4 +1,4 @@
-import { MoreHoriz } from "@mui/icons-material";
+import { BookmarkBorderOutlined, FavoriteBorderOutlined, MessageOutlined, MoreHoriz, ShareOutlined } from "@mui/icons-material";
 import { Avatar, Card, CardActions, CardHeader, CardMedia, IconButton } from "@mui/material";
 
 const Feed = () => {
@@ -21,8 +21,23 @@ const Feed = () => {
                 height="360"
                 image="/assets/post/post5.jpg"
             />
-            <CardActions>
-
+            <CardActions disableSpacing sx={{ justifyContent: "space-between" }}>
+                <div>
+                    <IconButton>
+                        <FavoriteBorderOutlined />
+                    </IconButton>
+                    <IconButton>
+                        <MessageOutlined />
+                    </IconButton>
+                    <IconButton>
+                        <ShareOutlined />
+                    </IconButton>
+                </div>
+                <div>
+                    <IconButton>
+                        <BookmarkBorderOutlined />
+                    </IconButton>
+                </div>
             </CardActions>
         </Card>
     )
