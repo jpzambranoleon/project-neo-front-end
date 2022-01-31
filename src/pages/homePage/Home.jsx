@@ -1,8 +1,8 @@
 import { Box, Grid } from "@mui/material";
-import Leftbar from "../components/Leftbar";
-import Middlebar from "../components/Middlebar";
-import Navbar from "../components/Navbar";
-import Rightbar from "../components/Rightbar";
+import Leftbar from "./components/Leftbar";
+import Middlebar from "./components/Middlebar";
+import Navbar from "../../components/Navbar";
+import Rightbar from "./components/Rightbar";
 
 
 export default function Home() {
