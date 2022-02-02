@@ -1,6 +1,7 @@
 import { Box, Grid } from "@mui/material";
 import Navbar from "../../components/Navbar";
 import { makeStyles } from "@mui/styles";
+import ProjectBox from "./components/ProjectBox";
 
 const useStyles = makeStyles((theme) => ({
     boxContainer: {
@@ -21,7 +22,7 @@ export default function ProjectsPage() {
             <Box className={classes.boxContainer}>
                 <Grid container>
                     <Grid item sm={12}>
-                        <div>Projects</div>
+                        <ProjectBox />
                     </Grid>
                 </Grid>
             </Box>
