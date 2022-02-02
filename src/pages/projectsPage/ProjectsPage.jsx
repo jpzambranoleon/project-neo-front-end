@@ -21,7 +21,10 @@ export default function ProjectsPage() {
             <Navbar />
             <Box className={classes.boxContainer}>
                 <Grid container>
-                    <Grid item sm={12}>
+                    <Grid item sm={4}>
+                        <div>Hello</div>
+                    </Grid>
+                    <Grid item sm={8}>
                         <ProjectBox />
                     </Grid>
                 </Grid>
