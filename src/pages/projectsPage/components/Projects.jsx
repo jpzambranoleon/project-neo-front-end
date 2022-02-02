@@ -3,7 +3,7 @@ import { Avatar, Card, CardActionArea, CardHeader, CardMedia, IconButton } from 
 
 const Projects = () => {
     return (
-        <Card sx={{ ml: 3 }}>
+        <Card>
             <CardHeader
                 avatar={
                     <Avatar src="/assets/person/diana.jpg"/>

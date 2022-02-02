@@ -1,9 +1,10 @@
 import { Box } from "@mui/material"
+import Projects from "./Projects";
 
 const ProjectBox = () => {
     return (
         <Box sx={{ paddingTop: 10 }}>
-            <div>Hello There</div>
+            <Projects />
         </Box>
     );
 };
