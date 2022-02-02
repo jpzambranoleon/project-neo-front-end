@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-export default function Profile() {
+export default function ProjectsPage() {
     const classes = useStyles();
     return (
         <div>
