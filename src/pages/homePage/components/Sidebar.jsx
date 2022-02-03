@@ -10,7 +10,7 @@ const Sidebar = () => {
     };
 
     return (
-        <Card sx={{ mr: 3 }}>
+        <Card>
             <List component="nav" aria-label="main mailbox folders">
                 <ListItemButton
                     selected={selectedIndex === 0}

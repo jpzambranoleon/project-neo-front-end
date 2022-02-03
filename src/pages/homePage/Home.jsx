@@ -23,7 +23,7 @@ export default function Home() {
         <div>
             <Navbar />
             <Box className={classes.boxContainer}>
-                <Grid container>
+                <Grid container spacing={3}>
                     <Grid item sm={3}>
                         <Leftbar />
                     </Grid>

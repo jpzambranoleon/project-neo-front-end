@@ -2,6 +2,7 @@ import { Box, Grid } from "@mui/material";
 import Navbar from "../../components/Navbar";
 import ProfileCard from "../homePage/components/ProfileCard";
 import { makeStyles } from "@mui/styles";
+import UserCard from "./components/UserCard";
 
 const useStyles = makeStyles((theme) => ({
     boxContainer: {
@@ -22,7 +23,7 @@ export default function Users() {
                 <Box className={classes.boxContainer}>
                 <Grid container>
                     <Grid item sm={3}>
-                        <ProfileCard />
+                        <UserCard />
                     </Grid>
                 </Grid>
             </Box>
