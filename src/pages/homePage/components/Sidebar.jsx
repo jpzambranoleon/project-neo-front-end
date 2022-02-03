@@ -10,14 +10,14 @@ const Sidebar = () => {
     };
 
     return (
-        <Card sx={{ maxWidth: 283 }}>
+        <Card sx={{ mr: 3 }}>
             <List component="nav" aria-label="main mailbox folders">
                 <ListItemButton
                     selected={selectedIndex === 0}
                     onClick={(event) => handleListItemClick(event, 0)}
                 >
                     <ListItemIcon>
-                        <Dashboard />
+                        <Dashboard htmlColor="purple"/>
                     </ListItemIcon>
                     <ListItemText primary="Dashboard" />
                 </ListItemButton>
@@ -26,7 +26,7 @@ const Sidebar = () => {
                     onClick={(event) => handleListItemClick(event, 1)}
                 >
                     <ListItemIcon>
-                        <Person />
+                        <Person htmlColor="goldenrod"/>
                     </ListItemIcon>
                     <ListItemText primary="User" />
                 </ListItemButton>
@@ -35,25 +35,34 @@ const Sidebar = () => {
                     onClick={(event) => handleListItemClick(event, 2)}
                 >
                     <ListItemIcon>
-                        <Analytics />
+                        <Chat htmlColor="green"/>
                     </ListItemIcon>
-                    <ListItemText primary="Analytics" />
+                    <ListItemText primary="Chat" />
                 </ListItemButton>
                 <ListItemButton
                     selected={selectedIndex === 3}
                     onClick={(event) => handleListItemClick(event, 3)}
                 >
                     <ListItemIcon>
-                        <Bookmark />
+                        <Analytics htmlColor="tomato"/>
                     </ListItemIcon>
-                    <ListItemText primary="Bookmark" />
+                    <ListItemText primary="Analytics" />
                 </ListItemButton>
                 <ListItemButton
                     selected={selectedIndex === 4}
                     onClick={(event) => handleListItemClick(event, 4)}
                 >
                     <ListItemIcon>
-                        <Settings />
+                        <Bookmark htmlColor="blue"/>
+                    </ListItemIcon>
+                    <ListItemText primary="Bookmark" />
+                </ListItemButton>
+                <ListItemButton
+                    selected={selectedIndex === 5}
+                    onClick={(event) => handleListItemClick(event, 5)}
+                >
+                    <ListItemIcon>
+                        <Settings htmlColor="grey"/>
                     </ListItemIcon>
                     <ListItemText primary="Settings" />
                 </ListItemButton>
