@@ -1,5 +1,5 @@
 import { EmojiEmotions, Label, PermMedia, Room } from "@mui/icons-material";
-import { Button, Card, InputBase} from "@mui/material";
+import { Button, Card, InputBase, Typography} from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -9,8 +9,9 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: theme.spacing(2)
     },
     buttonGroup: {
+        display: "flex",
         marginLeft: theme.spacing(1),
-        marginBottom: theme.spacing(2)
+        marginBottom: theme.spacing(2),
     }
 }))
 
@@ -23,20 +24,28 @@ const Post = () => {
             </div>
             <div className={classes.buttonGroup}>
                 <Button size="small">
-                    <PermMedia htmlColor="tomato"/>
-                    Photo or Video
+                    <PermMedia fontSize="small" htmlColor="tomato"/>
+                    <Typography variant="body3">
+                        Media
+                    </Typography>
                 </Button>
                 <Button size="small">
-                    <Label htmlColor="blue"/>
-                    Tag
+                    <Label fontSize="small" htmlColor="blue"/>
+                    <Typography variant="body3">
+                        Tag
+                    </Typography>
                 </Button>
                 <Button size="small">
-                    <Room htmlColor="green"/>
-                    Location
+                    <Room fontsize="small" htmlColor="green"/>
+                    <Typography variant="body3">
+                        Location
+                    </Typography>
                 </Button>
                 <Button size="small">
-                    <EmojiEmotions htmlColor="goldenrod"/>
-                    Feelings
+                    <EmojiEmotions fontSize="small" htmlColor="goldenrod"/>
+                    <Typography variant="body3">
+                        Feeling
+                    </Typography>
                 </Button>
             </div>
         </Card>
