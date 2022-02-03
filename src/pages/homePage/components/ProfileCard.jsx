@@ -3,7 +3,7 @@ import { makeStyles } from "@mui/styles";
 
 const ProfileCard = () => {
     return (
-        <Card sx={{ mr: 3 }}>
+        <Card sx={{ ml: 3 }}>
             <CardMedia 
                 component="img"
                 height="140"

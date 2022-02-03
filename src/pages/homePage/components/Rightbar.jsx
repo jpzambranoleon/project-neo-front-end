@@ -1,5 +1,6 @@
 import { Box } from "@mui/material"
 import { makeStyles } from "@mui/styles";
+import ProfileCard from "./ProfileCard";
 import Projects from "./Projects";
 
 const useStyles = makeStyles((theme) => ({
@@ -14,7 +15,7 @@ const Rightbar = () => {
     const classes = useStyles();
     return (
         <Box className={classes.RightbarBox} sx={{ paddingTop: 10 }}>
-            <Projects />
+            <ProfileCard />
         </Box>
     );
 };
