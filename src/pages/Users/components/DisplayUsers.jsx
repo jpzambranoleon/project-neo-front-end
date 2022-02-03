@@ -3,9 +3,11 @@ import ProfileCard from "../../homePage/components/ProfileCard";
 
 const DisplayUsers = () => {
     return (
-        <Box sx={{ display: "flex", paddingTop: 10 }}>
-            <ProfileCard />
-        </Box>
+        <Grid container>
+            <Grid item sm={3}>
+                <ProfileCard />
+            </Grid>
+        </Grid>
     );
 };
 
