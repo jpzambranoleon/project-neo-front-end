@@ -1,11 +1,16 @@
-import { GitHub, Google, LinkedIn } from "@mui/icons-material";
+import { Add, GitHub, Google, LinkedIn, MessageRounded, Send } from "@mui/icons-material";
 import { Avatar, Box, Button, ButtonGroup, Card, CardActions, CardContent, CardMedia, Grid, IconButton, Typography } from "@mui/material";
 
 
 const ProfileCard2 = () => {
     return (
         <Card sx={{ ml: 3 }}>
-            <CardContent>
+            <CardMedia 
+                component="img"
+                height="110"
+                image="/assets/cover/cover.jpg" 
+            />
+            <CardContent sx={{ mt: -9 }}>
                 <Grid container direction="column" sx={{ alignItems: "center" }}>
                     <Avatar sx={{ width: 100, height: 100 }} src="/assets/person/diana.jpg"/>
                     <CardContent>
@@ -28,10 +33,12 @@ const ProfileCard2 = () => {
                         </IconButton>
                     </Box>
                     <Box>
-                        <Button>
+                        <Button size="small">
+                            <Send />
                             Message
                         </Button>
-                        <Button>
+                        <Button size="small">
+                            <Add />
                             Recruit
                         </Button>
                     </Box>
