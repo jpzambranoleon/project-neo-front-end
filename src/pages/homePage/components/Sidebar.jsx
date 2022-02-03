@@ -1,4 +1,4 @@
-import { Dashboard, Drafts, Inbox } from "@mui/icons-material";
+import { Analytics, Bookmark, Chat, Dashboard, Drafts, Inbox, Person, Settings } from "@mui/icons-material";
 import { Box, Card, Divider, List, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import { useState } from "react";
 
@@ -17,33 +17,45 @@ const Sidebar = () => {
                     onClick={(event) => handleListItemClick(event, 0)}
                 >
                     <ListItemIcon>
-                        <Inbox />
+                        <Dashboard />
                     </ListItemIcon>
-                    <ListItemText primary="Inbox" />
+                    <ListItemText primary="Dashboard" />
                 </ListItemButton>
                 <ListItemButton
                     selected={selectedIndex === 1}
                     onClick={(event) => handleListItemClick(event, 1)}
                 >
                     <ListItemIcon>
-                        <Drafts />
+                        <Person />
                     </ListItemIcon>
-                    <ListItemText primary="Drafts" />
+                    <ListItemText primary="User" />
                 </ListItemButton>
-            </List>
-            <Divider />
-            <List component="nav" aria-label="secondary mailbox folder">
                 <ListItemButton
                     selected={selectedIndex === 2}
                     onClick={(event) => handleListItemClick(event, 2)}
                 >
-                    <ListItemText primary="Trash" />
+                    <ListItemIcon>
+                        <Analytics />
+                    </ListItemIcon>
+                    <ListItemText primary="Analytics" />
                 </ListItemButton>
                 <ListItemButton
                     selected={selectedIndex === 3}
                     onClick={(event) => handleListItemClick(event, 3)}
                 >
-                    <ListItemText primary="Spam" />
+                    <ListItemIcon>
+                        <Bookmark />
+                    </ListItemIcon>
+                    <ListItemText primary="Bookmark" />
+                </ListItemButton>
+                <ListItemButton
+                    selected={selectedIndex === 4}
+                    onClick={(event) => handleListItemClick(event, 4)}
+                >
+                    <ListItemIcon>
+                        <Settings />
+                    </ListItemIcon>
+                    <ListItemText primary="Settings" />
                 </ListItemButton>
             </List>
         </Card>
