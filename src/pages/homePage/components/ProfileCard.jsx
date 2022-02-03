@@ -2,7 +2,7 @@ import { Add, GitHub, Google, LinkedIn, Send } from "@mui/icons-material";
 import { Avatar, Box, Button, ButtonGroup, Card, CardActions, CardContent, CardMedia, Grid, IconButton, Stack, Typography } from "@mui/material";
 
 
-const ProfileCard2 = () => {
+const ProfileCard = () => {
     return (
         <Card sx={{ ml: 3 }}>
             <CardMedia 
@@ -63,4 +63,4 @@ const ProfileCard2 = () => {
     );
 };
 
-export default ProfileCard2;
+export default ProfileCard;
