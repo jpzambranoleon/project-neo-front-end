@@ -1,5 +1,5 @@
 import { Add, GitHub, Google, LinkedIn, MessageRounded, Send } from "@mui/icons-material";
-import { Avatar, Box, Button, ButtonGroup, Card, CardActions, CardContent, CardMedia, Grid, IconButton, Typography } from "@mui/material";
+import { Avatar, Box, Button, ButtonGroup, Card, CardActions, CardContent, CardMedia, Grid, IconButton, Stack, Typography } from "@mui/material";
 
 
 const ProfileCard2 = () => {
@@ -32,16 +32,18 @@ const ProfileCard2 = () => {
                             <GitHub fontSize="small"/>
                         </IconButton>
                     </Box>
-                    <Box>
-                        <Button size="small">
-                            <Send />
-                            Message
-                        </Button>
-                        <Button size="small">
-                            <Add />
-                            Recruit
-                        </Button>
-                    </Box>
+                    <CardContent>
+                        <Stack spacing={2} direction="row">
+                            <Button size="small" variant="contained">
+                                <Send fontSize="small" />
+                                Message
+                            </Button>
+                            <Button size="small" variant="contained">
+                                <Add fontSize="small" />
+                                Recruit
+                            </Button>
+                        </Stack>
+                    </CardContent>
                     <Box>
                         <ButtonGroup variant="text" size="small">
                             <Button>
