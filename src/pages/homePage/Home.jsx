@@ -1,9 +1,10 @@
 import { Box, Grid } from "@mui/material";
-import Leftbar from "./components/Leftbar";
-import Middlebar from "./components/Middlebar";
 import Navbar from "../../components/Navbar";
-import Rightbar from "./components/Rightbar";
 import { makeStyles } from "@mui/styles";
+import Sidebar from "./components/Sidebar";
+import Feed from "./components/Feed";
+import Post from "./components/Post";
+import ProfileCard from "./components/ProfileCard";
 
 const useStyles = makeStyles((theme) => ({
     boxContainer: {
@@ -26,13 +27,20 @@ export default function Home() {
             <Box className={classes.boxContainer}>
                 <Grid container spacing={3} justifyContent="center">
                     <Grid item sm={3}>
-                        <Leftbar />
+                        <Box>
+                            <Sidebar />
+                        </Box>
                     </Grid>
                     <Grid item sm={6} xs={12}>
-                        <Middlebar />
+                        <Box>
+                            <Post />
+                            <Feed />
+                        </Box>
                     </Grid>
                     <Grid item sm={3}>
-                        <Rightbar />
+                        <Box>
+                            <ProfileCard />
+                        </Box>
                     </Grid>
                 </Grid>
             </Box>
