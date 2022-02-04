@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
 const Leftbar = () => {
     const classes = useStyles();
     return (
-        <Box className={classes.LeftbarBox} sx={{ paddingTop: 10 }}>
+        <Box className={classes.LeftbarBox}>
             <Sidebar />
         </Box>
     );

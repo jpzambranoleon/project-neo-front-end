@@ -4,7 +4,7 @@ import Post from "./Post";
 
 const Middlebar = () => {
     return (
-        <Box sx={{ paddingTop: 10 }}>
+        <Box>
             <Post />
             <Feed />
         </Box>

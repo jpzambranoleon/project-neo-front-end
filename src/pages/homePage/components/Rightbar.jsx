@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
 const Rightbar = () => {
     const classes = useStyles();
     return (
-        <Box className={classes.RightbarBox} sx={{ paddingTop: 10 }}>
+        <Box className={classes.RightbarBox}>
             <ProfileCard />
         </Box>
     );
