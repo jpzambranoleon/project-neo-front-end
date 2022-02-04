@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
 const User = () => {
     const classes = useStyles();
     return (
-        <Card sx={{ maxWidth: 800 }}>
+        <Card>
             <CardMedia 
                 component="img"
                 height="200"

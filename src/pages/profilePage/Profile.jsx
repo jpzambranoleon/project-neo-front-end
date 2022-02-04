@@ -1,4 +1,4 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Paper } from "@mui/material";
 import Navbar from "../../components/Navbar";
 import { makeStyles } from "@mui/styles";
 import ProfileCard from "../homePage/components/ProfileCard";
@@ -6,7 +6,7 @@ import User from "./components/User";
 
 const useStyles = makeStyles((theme) => ({
     boxContainer: {
-        width: "75%",
+        width: "80%",
         margin:"0 auto",
         marginTop: theme.spacing(10),
 
@@ -23,15 +23,20 @@ export default function Profile() {
             <Navbar />
             <Box className={classes.boxContainer}>
                 <Grid container spacing={3}>
-                    <Grid item sm={9}>
-                        <Box>
-                            <User />
-                        </Box>
-                    </Grid>
                     <Grid item sm={3}>
                         <Box>
                             <ProfileCard />
                         </Box>
+                    </Grid>
+                    <Grid item sm={6}>
+                        <Paper>
+                            <div>Hello</div>
+                        </Paper>
+                    </Grid>
+                    <Grid item sm={3}>
+                        <Paper>
+                            <div>There</div>
+                        </Paper>
                     </Grid>
                 </Grid>
             </Box>
