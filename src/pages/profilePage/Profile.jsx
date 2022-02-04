@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     boxContainer: {
         width: "80%",
         margin:"0 auto",
+        marginTop: theme.spacing(10),
 
         [theme.breakpoints.down("sm")]: {
             width: "100%"
@@ -22,10 +23,10 @@ export default function Profile() {
             <Navbar />
             <Box className={classes.boxContainer}>
                 <Grid container>
-                    <Grid item sm={8}>
+                    <Grid item sm={9}>
                         <Leftbar />
                     </Grid>
-                    <Grid item sm={4}>
+                    <Grid item sm={3}>
                         <Rightbar />
                     </Grid>
                 </Grid>

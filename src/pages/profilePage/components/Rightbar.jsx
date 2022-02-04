@@ -1,9 +1,10 @@
 import { Box } from "@mui/material"
+import ProfileCard from "../../homePage/components/ProfileCard";
 
 const Rightbar = () => {
     return (
-        <Box sx={{ paddingTop: 10 }}>
-            <div>Right</div>
+        <Box>
+            <ProfileCard />
         </Box>
     );
 };

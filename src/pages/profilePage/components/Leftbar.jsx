@@ -3,7 +3,7 @@ import User from "./User";
 
 const Leftbar = () => {
     return (
-        <Box sx={{ paddingTop: 10 }}>
+        <Box>
             <User />
         </Box>
     );
