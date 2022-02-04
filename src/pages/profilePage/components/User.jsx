@@ -4,13 +4,6 @@ import { grey } from "@mui/material/colors";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
-    cardContainer: {
-        marginRight: theme.spacing(3),
-
-        [theme.breakpoints.down("sm")]: {
-            marginRight: theme.spacing(0),
-        }
-    },
     userContent: {
         display: "flex",
         alignItems: "center",
@@ -22,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
 const User = () => {
     const classes = useStyles();
     return (
-        <Card className={classes.cardContainer}>
+        <Card>
             <CardMedia 
                 component="img"
                 height="200"
