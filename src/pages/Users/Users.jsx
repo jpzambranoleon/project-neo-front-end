@@ -22,7 +22,7 @@ export default function Users() {
         <div>
             <Navbar />
                 <Box className={classes.boxContainer}>
-                <Grid container>
+                <Grid container justifyContent="center">
                     <Grid item sm={3}>
                         <UserCard />
                     </Grid>
