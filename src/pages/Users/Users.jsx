@@ -1,4 +1,4 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import Navbar from "../../components/Navbar";
 import ProfileCard from "../homePage/components/ProfileCard";
 import { makeStyles } from "@mui/styles";
@@ -22,9 +22,9 @@ export default function Users() {
         <div>
             <Navbar />
                 <Box className={classes.boxContainer}>
-                <Grid container justifyContent="center">
+                <Grid container spacing={2}>
                     <Grid item sm={3}>
-                        <UserCard />
+                        <ProfileCard />
                     </Grid>
                 </Grid>
             </Box>
