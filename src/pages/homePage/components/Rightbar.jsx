@@ -5,7 +5,7 @@ import ProfileCard from "./ProfileCard";
 const useStyles = makeStyles((theme) => ({
     RightbarBox: {
         [theme.breakpoints.down("sm")]: {
-            display: "none",
+           // display: "none",
         }
     },
 }));

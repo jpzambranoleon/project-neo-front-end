@@ -6,7 +6,7 @@ import Sidebar from "./Sidebar";
 const useStyles = makeStyles((theme) => ({
     LeftbarBox: {
         [theme.breakpoints.down("sm")]: {
-            display: "none",
+           // display: "none",
         }
     },
 }));

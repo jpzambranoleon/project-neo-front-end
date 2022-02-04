@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
         margin:"0 auto",
 
         [theme.breakpoints.down("sm")]: {
-            width: "100%"
+            // width: "100%"
         }
     },
 }))
@@ -23,7 +23,7 @@ export default function Home() {
         <div>
             <Navbar />
             <Box className={classes.boxContainer}>
-                <Grid container spacing={3}>
+                <Grid container spacing={3} justifyContent="center">
                     <Grid item sm={3}>
                         <Leftbar />
                     </Grid>
