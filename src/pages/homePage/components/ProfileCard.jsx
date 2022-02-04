@@ -4,7 +4,7 @@ import { Avatar, Box, Button, ButtonGroup, Card, CardActions, CardContent, CardM
 
 const ProfileCard = () => {
     return (
-        <Card sx={{ maxWidth: 280 }}>
+        <Card sx={{ maxWidth: 300 }}>
             <CardMedia 
                 component="img"
                 height="110"
