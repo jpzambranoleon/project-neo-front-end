@@ -1,8 +1,8 @@
 import { Box, Grid } from "@mui/material";
 import Navbar from "../../components/Navbar";
-import Leftbar from "./components/Leftbar";
-import Rightbar from "./components/Rightbar";
 import { makeStyles } from "@mui/styles";
+import ProfileCard from "../homePage/components/ProfileCard";
+import User from "./components/User";
 
 const useStyles = makeStyles((theme) => ({
     boxContainer: {
@@ -24,10 +24,14 @@ export default function Profile() {
             <Box className={classes.boxContainer}>
                 <Grid container>
                     <Grid item sm={9}>
-                        <Leftbar />
+                        <Box>
+                            <User />
+                        </Box>
                     </Grid>
                     <Grid item sm={3}>
-                        <Rightbar />
+                        <Box>
+                            <ProfileCard />
+                        </Box>
                     </Grid>
                 </Grid>
             </Box>
