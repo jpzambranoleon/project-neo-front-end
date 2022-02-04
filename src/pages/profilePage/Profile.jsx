@@ -6,7 +6,7 @@ import User from "./components/User";
 
 const useStyles = makeStyles((theme) => ({
     boxContainer: {
-        width: "80%",
+        width: "75%",
         margin:"0 auto",
         marginTop: theme.spacing(10),
 
@@ -22,7 +22,7 @@ export default function Profile() {
         <div>
             <Navbar />
             <Box className={classes.boxContainer}>
-                <Grid container>
+                <Grid container spacing={3}>
                     <Grid item sm={9}>
                         <Box>
                             <User />
