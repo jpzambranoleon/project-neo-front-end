@@ -5,7 +5,6 @@ import { makeStyles } from "@mui/styles";
 const useStyles = makeStyles((theme) => ({
     userCard: {
         maxWidth: 300,
-        marginTop: theme.spacing(10),
     },
 }));
 

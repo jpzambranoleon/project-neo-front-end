@@ -2,7 +2,7 @@ import { Box, Grid } from "@mui/material"
 
 const FilterBox = () => {
     return (
-        <Box sx={{ paddingTop: 10 }}>
+        <Box>
             <div>Filter</div>
         </Box>
     );

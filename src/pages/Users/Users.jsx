@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     boxContainer: {
         width: "80%",
         margin:"0 auto",
+        marginTop: theme.spacing(10),
 
         [theme.breakpoints.down("sm")]: {
             width: "100%"
