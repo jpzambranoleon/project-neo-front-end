@@ -13,7 +13,7 @@ const Description = () => {
                 }}
             >
                 <Typography component="h1" variant="h5">
-                    Sign up
+                    Profile
                 </Typography>
                 <Box component="form" noValidate sx={{ mt: 3 }}>
                     <Grid container spacing={2}>
