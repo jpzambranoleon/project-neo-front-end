@@ -1,8 +1,9 @@
-import { Box, Grid, Paper } from "@mui/material";
+import { Box, Grid, Paper, TextField } from "@mui/material";
 import Navbar from "../../components/Navbar";
 import { makeStyles } from "@mui/styles";
 import ProfileCard from "../homePage/components/ProfileCard";
 import User from "./components/User";
+import Description from "./components/Description";
 
 const useStyles = makeStyles((theme) => ({
     boxContainer: {
@@ -29,9 +30,7 @@ export default function Profile() {
                         </Box>
                     </Grid>
                     <Grid item sm={6}>
-                        <Paper>
-                            <div>Hello</div>
-                        </Paper>
+                        <Description />
                     </Grid>
                     <Grid item sm={3}>
                         <Paper>
