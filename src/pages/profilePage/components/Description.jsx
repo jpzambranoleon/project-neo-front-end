@@ -16,6 +16,9 @@ const Description = () => {
                 <Typography component="h1" variant="h4">
                     Diana Ayi
                 </Typography>
+                <Typography variant="body2">
+                    User Interface Designer and Front-End Developer
+                </Typography>
                 <Box component="form" noValidate sx={{ mt: 3 }}>
                     <Grid container spacing={2}>
                         <Grid item xs={12} sm={6}>
