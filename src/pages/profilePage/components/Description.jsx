@@ -1,16 +1,18 @@
-import { Avatar, Box, Button, Grid, TextField, Typography, Container} from "@mui/material";
+import { Avatar, Box, Typography, Container, CardMedia} from "@mui/material";
 import { grey } from "@mui/material/colors";
 
 const Description = () => {
     return (
         <Box component="main">
             <Box sx={{ bgcolor: 'white' }}>
-                <Container>
+                <CardMedia
+                    component="img"
+                    
+                    image="/assets/cover/cover.jpg"
+                />
+                <Container sx={{ mt: -10 }}>
                     <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                        <Avatar src="/assets/person/diana.jpg" sx={{ width: 140, height: 140 }}/>
-                        <Button>
-                            Edit
-                        </Button>
+                        <Avatar src="/assets/person/diana.jpg" sx={{ width: 150, height: 150 }}/>
                     </Box>
                     <Typography component="h1" variant="h4">
                         Diana Ayi
