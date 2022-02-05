@@ -1,5 +1,5 @@
 import { LockOutlined } from "@mui/icons-material";
-import { Avatar, Box, Button, CssBaseline, FormControlLabel, Grid, TextField, Typography, Link, Checkbox, Container } from "@mui/material";
+import { Avatar, Box, Button, CssBaseline, FormControlLabel, Grid, TextField, Typography, Link, Checkbox, Container, CardMedia } from "@mui/material";
 
 const Description = () => {
     return (
@@ -12,6 +12,11 @@ const Description = () => {
                     bgcolor: 'white'
                 }}
             >
+                <CardMedia 
+                    component="img"
+                    height="170"
+                    image="/assets/cover/cover.jpg"
+                />
                 <Avatar src="/assets/person/diana.jpg" sx={{ height: 200, width: 200 }}/>
                 <Typography component="h1" variant="h4">
                     Diana Ayi
