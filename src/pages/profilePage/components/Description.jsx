@@ -3,7 +3,7 @@ import { Avatar, Box, Button, CssBaseline, FormControlLabel, Grid, TextField, Ty
 
 const Description = () => {
     return (
-        <Container component="main">
+        <Box component="main">
             <Box
                 sx={{
                     display: 'flex',
@@ -12,8 +12,9 @@ const Description = () => {
                     bgcolor: 'white'
                 }}
             >
-                <Typography component="h1" variant="h5">
-                    Profile
+                <Avatar src="/assets/person/diana.jpg" sx={{ height: 200, width: 200 }}/>
+                <Typography component="h1" variant="h4">
+                    Diana Ayi
                 </Typography>
                 <Box component="form" noValidate sx={{ mt: 3 }}>
                     <Grid container spacing={2}>
@@ -39,6 +40,9 @@ const Description = () => {
                             />
                         </Grid>
                         <Grid item xs={12}>
+                            <Typography variant="h5">
+                                Description
+                            </Typography>
                             <TextField
                                 required
                                 fullWidth
@@ -70,7 +74,7 @@ const Description = () => {
                     </Button>
                 </Box>
             </Box>
-        </Container>
+        </Box>
     );
 };
 
