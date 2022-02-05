@@ -28,7 +28,10 @@ export default function Profile() {
                             <ProfileCard />
                         </Box>
                     </Grid>
-                    <Grid item sm={9}>
+                    <Grid item sm={6}>
+                        <Description />
+                    </Grid>
+                    <Grid item sm={3}>
                         <Description />
                     </Grid>
                 </Grid>
