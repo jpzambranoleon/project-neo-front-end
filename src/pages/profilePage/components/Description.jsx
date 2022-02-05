@@ -12,11 +12,6 @@ const Description = () => {
                     bgcolor: 'white'
                 }}
             >
-                <CardMedia 
-                    component="img"
-                    height="180"
-                    image="/assets/cover/cover.jpg"
-                />
                 <Avatar src="/assets/person/diana.jpg" sx={{ height: 200, width: 200 }}/>
                 <Typography component="h1" variant="h4">
                     Diana Ayi
