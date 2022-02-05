@@ -3,21 +3,16 @@ import { Avatar, Box, Button, Grid, TextField, Typography, Container } from "@mu
 const Description = () => {
     return (
         <Box component="main">
-            <Box
-                sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    bgcolor: 'white'
-                }}
-            >
-                <Avatar src="/assets/person/diana.jpg" sx={{ height: 200, width: 200 }}/>
-                <Typography component="h1" variant="h4">
-                    Diana Ayi
-                </Typography>
-                <Typography variant="body2">
-                    User Interface Designer and Front-End Developer
-                </Typography>
+            <Box sx={{ bgcolor: 'white' }}>
+                <Container>
+                    <Avatar src="/assets/person/diana.jpg" sx={{ width: 140, height: 140 }}/>
+                    <Typography component="h1" variant="h4">
+                        Diana Ayi
+                    </Typography>
+                    <Typography variant="body2">
+                        User Interface Designer and Front-End Developer
+                    </Typography>
+                </Container>
                 <Box component="form" noValidate sx={{ mt: 3 }}>
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
