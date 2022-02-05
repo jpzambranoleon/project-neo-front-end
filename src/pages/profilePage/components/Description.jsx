@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, Grid, TextField, Typography, Container, CardContent } from "@mui/material";
+import { Avatar, Box, Button, Grid, TextField, Typography, Container} from "@mui/material";
 import { grey } from "@mui/material/colors";
 
 const Description = () => {
@@ -6,7 +6,12 @@ const Description = () => {
         <Box component="main">
             <Box sx={{ bgcolor: 'white' }}>
                 <Container>
-                    <Avatar src="/assets/person/diana.jpg" sx={{ width: 140, height: 140 }}/>
+                    <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                        <Avatar src="/assets/person/diana.jpg" sx={{ width: 140, height: 140 }}/>
+                        <Button>
+                            Edit
+                        </Button>
+                    </Box>
                     <Typography component="h1" variant="h4">
                         Diana Ayi
                     </Typography>
