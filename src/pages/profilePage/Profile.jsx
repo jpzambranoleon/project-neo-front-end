@@ -2,7 +2,6 @@ import { Box, Grid, Paper, TextField } from "@mui/material";
 import Navbar from "../../components/Navbar";
 import { makeStyles } from "@mui/styles";
 import ProfileCard from "../homePage/components/ProfileCard";
-import User from "./components/User";
 import Description from "./components/Description";
 
 const useStyles = makeStyles((theme) => ({

@@ -1,5 +1,4 @@
-import { LockOutlined } from "@mui/icons-material";
-import { Avatar, Box, Button, CssBaseline, FormControlLabel, Grid, TextField, Typography, Link, Checkbox, Container, CardMedia } from "@mui/material";
+import { Avatar, Box, Button, Grid, TextField, Typography, Container } from "@mui/material";
 
 const Description = () => {
     return (
