@@ -14,7 +14,7 @@ const Description = () => {
             >
                 <CardMedia 
                     component="img"
-                    height="170"
+                    height="180"
                     image="/assets/cover/cover.jpg"
                 />
                 <Avatar src="/assets/person/diana.jpg" sx={{ height: 200, width: 200 }}/>
@@ -45,17 +45,14 @@ const Description = () => {
                             />
                         </Grid>
                         <Grid item xs={12}>
+                            <Container>
                             <Typography variant="h5">
                                 About
                             </Typography>
-                            <TextField
-                                required
-                                fullWidth
-                                id="email"
-                                label="Email Address"
-                                name="email"
-                                autoComplete="email"
-                            />
+                            <Typography variant="body2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, dolorum quae aliquam explicabo a in tenetur at. Deserunt explicabo quis quaerat dolorem id iusto delectus, neque asperiores! Tenetur, facere culpa.
+                            </Typography>
+                            </Container>
                         </Grid>
                         <Grid item xs={12}>
                             <TextField
