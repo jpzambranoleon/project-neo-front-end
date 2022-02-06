@@ -4,7 +4,7 @@ import { Avatar, Box, Button, ButtonGroup, Card, CardActions, CardContent, CardM
 
 const ProfileCard = () => {
     return (
-        <Card sx={{ maxWidth: 300 }}>
+        <Box sx={{ maxWidth: 300, bgcolor: "white" }}>
             <CardMedia 
                 component="img"
                 height="110"
@@ -59,7 +59,7 @@ const ProfileCard = () => {
                     </Box>
                 </Grid>
             </CardContent>
-        </Card>
+        </Box>
     );
 };
 

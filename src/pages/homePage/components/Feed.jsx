@@ -1,9 +1,9 @@
 import { BookmarkBorderOutlined, FavoriteBorderOutlined, MessageOutlined, MoreHoriz, ShareOutlined } from "@mui/icons-material";
-import { Avatar, Card, CardActions, CardHeader, CardMedia, IconButton } from "@mui/material";
+import { Avatar, Box, Card, CardActions, CardHeader, CardMedia, IconButton } from "@mui/material";
 
 const Feed = () => {
     return (
-        <Card sx={{ mt: 3 }}>
+        <Box sx={{ mt: 3, bgcolor: "white" }}>
             <CardHeader 
                 avatar={
                     <Avatar src="/assets/person/diana.jpg" />
@@ -18,7 +18,6 @@ const Feed = () => {
             />
             <CardMedia 
                 component="img"
-                height="360"
                 image="/assets/post/post5.jpg"
             />
             <CardActions disableSpacing sx={{ justifyContent: "space-between" }}>
@@ -39,7 +38,7 @@ const Feed = () => {
                     </IconButton>
                 </div>
             </CardActions>
-        </Card>
+        </Box>
     )
 }
 

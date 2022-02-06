@@ -10,7 +10,7 @@ const Sidebar = () => {
     };
 
     return (
-        <Card>
+        <Box sx={{ bgcolor: "white" }}>
             <List component="nav" aria-label="main mailbox folders">
                 <ListItemButton
                     selected={selectedIndex === 0}
@@ -67,7 +67,7 @@ const Sidebar = () => {
                     <ListItemText primary="Settings" />
                 </ListItemButton>
             </List>
-        </Card>
+        </Box>
     )
 };
 
