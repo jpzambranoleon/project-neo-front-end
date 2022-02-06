@@ -23,8 +23,12 @@ const Description = () => {
                     <Typography variant="body2">
                         User Interface Designer and Front-End Developer
                     </Typography>
+                    <Typography variant="body2" color={grey[500]}>
+                        Tokyo, Japan
+                    </Typography>
                 </Container>
-                <Box sx={{ mt: 3 }}>
+            </Box>
+            <Box sx={{ mt: 3, bgcolor: "white" }}>
                 <Container>
                     <Typography variant="h5">
                         About
@@ -39,7 +43,6 @@ const Description = () => {
                         ipsa fugit blanditiis praesentium laudantium rem distinctio?
                     </Typography>
                 </Container>
-                </Box>
             </Box>
         </Box>
     );
