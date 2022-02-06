@@ -1,4 +1,4 @@
-import { Avatar, Box, Typography, Container, CardMedia} from "@mui/material";
+import { Avatar, Box, Typography, Container, CardMedia, CardContent, Button, IconButton} from "@mui/material";
 import { grey } from "@mui/material/colors";
 
 const Description = () => {
@@ -7,12 +7,17 @@ const Description = () => {
             <Box sx={{ bgcolor: 'white' }}>
                 <CardMedia
                     component="img"
-                    
+                    height="160"
                     image="/assets/cover/cover.jpg"
                 />
                 <Container sx={{ mt: -10 }}>
                     <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                         <Avatar src="/assets/person/diana.jpg" sx={{ width: 150, height: 150 }}/>
+                        <Box sx={{ mt: 8 }}>
+                            <Button variant="outlined">
+                                Edit Profile
+                            </Button>
+                        </Box>
                     </Box>
                     <Typography component="h1" variant="h4">
                         Diana Ayi
@@ -29,10 +34,12 @@ const Description = () => {
                 </Container>
             </Box>
             <Box sx={{ mt: 3, bgcolor: "white" }}>
-                <Container>
+                <CardContent>
                     <Typography variant="h5">
                         About
                     </Typography>
+                </CardContent>
+                <CardContent>
                     <Typography variant="body2">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Id, dolorum quae aliquam explicabo a in tenetur at. 
@@ -42,7 +49,7 @@ const Description = () => {
                         reprehenderit aperiam deserunt atque maxime at iusto, consequuntur esse, 
                         ipsa fugit blanditiis praesentium laudantium rem distinctio?
                     </Typography>
-                </Container>
+                </CardContent>
             </Box>
         </Box>
     );
