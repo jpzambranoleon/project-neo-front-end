@@ -2,20 +2,15 @@ import { Avatar, Box, CardActionArea, CardHeader, CardMedia } from "@mui/materia
 
 const UserCard = () => {
     return (
-        <Box sx={{ ml: 3 }}>
+        <Box sx={{ bgcolor: "white" }}>
+            <CardActionArea>
             <CardHeader
                 avatar={
                     <Avatar src="/assets/person/diana.jpg"/>
                 }
-                title="Projects"
-                subheader="September 14, 2022"
+                title="Diana Ayi"
+                subheader="@dayi"
             />
-            <CardActionArea>
-                <CardMedia 
-                    component="img"
-                    height="140"
-                    image="https://mui.com/static/images/cards/contemplative-reptile.jpg"
-                />
             </CardActionArea>
         </Box>
     );
