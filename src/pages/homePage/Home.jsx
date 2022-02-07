@@ -6,6 +6,7 @@ import Feed from "./components/Feed";
 import Post from "./components/Post";
 import ProfileCard from "./components/ProfileCard";
 import UserCard from "./components/UserCard";
+import Sidebar2 from "./components/Sidebar2";
 
 const useStyles = makeStyles((theme) => ({
     boxContainer: {
@@ -30,7 +31,7 @@ export default function Home() {
                     <Grid item sm={3}>
                         <Box>
                             <UserCard />
-                            <Sidebar />
+                            <Sidebar2 />
                         </Box>
                     </Grid>
                     <Grid item sm={6} xs={12}>
