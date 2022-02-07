@@ -2,7 +2,7 @@ import { Avatar, Box, CardActionArea, CardHeader, CardMedia } from "@mui/materia
 
 const UserCard = () => {
     return (
-        <Box sx={{ bgcolor: "white" }}>
+        <Box sx={{ bgcolor: "white", borderRadius: "1rem" }}>
             <CardActionArea>
             <CardHeader
                 avatar={
