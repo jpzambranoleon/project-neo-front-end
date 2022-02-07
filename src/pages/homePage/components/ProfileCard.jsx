@@ -5,14 +5,9 @@ import { Avatar, Box, Button, ButtonGroup, Card, CardActions, CardContent, CardM
 const ProfileCard = () => {
     return (
         <Box sx={{ maxWidth: 300, bgcolor: "white" }}>
-            <CardMedia 
-                component="img"
-                height="110"
-                image="/assets/cover/cover.jpg" 
-            />
-            <CardContent sx={{ mt: -9 }}>
+            <CardContent>
                 <Grid container direction="column" sx={{ alignItems: "center" }}>
-                    <Avatar sx={{ width: 100, height: 100 }} src="/assets/person/diana.jpg"/>
+                    <Avatar sx={{ width: 120, height: 120 }} src="/assets/person/diana.jpg"/>
                     <CardContent>
                         <Typography variant="h5">
                             Diana Ayi
