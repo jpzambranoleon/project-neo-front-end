@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: theme.spacing(10),
 
         [theme.breakpoints.down("sm")]: {
-            // width: "100%"
+            width: "100%"
         }
     },
 }))
