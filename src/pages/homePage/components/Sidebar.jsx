@@ -1,74 +1,81 @@
-import { Analytics, Bookmark, Chat, Dashboard, Drafts, Inbox, Person, Settings } from "@mui/icons-material";
-import { Box, Card, Divider, List, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
-import { useState } from "react";
+import { Analytics, Apps, Bookmark, Explore, Home, Message, Person, Settings } from "@mui/icons-material";
+import { Box, List, ListItem, ListItemButton, ListItemIcon, Typography } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 
-const Sidebar = () => {
-    const [selectedIndex, setSelectedIndex] = useState(1);
+const useStyles = makeStyles((theme) => ({
+  
+}));
 
-    const handleListItemClick = (event, index) => {
-      setSelectedIndex(index);
-    };
-
+const Sidebar2 = () => {
+    const classes = useStyles();
     return (
-        <Box sx={{ bgcolor: "white", mt: 3 }}>
-            <List component="nav" aria-label="main mailbox folders">
-                <ListItemButton
-                    selected={selectedIndex === 0}
-                    onClick={(event) => handleListItemClick(event, 0)}
-                >
-                    <ListItemIcon>
-                        <Dashboard htmlColor="purple"/>
-                    </ListItemIcon>
-                    <ListItemText primary="Dashboard" />
-                </ListItemButton>
-                <ListItemButton
-                    selected={selectedIndex === 1}
-                    onClick={(event) => handleListItemClick(event, 1)}
-                >
-                    <ListItemIcon>
-                        <Person htmlColor="goldenrod"/>
-                    </ListItemIcon>
-                    <ListItemText primary="User" />
-                </ListItemButton>
-                <ListItemButton
-                    selected={selectedIndex === 2}
-                    onClick={(event) => handleListItemClick(event, 2)}
-                >
-                    <ListItemIcon>
-                        <Chat htmlColor="green"/>
-                    </ListItemIcon>
-                    <ListItemText primary="Chat" />
-                </ListItemButton>
-                <ListItemButton
-                    selected={selectedIndex === 3}
-                    onClick={(event) => handleListItemClick(event, 3)}
-                >
-                    <ListItemIcon>
-                        <Analytics htmlColor="tomato"/>
-                    </ListItemIcon>
-                    <ListItemText primary="Analytics" />
-                </ListItemButton>
-                <ListItemButton
-                    selected={selectedIndex === 4}
-                    onClick={(event) => handleListItemClick(event, 4)}
-                >
-                    <ListItemIcon>
-                        <Bookmark htmlColor="blue"/>
-                    </ListItemIcon>
-                    <ListItemText primary="Bookmark" />
-                </ListItemButton>
-                <ListItemButton
-                    selected={selectedIndex === 5}
-                    onClick={(event) => handleListItemClick(event, 5)}
-                >
-                    <ListItemIcon>
-                        <Settings htmlColor="grey"/>
-                    </ListItemIcon>
-                    <ListItemText primary="Settings" />
-                </ListItemButton>
-            </List>
+        <Box bgcolor="white" sx={{ mt: 3 }}>
+            <ListItemButton sx={{ padding: "20px 20px" }}>
+                <ListItemIcon>
+                    <Home />
+                </ListItemIcon>
+                <Typography variant="h2" sx={{ fontWeight: "700", fontSize: "20px" }}>
+                    Home
+                </Typography>
+            </ListItemButton>
+            <ListItemButton sx={{ padding: "20px 20px" }}>
+                <ListItemIcon>
+                    <Person />
+                </ListItemIcon>
+                <Typography variant="h2" sx={{ fontWeight: "700", fontSize: "20px" }}>
+                    Profile
+                </Typography>
+            </ListItemButton>
+            <ListItemButton sx={{ padding: "20px 20px" }}>
+                <ListItemIcon>
+                    <Message />
+                </ListItemIcon>
+                <Typography variant="h2" sx={{ fontWeight: "700", fontSize: "20px" }}>
+                    Messages
+                </Typography>
+            </ListItemButton>
+            <ListItemButton sx={{ padding: "20px 20px" }}>
+                <ListItemIcon>
+                    <Explore />
+                </ListItemIcon>
+                <Typography variant="h2" sx={{ fontWeight: "700", fontSize: "20px" }}>
+                    Explore
+                </Typography>
+            </ListItemButton>
+            <ListItemButton sx={{ padding: "20px 20px" }}>
+                <ListItemIcon>
+                    <Apps />
+                </ListItemIcon>
+                <Typography variant="h2" sx={{ fontWeight: "700", fontSize: "20px" }}>
+                    Projects
+                </Typography>
+            </ListItemButton>
+            <ListItemButton sx={{ padding: "20px 20px" }}>
+                <ListItemIcon>
+                    <Analytics />
+                </ListItemIcon>
+                <Typography variant="h2" sx={{ fontWeight: "700", fontSize: "20px" }}>
+                    Analytics
+                </Typography>
+            </ListItemButton>
+            <ListItemButton sx={{ padding: "20px 20px" }}>
+                <ListItemIcon>
+                    <Bookmark />
+                </ListItemIcon>
+                <Typography variant="h2" sx={{ fontWeight: "700", fontSize: "20px" }}>
+                    Bookmarks
+                </Typography>
+            </ListItemButton>
+            <ListItemButton sx={{ padding: "20px 20px" }}>
+                <ListItemIcon>
+                    <Settings />
+                </ListItemIcon>
+                <Typography variant="h2" sx={{ fontWeight: "700", fontSize: "20px" }}>
+                    Settings
+                </Typography>
+            </ListItemButton>
         </Box>
     )
 };
 
-export default Sidebar;
+export default Sidebar2;
