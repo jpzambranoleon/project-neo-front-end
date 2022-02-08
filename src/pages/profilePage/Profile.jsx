@@ -3,6 +3,8 @@ import Navbar from "../../components/Navbar";
 import { makeStyles } from "@mui/styles";
 import ProfileCard from "../../components/ProfileCard";
 import Description from "./components/Description";
+import Sidebar from "../homePage/components/Sidebar";
+import UserCard from "../homePage/components/UserCard";
 
 const useStyles = makeStyles((theme) => ({
     boxContainer: {
@@ -25,7 +27,8 @@ export default function Profile() {
                 <Grid container spacing={3}>
                     <Grid item sm={3}>
                         <Box>
-                            <ProfileCard />
+                            <UserCard />
+                            <Sidebar />
                         </Box>
                     </Grid>
                     <Grid item sm={6}>
