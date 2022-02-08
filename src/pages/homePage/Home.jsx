@@ -6,6 +6,7 @@ import Post from "./components/Post";
 import UserCard from "./components/UserCard";
 import Sidebar from "./components/Sidebar";
 import Follow from "./components/Follow";
+import Projects from "./components/Projects";
 
 const useStyles = makeStyles((theme) => ({
     boxContainer: {
@@ -41,7 +42,8 @@ export default function Home() {
                     </Grid>
                     <Grid item sm={3}>
                         <Box>
-                           <Follow /> 
+                           <Follow />
+                           <Projects /> 
                         </Box>
                     </Grid>
                 </Grid>
