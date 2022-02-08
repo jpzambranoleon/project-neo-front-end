@@ -4,7 +4,7 @@ import { Avatar, Box, Card, CardActionArea, CardContent, CardHeader, CardMedia, 
 const Projects = () => {
     return (
         <Box sx={{ bgcolor: "white", mt: 3 }}>
-            <ListItem sx={{ padding: "10px 10px" }}>
+            <ListItem sx={{ padding: "15px 15px" }}>
                 <Typography variant="h2" sx={{ fontWeight: "700", fontSize: "20px" }}>
                     Interesting Projects
                 </Typography>
