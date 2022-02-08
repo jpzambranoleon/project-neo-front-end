@@ -1,6 +1,6 @@
 import { Box, Grid, Typography } from "@mui/material";
 import Navbar from "../../components/Navbar";
-import ProfileCard from "../homePage/components/ProfileCard";
+import ProfileCard from "../../components/ProfileCard";
 import { makeStyles } from "@mui/styles";
 import UserCard from "./components/UserCard";
 

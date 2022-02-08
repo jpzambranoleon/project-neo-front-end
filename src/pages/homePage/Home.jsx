@@ -3,9 +3,9 @@ import Navbar from "../../components/Navbar";
 import { makeStyles } from "@mui/styles";
 import Feed from "./components/Feed";
 import Post from "./components/Post";
-import ProfileCard from "./components/ProfileCard";
 import UserCard from "./components/UserCard";
 import Sidebar from "./components/Sidebar";
+import Follow from "./components/Follow";
 
 const useStyles = makeStyles((theme) => ({
     boxContainer: {
@@ -41,7 +41,7 @@ export default function Home() {
                     </Grid>
                     <Grid item sm={3}>
                         <Box>
-                            <ProfileCard />
+                           <Follow /> 
                         </Box>
                     </Grid>
                 </Grid>
