@@ -1,12 +1,11 @@
 import { Box, Grid } from "@mui/material";
 import Navbar from "../../components/Navbar";
 import { makeStyles } from "@mui/styles";
-import Sidebar from "./components/Sidebar";
 import Feed from "./components/Feed";
 import Post from "./components/Post";
 import ProfileCard from "./components/ProfileCard";
 import UserCard from "./components/UserCard";
-import Sidebar2 from "./components/Sidebar2";
+import Sidebar from "./components/Sidebar";
 
 const useStyles = makeStyles((theme) => ({
     boxContainer: {
@@ -31,7 +30,7 @@ export default function Home() {
                     <Grid item sm={3}>
                         <Box>
                             <UserCard />
-                            <Sidebar2 />
+                            <Sidebar />
                         </Box>
                     </Grid>
                     <Grid item sm={6} xs={12}>
