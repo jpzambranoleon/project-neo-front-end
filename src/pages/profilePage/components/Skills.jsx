@@ -1,13 +1,13 @@
-import { Box, CardContent, Typography } from "@mui/material";
+import { Box, CardContent, ListItem, Typography } from "@mui/material";
 
 const Skills = () => {
     return (
         <Box sx={{ mt: 3, bgcolor: "white" }}>
-            <CardContent>
+            <ListItem>
                 <Typography variant="h5">
                     About
                 </Typography>
-            </CardContent>
+            </ListItem>
             <CardContent>
                 <Typography variant="body2">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
