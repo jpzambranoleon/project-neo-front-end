@@ -1,6 +1,7 @@
 import { Box, Grid, Paper, TextField } from "@mui/material";
 import Navbar from "../../components/Navbar";
 import { makeStyles } from "@mui/styles";
+import UserCard from "../homePage/components/UserCard";
 import Sidebar from "../homePage/components/Sidebar";
 
 const useStyles = makeStyles((theme) => ({
@@ -29,11 +30,12 @@ export default function Explore() {
                         </Box>
                     </Grid>
                     <Grid item sm={6}>
-                        <Description />
-                        <Skills />
+                        <Box>
+                            
+                        </Box>
                     </Grid>
                     <Grid item sm={3}>
-                        <Friends />
+                        
                     </Grid>
                 </Grid>
             </Box>
