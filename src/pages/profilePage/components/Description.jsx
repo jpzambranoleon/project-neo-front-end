@@ -1,4 +1,4 @@
-import { Avatar, Box, Typography, Container, CardMedia, CardContent, Button, IconButton} from "@mui/material";
+import { Avatar, Box, Typography, Container, CardMedia, CardContent, Button, IconButton, ListItem} from "@mui/material";
 import { grey } from "@mui/material/colors";
 
 const Description = () => {
@@ -34,11 +34,11 @@ const Description = () => {
                 </Container>
             </Box>
             <Box sx={{ mt: 3, bgcolor: "white" }}>
-                <CardContent>
+                <ListItem>
                     <Typography variant="h5">
                         About
                     </Typography>
-                </CardContent>
+                </ListItem>
                 <CardContent>
                     <Typography variant="body2">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
