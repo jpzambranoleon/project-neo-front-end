@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar";
 import { makeStyles } from "@mui/styles";
 import UserCard from "../homePage/components/UserCard";
 import Sidebar from "../homePage/components/Sidebar";
+import Users from "./components/Users";
 
 const useStyles = makeStyles((theme) => ({
     boxContainer: {
@@ -29,9 +30,9 @@ export default function Explore() {
                             <Sidebar />
                         </Box>
                     </Grid>
-                    <Grid item sm={6}>
+                    <Grid item sm={9}>
                         <Box>
-                            
+                            <Users />
                         </Box>
                     </Grid>
                     <Grid item sm={3}>

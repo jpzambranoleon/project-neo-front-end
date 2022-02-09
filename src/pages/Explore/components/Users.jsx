@@ -1,10 +1,31 @@
 import { Box, Card, CardContent, Grid, ListItem, Typography } from "@mui/material";
 
-const Skills = () => {
+const Users = () => {
     return (
-        <Box sx={{ mt: 3, bgcolor: "white" }}>
+        <Box sx={{ bgcolor: "white" }}>
             <Grid container>
-                <Grid item sm={2}>
+                <Grid item sm={3}>
+                    <Card>
+                        <Typography>
+                            Hello
+                        </Typography>
+                    </Card>
+                </Grid>
+                <Grid item sm={3}>
+                    <Card>
+                        <Typography>
+                            Hello
+                        </Typography>
+                    </Card>
+                </Grid>
+                <Grid item sm={3}>
+                    <Card>
+                        <Typography>
+                            Hello
+                        </Typography>
+                    </Card>
+                </Grid>
+                <Grid item sm={3}>
                     <Card>
                         <Typography>
                             Hello
@@ -16,4 +37,4 @@ const Skills = () => {
     );
 };
 
-export default Skills;
+export default Users;
