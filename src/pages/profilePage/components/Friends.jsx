@@ -2,10 +2,10 @@ import { Avatar, Box, Typography, Container, CardMedia, CardContent, Button, Ico
 
 const Friends = () => {
     return (
-        <Box>
+        <Box bgcolor="white">
             <ListItem>
                 <Typography variant="h2" sx={{ fontWeight: "700", fontSize: "20px" }}>
-                    Who to follow
+                    Contacts
                 </Typography>
             </ListItem>
             <ListItemButton>
