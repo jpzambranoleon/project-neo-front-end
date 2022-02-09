@@ -5,6 +5,7 @@ import ProfileCard from "../../components/ProfileCard";
 import Description from "./components/Description";
 import Sidebar from "../homePage/components/Sidebar";
 import UserCard from "../homePage/components/UserCard";
+import Friends from "./components/Friends";
 
 const useStyles = makeStyles((theme) => ({
     boxContainer: {
@@ -35,7 +36,7 @@ export default function Profile() {
                         <Description />
                     </Grid>
                     <Grid item sm={3}>
-                        <Description />
+                        <Friends />
                     </Grid>
                 </Grid>
             </Box>
