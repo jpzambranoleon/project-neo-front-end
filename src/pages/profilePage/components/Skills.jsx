@@ -5,7 +5,7 @@ const Skills = () => {
         <Box sx={{ mt: 3, bgcolor: "white" }}>
             <ListItem>
                 <Typography variant="h5">
-                    About
+                    Skills
                 </Typography>
             </ListItem>
             <CardContent>
