@@ -11,25 +11,13 @@ const Users = () => {
                         <UserCard />
                     </Grid>
                     <Grid item sm={3}>
-                        <Card>
-                            <Typography>
-                                Hello
-                            </Typography>
-                        </Card>
+                        <UserCard/>
                     </Grid>
                     <Grid item sm={3}>
-                        <Card>
-                            <Typography>
-                                Hello
-                            </Typography>
-                        </Card>
+                        <UserCard />
                     </Grid>
                     <Grid item sm={3}>
-                        <Card>
-                            <Typography>
-                                Hello
-                            </Typography>
-                        </Card>
+                        <UserCard />
                     </Grid>
                 </Grid>
             </CardContent>

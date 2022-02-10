@@ -60,14 +60,6 @@ const Sidebar = () => {
             </ListItemButton>
             <ListItemButton sx={{ padding: "20px 20px" }}>
                 <ListItemIcon>
-                    <Analytics />
-                </ListItemIcon>
-                <Typography variant="h2" sx={{ fontWeight: "700", fontSize: "20px" }}>
-                    Analytics
-                </Typography>
-            </ListItemButton>
-            <ListItemButton sx={{ padding: "20px 20px" }}>
-                <ListItemIcon>
                     <Bookmark />
                 </ListItemIcon>
                 <Typography variant="h2" sx={{ fontWeight: "700", fontSize: "20px" }}>
