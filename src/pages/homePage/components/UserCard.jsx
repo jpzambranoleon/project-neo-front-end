@@ -3,7 +3,7 @@ import { Avatar, Box, CardActionArea, CardHeader, CardMedia } from "@mui/materia
 const UserCard = () => {
     return (
         <Box sx={{ bgcolor: "white" }}>
-            <CardActionArea sx={{ borderRadius: "1rem" }}>
+            <CardActionArea>
             <CardHeader
                 avatar={
                     <Avatar src="/assets/person/diana.jpg"/>
