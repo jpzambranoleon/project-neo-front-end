@@ -5,7 +5,7 @@ import UserCard from "./UserCard";
 const Users = () => {
     return (
         <Box sx={{ bgcolor: "white" }}>
-            <Grid container>
+            <Grid container spacing={2}>
                 <Grid item sm={3}>
                     <UserCard />
                 </Grid>
