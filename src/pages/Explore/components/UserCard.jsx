@@ -9,18 +9,18 @@ const UserCard = () => {
                 src="/assets/cover/cover.jpg"
                     
             />
-            <Grid container direction="column" sx={{ alignItems: "center", mt: -8 }}>
-                <Avatar src="/assets/person/diana.jpg" sx={{ width: 110, height: 110 }} />
-                <Typography variant="h2" sx={{ fontWeight: "500", fontSize: "20px" }}>
+            <Grid container direction="column" sx={{ alignItems: "center", mt: -7 }}>
+                <Avatar src="/assets/person/diana.jpg" sx={{ width: 100, height: 100 }}/>
+                <Typography variant="h2" sx={{ fontWeight: 500, fontSize: "20px" }}>
                     Diana Ayi
                 </Typography>
                 <CardContent>
-                    <Typography variant="body2" color="text.secondary">
-                            User Interface Designer and Front-End Developer
-                    </Typography>
+                <Typography variant="body2" color="text.secondary">
+                    User Interface Designer and Front-End Developer
+                </Typography>
                 </CardContent>
                 <CardContent>
-                    <Button variant="outlined" sx={{ width: "200px" }}>
+                    <Button variant="outlined" sx={{ width: 170 }}>
                         Recruit
                     </Button>
                 </CardContent>
