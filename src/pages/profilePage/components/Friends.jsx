@@ -32,6 +32,22 @@ const Friends = () => {
                     Cindy Baker
                 </Typography>
             </ListItemButton>
+            <ListItemButton>
+                <ListItemAvatar>
+                    <Avatar src="https://mui.com/static/images/avatar/4.jpg"/>
+                </ListItemAvatar>
+                <Typography sx={{ fontWeight: "500" }}>
+                    Agnes Walker
+                </Typography>
+            </ListItemButton>
+            <ListItemButton>
+                <ListItemAvatar>
+                    <Avatar src="https://mui.com/static/images/avatar/5.jpg"/>
+                </ListItemAvatar>
+                <Typography sx={{ fontWeight: "500" }}>
+                    Trevor Henderson
+                </Typography>
+            </ListItemButton>
         </Box>
     );
 };
