@@ -35,9 +35,6 @@ export default function Explore() {
                             <Users />
                         </Box>
                     </Grid>
-                    <Grid item sm={3}>
-                        
-                    </Grid>
                 </Grid>
             </Box>
         </div>
