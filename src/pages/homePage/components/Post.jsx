@@ -1,4 +1,4 @@
-import { EmojiEmotions, Label, PermMedia, Room } from "@mui/icons-material";
+import { EmojiEmotions, Label, PermMedia, Room, Send } from "@mui/icons-material";
 import { Box, Button, Card, InputBase, Typography} from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
@@ -45,6 +45,12 @@ const Post = () => {
                     <EmojiEmotions fontSize="small" htmlColor="goldenrod"/>
                     <Typography variant="body3">
                         Feeling
+                    </Typography>
+                </Button>
+                <Button size="small" variant="contained" color="success">
+                    <Send fontSize="small" />
+                    <Typography>
+                        Post
                     </Typography>
                 </Button>
             </div>
