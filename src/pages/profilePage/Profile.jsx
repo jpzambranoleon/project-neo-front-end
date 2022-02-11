@@ -3,7 +3,7 @@ import Navbar from "../../components/Navbar";
 import { makeStyles } from "@mui/styles";
 import ProfileCard from "../../components/ProfileCard";
 import Description from "./components/Description";
-import Sidebar from "../homePage/components/Sidebar";
+import Sidebar from "../../components/Sidebar";
 import UserCard from "../homePage/components/UserCard";
 import Friends from "./components/Friends";
 import Skills from "./components/Skills";

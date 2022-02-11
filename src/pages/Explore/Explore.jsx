@@ -2,7 +2,7 @@ import { Box, Grid, Paper, TextField } from "@mui/material";
 import Navbar from "../../components/Navbar";
 import { makeStyles } from "@mui/styles";
 import UserCard from "../homePage/components/UserCard";
-import Sidebar from "../homePage/components/Sidebar";
+import Sidebar from "../../components/Sidebar";
 import Users from "./components/Users";
 
 const useStyles = makeStyles((theme) => ({

@@ -4,7 +4,7 @@ import { makeStyles } from "@mui/styles";
 import Feed from "./components/Feed";
 import Post from "./components/Post";
 import UserCard from "./components/UserCard";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "../../components/Sidebar";
 import Follow from "./components/Follow";
 import Projects from "./components/Projects";
 
