@@ -1,6 +1,6 @@
 import { Avatar, Box, CardActionArea, CardHeader, CardMedia } from "@mui/material";
 
-const UserCard = () => {
+const User = () => {
     return (
         <Box sx={{ bgcolor: "white" }}>
             <CardActionArea>
@@ -16,4 +16,4 @@ const UserCard = () => {
     );
 };
 
-export default UserCard;
+export default User;

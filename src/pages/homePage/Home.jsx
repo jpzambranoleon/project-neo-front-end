@@ -3,7 +3,7 @@ import Navbar from "../../components/Navbar";
 import { makeStyles } from "@mui/styles";
 import Feed from "./components/Feed";
 import Post from "./components/Post";
-import UserCard from "./components/UserCard";
+import User from "./components/User";
 import Sidebar from "../../components/Sidebar";
 import Follow from "./components/Follow";
 import Projects from "./components/Projects";
@@ -30,7 +30,7 @@ export default function Home() {
                 <Grid container spacing={3} justifyContent="center">
                     <Grid item sm={3}>
                         <Box>
-                            <UserCard />
+                            <User />
                             <Sidebar />
                         </Box>
                     </Grid>
