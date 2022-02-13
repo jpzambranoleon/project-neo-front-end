@@ -1,5 +1,4 @@
 import { Avatar, Box, Typography, Container, CardMedia, CardContent, Button, IconButton, ListItem, ListItemButton, ListItemAvatar} from "@mui/material";
-import UserCard from "../../homePage/components/UserCard";
 
 const Friends = () => {
     return (

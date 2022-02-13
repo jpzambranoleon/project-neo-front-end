@@ -1,9 +1,9 @@
 import { Box, Grid, Paper, TextField } from "@mui/material";
 import Navbar from "../../components/Navbar";
 import { makeStyles } from "@mui/styles";
-import UserCard from "../homePage/components/UserCard";
 import Sidebar from "../../components/Sidebar";
 import Users from "./components/Users";
+import User from "../homePage/components/User";
 
 const useStyles = makeStyles((theme) => ({
     boxContainer: {
@@ -26,7 +26,7 @@ export default function Explore() {
                 <Grid container spacing={3}>
                     <Grid item sm={3}>
                         <Box>
-                            <UserCard />
+                            <User />
                             <Sidebar />
                         </Box>
                     </Grid>
