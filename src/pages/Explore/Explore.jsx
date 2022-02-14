@@ -4,6 +4,7 @@ import { makeStyles } from "@mui/styles";
 import Sidebar from "../../components/Sidebar";
 import Users from "./components/Users";
 import User from "../../components/User";
+import SearchBar from "./components/SearchBar";
 
 const useStyles = makeStyles((theme) => ({
     boxContainer: {
@@ -32,6 +33,7 @@ export default function Explore() {
                     </Grid>
                     <Grid item sm={9}>
                         <Box>
+                            <SearchBar />
                             <Users />
                         </Box>
                     </Grid>
