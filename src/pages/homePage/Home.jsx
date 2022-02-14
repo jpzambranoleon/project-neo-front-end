@@ -3,10 +3,10 @@ import Navbar from "../../components/Navbar";
 import { makeStyles } from "@mui/styles";
 import Feed from "./components/Feed";
 import Post from "./components/Post";
-import User from "./components/User";
 import Sidebar from "../../components/Sidebar";
 import Follow from "./components/Follow";
 import Projects from "./components/Projects";
+import User from "../../components/User";
 
 const useStyles = makeStyles((theme) => ({
     boxContainer: {

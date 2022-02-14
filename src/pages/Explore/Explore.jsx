@@ -3,7 +3,7 @@ import Navbar from "../../components/Navbar";
 import { makeStyles } from "@mui/styles";
 import Sidebar from "../../components/Sidebar";
 import Users from "./components/Users";
-import User from "../homePage/components/User";
+import User from "../../components/User";
 
 const useStyles = makeStyles((theme) => ({
     boxContainer: {

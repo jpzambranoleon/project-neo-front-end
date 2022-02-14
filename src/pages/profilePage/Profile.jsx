@@ -5,7 +5,7 @@ import Description from "./components/Description";
 import Sidebar from "../../components/Sidebar";
 import Friends from "./components/Friends";
 import Skills from "./components/Skills";
-import User from "../homePage/components/User";
+import User from "../../components/User";
 
 const useStyles = makeStyles((theme) => ({
     boxContainer: {
