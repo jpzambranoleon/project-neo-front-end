@@ -1,5 +1,5 @@
 import { Menu, Search } from "@mui/icons-material";
-import { IconButton, InputBase, Paper } from "@mui/material";
+import { Divider, IconButton, InputBase, Paper } from "@mui/material";
 
 const SearchBar = () => {
     return (
@@ -15,6 +15,7 @@ const SearchBar = () => {
              <IconButton type="submit" sx={{ p: '10px' }} aria-label="search">
                 <Search />
             </IconButton>
+            <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
         </Paper>
     );
 };
