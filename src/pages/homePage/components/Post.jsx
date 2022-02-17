@@ -1,5 +1,5 @@
 import { EmojiEmotions, Label, PermMedia, Room, Send } from "@mui/icons-material";
-import { Box, Button, Card, InputBase, Typography} from "@mui/material";
+import { Button, InputBase, Typography, Paper } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 const Post = () => {
     const classes = useStyles();
     return (
-        <Box sx={{ bgcolor: "white" }}>
+        <Paper>
             <div className={classes.inputBase}>
                 <InputBase multiline placeholder="What's on your mind?" sx={{ width: "100%" }}/>
             </div>
@@ -54,7 +54,7 @@ const Post = () => {
                     </Typography>
                 </Button>
             </div>
-        </Box>
+        </Paper>
     );
 };
 
