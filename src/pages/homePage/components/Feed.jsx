@@ -1,9 +1,9 @@
 import { BookmarkBorderOutlined, FavoriteBorderOutlined, MessageOutlined, MoreHoriz, ShareOutlined } from "@mui/icons-material";
-import { Avatar, Box, Card, CardActions, CardHeader, CardMedia, IconButton } from "@mui/material";
+import { Avatar, Box, Card, CardActions, CardHeader, CardMedia, IconButton, Paper } from "@mui/material";
 
 const Feed = () => {
     return (
-        <Box sx={{ mt: 3, bgcolor: "white" }}>
+        <Paper sx={{ mt: 3, bgcolor: "white" }}>
             <CardHeader 
                 avatar={
                     <Avatar src="/assets/person/diana.jpg" />
@@ -38,7 +38,7 @@ const Feed = () => {
                     </IconButton>
                 </div>
             </CardActions>
-        </Box>
+        </Paper>
     )
 }
 
