@@ -1,5 +1,5 @@
 import { BookmarkBorderOutlined, FavoriteBorderOutlined, MessageOutlined, MoreHoriz, ShareOutlined } from "@mui/icons-material";
-import { Avatar, Box, Card, CardActions, CardHeader, CardMedia, IconButton, Paper } from "@mui/material";
+import { Avatar, CardActions, CardHeader, CardMedia, IconButton, Paper } from "@mui/material";
 
 const Feed = () => {
     return (
