@@ -1,55 +1,48 @@
-import { Cancel, MailOutlined, NotificationsOutlined, Search } from "@mui/icons-material";
-import { alpha, AppBar, Avatar, Badge, InputBase, Toolbar, Typography } from "@mui/material"
-import { makeStyles } from "@mui/styles";
+import { AccountCircle, Cancel, Mail, Notifications, Search } from "@mui/icons-material";
+import { alpha, AppBar, Avatar, Badge, InputBase, Toolbar, Typography, styled, Box, IconButton, CardMedia, CardActionArea } from "@mui/material"
 import { useState } from "react";
 
-const useStyles = makeStyles((theme) => ({
-    logoLg: {
-        display: "none",
-        [theme.breakpoints.up("sm")]: {
-            display: "block",
+const SearchField = styled('div')(({ theme }) => ({
+    position: 'relative',
+    borderRadius: theme.shape.borderRadius,
+    backgroundColor: alpha(theme.palette.common.white, 0.15),
+    '&:hover': {
+      backgroundColor: alpha(theme.palette.common.white, 0.25),
+    },
+    marginRight: theme.spacing(2),
+    marginLeft: 0,
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: theme.spacing(3),
+      width: 'auto',
+    },
+}));
+
+const SearchIconWrapper = styled('div')(({ theme }) => ({
+    padding: theme.spacing(0, 2),
+    height: '100%',
+    position: 'absolute',
+    pointerEvents: 'none',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+}));
+  
+const StyledInputBase = styled(InputBase)(({ theme }) => ({
+    color: 'inherit',
+    '& .MuiInputBase-input': {
+        padding: theme.spacing(1, 1, 1, 0),
+        // vertical padding + font size from searchIcon
+        paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+        transition: theme.transitions.create('width'),
+        width: '100%',
+        [theme.breakpoints.up('md')]: {
+        width: '20ch',
         },
     },
-    logoSm:{
-        display: "block",
-        [theme.breakpoints.up("sm")]: {
-            display: "none",
-        },
-    },
-    search: {
-        display: "flex",
-        alignItems: "center",
-        backgroundColor: alpha("#e9ecef", 1),
-        '&:hover': {
-            backgroundColor: alpha("#e9ecef", 0.75),
-        },
-        borderRadius: theme.shape.borderRadius,
-        width: "50%",
-        [theme.breakpoints.down("sm")]: {
-            display: (props) => (props.open ? "flex" : "none"),
-            width: "70%",
-        },
-    },
-    cancel: {
-        [theme.breakpoints.up("sm")]: {
-            display: "none",
-        }
-    },
-    searchButton: {
-        marginRight: theme.spacing(2),
-        [theme.breakpoints.up("sm")]: {
-            display: "none"
-        }
-    },
-    icons: {
-        alignItems: "center",
-        display: (props) => (props.open ? "none" : "flex")
-    }
-}))
+}));
 
 const Navbar = () => {
-    const [open, setOpen] = useState(false);
-    const classes = useStyles({ open });
     return (
         <AppBar>
             <Toolbar 
@@ -59,27 +52,50 @@ const Navbar = () => {
                     width: "80%",
                     margin: "0 auto" 
                 }}>
-                <Typography variant="h6" className={classes.logoLg}>
-                    Project-Neo
+                <Typography 
+                    variant="h6" 
+                    noWrap
+                    component="div"
+                    sx={{ display: { xs: 'block', sm: 'block' } }}
+                >
+                    Project-NEO
                 </Typography>
-                <Typography variant="h6" className={classes.logoSm}>
-                    NEO
-                </Typography>
-                <div className={classes.search}>
-                    <Search />
-                    <InputBase placeholder="search" sx={{ ml: 1, width: "50vw", fontSize: "0.9rem"}}/>
-                    <Cancel className={classes.cancel} onClick={() => setOpen(false)} />
-                </div>
-                <div className={classes.icons}>
-                    <Search className={classes.searchButton} onClick={() => setOpen(true)}/>
-                    <Badge sx={{ mr: 2 }}>
-                        <MailOutlined />
-                    </Badge>
-                    <Badge sx={{ mr: 2 }}>
-                        <NotificationsOutlined />
-                    </Badge>
-                    <Avatar alt="Diana Ayi" />
-                </div>
+
+                <SearchField>
+                    <SearchIconWrapper>
+                        <Search />
+                    </SearchIconWrapper>
+                    <StyledInputBase
+                        placeholder="Search…"
+                        inputProps={{ 'aria-label': 'search' }}
+                    />
+                </SearchField>
+                <Box sx={{ flexGrow: 1 }} />
+                <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+                    <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+                        <Badge badgeContent={4} color="error">
+                            <Mail />
+                        </Badge>
+                    </IconButton>
+                    <IconButton
+                        size="large"
+                        aria-label="show 17 new notifications"
+                        color="inherit"
+                    >
+                        <Badge badgeContent={17} color="error">
+                            <Notifications />
+                        </Badge>
+                    </IconButton>
+                    <IconButton
+                        size="large"
+                        edge="end"
+                        aria-label="account of current user"
+                        aria-haspopup="true"
+                        color="inherit"
+                    >
+                        <AccountCircle />
+                    </IconButton>
+                </Box>
             </Toolbar>
         </AppBar>
     )
