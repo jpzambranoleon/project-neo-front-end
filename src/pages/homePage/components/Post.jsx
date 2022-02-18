@@ -47,12 +47,6 @@ const Post = () => {
                         Feeling
                     </Typography>
                 </Button>
-                <Button size="small" variant="contained" color="success">
-                    <Send fontSize="small" />
-                    <Typography>
-                        Post
-                    </Typography>
-                </Button>
             </div>
         </Paper>
     );
