@@ -1,5 +1,5 @@
-import { EmojiEmotions, Label, PermMedia, Room, Send } from "@mui/icons-material";
-import { Button, InputBase, Typography, Box, Paper } from "@mui/material";
+import { EmojiEmotions, Label, PermMedia, Room } from "@mui/icons-material";
+import { Button, InputBase, Typography, Paper } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
