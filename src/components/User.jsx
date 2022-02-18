@@ -1,8 +1,8 @@
-import { Avatar, Box, CardActionArea, CardHeader, CardMedia } from "@mui/material";
+import { Avatar, CardActionArea, CardHeader, Paper } from "@mui/material";
 
 const User = () => {
     return (
-        <Box sx={{ bgcolor: "white" }}>
+        <Paper>
             <CardActionArea>
             <CardHeader
                 avatar={
@@ -12,7 +12,7 @@ const User = () => {
                 subheader="@dayi"
             />
             </CardActionArea>
-        </Box>
+        </Paper>
     );
 };
 
