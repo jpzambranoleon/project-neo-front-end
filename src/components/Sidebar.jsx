@@ -1,13 +1,7 @@
-import { Analytics, Apps, Bookmark, Explore, Home, LaptopChromebook, Message, Person, Settings } from "@mui/icons-material";
-import { Box, List, ListItem, ListItemButton, ListItemIcon, Paper, Typography } from "@mui/material";
-import { makeStyles } from "@mui/styles";
-
-const useStyles = makeStyles((theme) => ({
-  
-}));
+import { Apps, Bookmark, Explore, Home, LaptopChromebook, Message, Person, Settings } from "@mui/icons-material";
+import { ListItemButton, ListItemIcon, Paper, Typography } from "@mui/material";
 
 const Sidebar = () => {
-    const classes = useStyles();
     return (
         <Paper sx={{ mt: 3 }}>
             <ListItemButton sx={{ padding: "20px 20px" }}>
