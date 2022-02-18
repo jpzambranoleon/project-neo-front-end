@@ -1,6 +1,18 @@
 import { EmojiEmotions, Label, PermMedia, Room } from "@mui/icons-material";
-import { Button, InputBase, Typography, Paper } from "@mui/material";
+import { alpha, Button, InputBase, Typography, Paper, styled } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+
+const SearchField = styled('div')(({ theme }) => ({
+    position: 'relative',
+    borderRadius: theme.shape.borderRadius,
+    backgroundColor: alpha(theme.palette.common.white, 0.15),
+    '&:hover': {
+      backgroundColor: alpha(theme.palette.common.white, 0.25),
+    },
+    marginRight: theme.spacing(2),
+    marginLeft: 0,
+    width: '100%',
+}));
 
 const useStyles = makeStyles((theme) => ({
     inputBase: {
