@@ -1,5 +1,5 @@
 import { Code, EmojiEmotions, Label, PermMedia,} from "@mui/icons-material";
-import { alpha, Button, InputBase, Typography, Paper, styled, TextField, Container, Box, CardContent, List, ListItem } from "@mui/material";
+import { alpha, Button, InputBase, Typography, Paper, styled, TextField, Container, Box, CardContent, List, ListItem, Avatar } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 const StyledTextField = styled(TextField)(({ theme }) => ({
@@ -54,11 +54,13 @@ const Post = () => {
     const classes = useStyles();
     return (
         <Paper>
-            <Paper>
+            <ListItem>
+            <Paper sx={{ width: '100%' }}>
                 <SearchField>
-                    <InputBase />
+                    <InputBase placeholder="What's on your mind?"/>
                 </SearchField>
             </Paper>
+            </ListItem>
             <ListItem sx={{ mb: 2, display: 'flex', justifyContent: 'space-between' }}>
                 <Button>
                     <PermMedia htmlColor="green"/>
