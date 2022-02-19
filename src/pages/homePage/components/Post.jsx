@@ -1,17 +1,39 @@
-import { EmojiEmotions, Label, PermMedia, Room } from "@mui/icons-material";
-import { alpha, Button, InputBase, Typography, Paper, styled } from "@mui/material";
+import { Code, EmojiEmotions, Label, PermMedia,} from "@mui/icons-material";
+import { alpha, Button, InputBase, Typography, Paper, styled, TextField, Container, Box, CardContent, List, ListItem } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+
+const StyledTextField = styled(TextField)(({ theme }) => ({
+    width: '100%',
+    backgroundColor: alpha(theme.palette.common.white),
+    '&:hover': {
+        backgroundColor: alpha(theme.palette.common.black, 0.15),
+    },
+}));
 
 const SearchField = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
+    backgroundColor: alpha(theme.palette.common.white),
     '&:hover': {
-      backgroundColor: alpha(theme.palette.common.white, 0.25),
+      backgroundColor: alpha(theme.palette.common.black, 0.15),
     },
     marginRight: theme.spacing(2),
     marginLeft: 0,
     width: '100%',
+}));
+
+const StyledInputBase = styled(InputBase)(({ theme }) => ({
+    color: 'inherit',
+    '& .MuiInputBase-input': {
+        padding: theme.spacing(1, 1, 1, 0),
+        // vertical padding + font size from searchIcon
+        paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+        transition: theme.transitions.create('width'),
+        width: '100%',
+        [theme.breakpoints.up('md')]: {
+        width: '20ch',
+        },
+    },
 }));
 
 const useStyles = makeStyles((theme) => ({
@@ -22,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
     },
     buttonGroup: {
         display: "flex",
+        justifyContent: "space-between",
         marginLeft: theme.spacing(1),
         marginBottom: theme.spacing(2),
     }
@@ -31,35 +54,45 @@ const Post = () => {
     const classes = useStyles();
     return (
         <Paper>
-            <div className={classes.inputBase}>
-                <InputBase multiline placeholder="What's on your mind?" sx={{ width: "100%" }}/>
-            </div>
-            <div className={classes.buttonGroup}>
-                <Button size="small">
-                    <PermMedia fontSize="small" htmlColor="tomato"/>
-                    <Typography variant="body3">
-                        Media
-                    </Typography>
+            <Paper>
+                <SearchField>
+                    <InputBase />
+                </SearchField>
+            </Paper>
+            <ListItem sx={{ mb: 2, display: 'flex', justifyContent: 'space-between' }}>
+                <Button>
+                    <PermMedia htmlColor="green"/>
+                    <Box sx={{ ml: 1 }}>
+                        <Typography variant="body3">
+                            Media
+                        </Typography>
+                    </Box>
                 </Button>
-                <Button size="small">
-                    <Label fontSize="small" htmlColor="blue"/>
-                    <Typography variant="body3">
-                        Tag
-                    </Typography>
+                <Button>
+                    <Label />
+                    <Box sx={{ ml: 1 }}>
+                        <Typography variant="body3">
+                            Tag
+                        </Typography>
+                    </Box>
                 </Button>
-                <Button size="small">
-                    <Room fontsize="small" htmlColor="green"/>
-                    <Typography variant="body3">
-                        Location
-                    </Typography>
+                <Button>
+                    <Code htmlColor="goldenrod"/>
+                    <Box sx={{ ml: 1 }}>
+                        <Typography variant="body3">
+                            Code
+                        </Typography>
+                    </Box>
                 </Button>
-                <Button size="small">
-                    <EmojiEmotions fontSize="small" htmlColor="goldenrod"/>
-                    <Typography variant="body3">
-                        Feeling
-                    </Typography>
+                <Button>
+                    <EmojiEmotions htmlColor="tomato"/>
+                    <Box sx={{ ml: 1 }}>
+                        <Typography variant="body3">
+                            Feelings
+                        </Typography>
+                    </Box>
                 </Button>
-            </div>
+            </ListItem>
         </Paper>
     );
 };
