@@ -7,6 +7,7 @@ import Sidebar from "../../components/Sidebar";
 import Follow from "./components/Follow";
 import Projects from "./components/Projects";
 import User from "../../components/User";
+import Tags from "./components/Tags";
 
 const useStyles = makeStyles((theme) => ({
     boxContainer: {
@@ -43,20 +44,7 @@ export default function Home() {
                     <Grid item sm={3}>
                         <Box>
                             <Follow />
-                            <Paper>
-                            <Typography gutterBottom>
-                                Categories
-                            </Typography>
-                            <Button variant="outlined" sx={{ mr: 2, color: '#555', fontSize: 15, textTransform: 'none' }}>
-                                JavaScript
-                            </Button>
-                            <Button variant="outlined" sx={{ mr: 2, color: '#555', fontSize: 15, textTransform: 'none' }}>
-                                CSS
-                            </Button>
-                            <Button variant="outlined" sx={{ mr: 2, color: '#555', fontSize: 15, textTransform: 'none' }}>
-                                React
-                            </Button>
-                            </Paper>
+                            <Tags />
                         </Box>
                     </Grid>
                 </Grid>
