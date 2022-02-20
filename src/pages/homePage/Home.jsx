@@ -1,4 +1,4 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Button, Card, Divider, Grid, Link, Paper, Typography } from "@mui/material";
 import Navbar from "../../components/Navbar";
 import { makeStyles } from "@mui/styles";
 import Feed from "./components/Feed";
@@ -42,8 +42,21 @@ export default function Home() {
                     </Grid>
                     <Grid item sm={3}>
                         <Box>
-                           <Follow />
-                           <Projects /> 
+                            <Follow />
+                            <Paper>
+                            <Typography gutterBottom>
+                                Categories
+                            </Typography>
+                            <Button variant="outlined" sx={{ mr: 2, color: '#555', fontSize: 15, textTransform: 'none' }}>
+                                JavaScript
+                            </Button>
+                            <Button variant="outlined" sx={{ mr: 2, color: '#555', fontSize: 15, textTransform: 'none' }}>
+                                CSS
+                            </Button>
+                            <Button variant="outlined" sx={{ mr: 2, color: '#555', fontSize: 15, textTransform: 'none' }}>
+                                React
+                            </Button>
+                            </Paper>
                         </Box>
                     </Grid>
                 </Grid>
