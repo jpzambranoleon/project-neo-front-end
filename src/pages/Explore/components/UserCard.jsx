@@ -1,5 +1,4 @@
-import { Add, GitHub, Google, LinkedIn, Send } from "@mui/icons-material";
-import { Avatar, Box, Button, ButtonGroup, Card, CardActionArea, CardContent, CardMedia, Container, Grid, IconButton, ListItem, Stack, Typography } from "@mui/material";
+import { Avatar, Button, Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 
 const UserCard = () => {
     return(
