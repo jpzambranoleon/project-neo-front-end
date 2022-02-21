@@ -44,7 +44,6 @@ export default function Home() {
                     </Grid>
                     <Grid item sm={3}>
                         <Box>
-                            <Follow />
                             <News />
                             <Tags />
                         </Box>
