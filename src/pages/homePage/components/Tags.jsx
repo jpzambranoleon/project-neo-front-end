@@ -2,7 +2,7 @@ import { Box, Button, Paper, Typography } from "@mui/material";
 
 const Tags = () => {
     return (
-        <Paper>
+        <Paper sx={{ mt: 3 }}>
             <Box sx={{ ml: 2 }}>
                 <Typography gutterBottom>
                     Categories
