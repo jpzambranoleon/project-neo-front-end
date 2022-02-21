@@ -1,4 +1,4 @@
-import { Box, CardActionArea, CardContent, CardMedia, List, ListItemButton, Paper, Typography } from "@mui/material";
+import { Box, Button, CardActionArea, CardContent, CardMedia, List, ListItem, ListItemButton, Paper, Typography } from "@mui/material";
 
 const News = () => {
     return (
@@ -66,6 +66,9 @@ const News = () => {
                 />
                 </CardContent>
             </CardActionArea>
+            <Button sx={{ textTransform: 'none' }}>
+                Show More
+            </Button>
         </Paper>
     );
 };
