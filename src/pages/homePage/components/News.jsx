@@ -3,6 +3,9 @@ import { Box, CardActionArea, CardContent, CardMedia, List, ListItemButton, Pape
 const News = () => {
     return (
         <Paper sx={{ mb: 2 }}>
+            <Typography sx={{ ml: 1 }}>
+                News
+            </Typography>
             <CardActionArea sx={{ display: 'flex', justifyContent: 'space-between' }}>
                 <CardContent>
                     <Typography sx={{ fontSize: 14 }} color="text.secondary">
