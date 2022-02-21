@@ -1,8 +1,8 @@
-import { Avatar, Box, CardContent, CardHeader, Container, ListItem, ListItemAvatar, ListItemButton, Typography } from "@mui/material";
+import { Avatar, Box, CardContent, CardHeader, Container, ListItem, ListItemAvatar, ListItemButton, Paper, Typography } from "@mui/material";
 
 const Follow = () => {
     return (
-        <Box sx={{ bgcolor: "white" }}>
+        <Paper>
             <ListItem>
                 <Typography variant="h2" sx={{ fontWeight: "700", fontSize: "20px" }}>
                     Who to follow
@@ -32,7 +32,7 @@ const Follow = () => {
                     Cindy Baker
                 </Typography>
             </ListItemButton>
-        </Box>
+        </Paper>
     );
 };
 
