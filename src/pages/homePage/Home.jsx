@@ -8,6 +8,7 @@ import Follow from "./components/Follow";
 import Projects from "./components/Projects";
 import User from "../../components/User";
 import Tags from "./components/Tags";
+import News from "./components/News";
 
 const useStyles = makeStyles((theme) => ({
     boxContainer: {
@@ -44,6 +45,7 @@ export default function Home() {
                     <Grid item sm={3}>
                         <Box>
                             <Follow />
+                            <News />
                             <Tags />
                         </Box>
                     </Grid>
