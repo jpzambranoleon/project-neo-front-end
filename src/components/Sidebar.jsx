@@ -3,7 +3,7 @@ import { ListItemButton, ListItemIcon, Paper, Typography } from "@mui/material";
 
 const Sidebar = () => {
     return (
-        <Paper sx={{ mt: 2 }}>
+        <Paper>
             <ListItemButton sx={{ padding: "20px 20px" }}>
                 <ListItemIcon>
                     <Home />
