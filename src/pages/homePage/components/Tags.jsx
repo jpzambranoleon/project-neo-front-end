@@ -25,6 +25,9 @@ const Tags = () => {
                 <Button variant="outlined" sx={{ textTransform: 'none', mb: 1, mr: 1 }}>
                     Web3
                 </Button>
+                <Button variant="outlined" sx={{ textTransform: 'none', mb: 1, mr: 1 }}>
+                    MUI
+                </Button>
             </Box>
         </Paper>
     )
