@@ -2,7 +2,7 @@ import { Avatar, Box, CardContent, CardHeader, Container, ListItem, ListItemAvat
 
 const Follow = () => {
     return (
-        <Paper>
+        <Paper sx={{ mb: 2 }}>
             <ListItem>
                 <Typography variant="h2" sx={{ fontWeight: "700", fontSize: "20px" }}>
                     Who to follow
