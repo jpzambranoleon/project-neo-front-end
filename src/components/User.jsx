@@ -2,7 +2,7 @@ import { Avatar, CardActionArea, CardHeader, Paper } from "@mui/material";
 
 const User = () => {
     return (
-        <Paper>
+        <Paper sx={{ mb: 2 }}>
             <CardActionArea>
             <CardHeader
                 avatar={
