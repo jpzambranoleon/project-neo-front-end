@@ -12,7 +12,7 @@ const News = () => {
                         Project-NEO goes live!
                     </Typography>
                     <Typography sx={{ fontSize: 12 }} color="text.secondary">
-                        12.5k Likes
+                        12.5K Likes
                     </Typography>
                 </CardContent>
                 <CardContent>
