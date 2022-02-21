@@ -90,7 +90,7 @@ const Navbar = () => {
                     </Box>
                     <Box>
                         <IconButton
-                            size="large"
+                            size="medium"
                             edge="end"
                             aria-label="account of current user"
                             aria-haspopup="true"
