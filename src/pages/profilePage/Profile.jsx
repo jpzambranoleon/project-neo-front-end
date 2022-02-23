@@ -6,6 +6,7 @@ import Sidebar from "../../components/Sidebar";
 import Friends from "./components/Friends";
 import Skills from "./components/Skills";
 import User from "../../components/User";
+import Images from "./components/Imagesjsx";
 
 const useStyles = makeStyles((theme) => ({
     boxContainer: {
@@ -37,6 +38,7 @@ export default function Profile() {
                         <Skills />
                     </Grid>
                     <Grid item sm={3}>
+                        <Images />
                         <Friends />
                     </Grid>
                 </Grid>
