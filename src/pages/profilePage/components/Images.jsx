@@ -16,7 +16,7 @@ const Images = () => {
             cols={3}
         >
             {itemData.map((item) => (
-                <ImageListItem>
+                <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
 
                 </ImageListItem>
             ))}
