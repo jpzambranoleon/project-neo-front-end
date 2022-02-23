@@ -10,4 +10,8 @@ const Images = () => {
     );
 };
 
+const itemData = [
+    
+]
+
 export default Images;
