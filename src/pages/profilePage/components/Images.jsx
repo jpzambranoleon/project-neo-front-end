@@ -17,7 +17,11 @@ const Images = () => {
         >
             {itemData.map((item) => (
                 <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
-
+                    <img 
+                        {...srcset(item.img, 121, item.rows, item.cols)}
+                        alt={item.title}
+                        loading="lazy"
+                    />
                 </ImageListItem>
             ))}
             <ImageListItem>
@@ -29,7 +33,7 @@ const Images = () => {
 
 const itemData = [
     {
-        img: 'https://images.unsplash.com/photo-155196381-b3b1ca40c98e',
+        img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
         title: 'Breakfast',
         rows: 2,
         cols: 2,
