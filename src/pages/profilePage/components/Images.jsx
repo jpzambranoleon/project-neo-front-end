@@ -7,11 +7,9 @@ const Images = () => {
             sx={{ mb: 2 }}
         >
             {itemData.map((item) => (
-                <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
+                <ImageListItem key={item.img}>
                     <img 
-                        {...srcset(item.img, 121, item.rows, item.cols)}
-                        alt={item.title}
-                        loading="lazy"
+                        src={}
                     />
                 </ImageListItem>
             ))}
