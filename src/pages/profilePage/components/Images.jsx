@@ -14,6 +14,7 @@ const Images = () => {
         <ImageList
             variant="quilted"
             cols={3}
+            sx={{ mb: 2 }}
         >
             {itemData.map((item) => (
                 <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
