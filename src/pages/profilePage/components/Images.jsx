@@ -11,7 +11,16 @@ const Images = () => {
 };
 
 const itemData = [
-    
+    {
+        img: 'https://images.unsplash.com/photo-155196381-b3b1ca40c98e',
+        title: 'Breakfast',
+        rows: 2,
+        cols: 2,
+    },
+    {
+        img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
+        title: 'Burger',
+    }
 ]
 
 export default Images;
