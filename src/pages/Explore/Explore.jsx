@@ -33,7 +33,6 @@ export default function Explore() {
                     </Grid>
                     <Grid item sm={9}>
                         <Box>
-                            <SearchBar />
                             <Users />
                         </Box>
                     </Grid>
