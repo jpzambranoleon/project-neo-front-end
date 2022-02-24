@@ -18,11 +18,9 @@ const UserCard = () => {
                     User Interface Designer and Front-End Developer
                 </Typography>
                 </CardContent>
-                <CardContent>
-                    <Button variant="outlined" sx={{ width: 170 }}>
-                        Recruit
-                    </Button>
-                </CardContent>
+                <Button variant="outlined" fullWidth>
+                    Recruit
+                </Button>
             </Grid>
         </Card>
     )
