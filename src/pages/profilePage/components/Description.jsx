@@ -32,11 +32,11 @@ const Description = () => {
                         Tokyo, Japan
                     </Typography>
                 </Container>
-                <Tabs centered >
+                <Tabs centered>
                     <Tab label="About" />
                     <Tab label="Posts" />
                     <Tab label="Projects" />
-                    <Tab label="Bookmarks" />
+                    <Tab label="Saved" />
                 </Tabs>
             </Box>
             <Box sx={{ mt: 3, bgcolor: "white" }}>
