@@ -1,5 +1,6 @@
 import { Avatar, Box, Typography, Container, CardMedia, CardContent, Button, IconButton, ListItem, Tabs, Tab} from "@mui/material";
 import { grey } from "@mui/material/colors";
+import EditButton from "./EditButton";
 
 const Description = () => {
     return (
@@ -13,9 +14,7 @@ const Description = () => {
                 <Container sx={{ mt: -10 }}>
                     <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                         <Avatar src="/assets/person/diana.jpg" sx={{ width: 150, height: 150 }}/>
-                        <Box sx={{ mt: 8 }}>
-                            
-                        </Box>
+                        <EditButton />
                     </Box>
                     <Typography component="h1" variant="h4">
                         Diana Ayi
