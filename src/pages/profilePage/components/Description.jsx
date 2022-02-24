@@ -32,7 +32,7 @@ const Description = () => {
                         Tokyo, Japan
                     </Typography>
                 </Container>
-                <Tabs>
+                <Tabs sx={{ justifyContent: 'space-between' }} centered >
                     <Tab label="About" />
                     <Tab label="Posts" />
                     <Tab label="Projects" />
