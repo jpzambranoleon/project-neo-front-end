@@ -14,9 +14,7 @@ const Description = () => {
                     <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                         <Avatar src="/assets/person/diana.jpg" sx={{ width: 150, height: 150 }}/>
                         <Box sx={{ mt: 8 }}>
-                            <Button variant="outlined">
-                                Edit Profile
-                            </Button>
+                            
                         </Box>
                     </Box>
                     <Typography component="h1" variant="h4">
