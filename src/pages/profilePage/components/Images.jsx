@@ -42,8 +42,8 @@ const itemData = [
         title: 'Hats',
     },
     {
-        img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-        title: 'Honey',
+        img: '/assets/post/post5.jpg',
+        title: 'Austi',
     },
 ]
 
