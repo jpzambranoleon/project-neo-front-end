@@ -1,4 +1,4 @@
-import { Avatar, Box, Typography, Container, CardMedia, CardContent, Button, IconButton, ListItem} from "@mui/material";
+import { Avatar, Box, Typography, Container, CardMedia, CardContent, Button, IconButton, ListItem, Tabs, Tab} from "@mui/material";
 import { grey } from "@mui/material/colors";
 
 const Description = () => {
@@ -32,6 +32,12 @@ const Description = () => {
                         Tokyo, Japan
                     </Typography>
                 </Container>
+                <Tabs>
+                    <Tab label="About" />
+                    <Tab label="Posts" />
+                    <Tab label="Projects" />
+                    <Tab label="Bookmarks" />
+                </Tabs>
             </Box>
             <Box sx={{ mt: 3, bgcolor: "white" }}>
                 <ListItem>
