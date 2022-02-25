@@ -1,4 +1,5 @@
-import { Avatar, Box, Typography, Container, CardMedia, CardContent, Button, IconButton, ListItem, Tabs, Tab} from "@mui/material";
+import { Edit } from "@mui/icons-material";
+import { Avatar, Box, Typography, Container, CardMedia, CardContent, Button, IconButton, ListItem, Tabs, Tab, Tooltip} from "@mui/material";
 import { grey } from "@mui/material/colors";
 import EditButton from "./EditButton";
 
@@ -40,10 +41,15 @@ const Description = () => {
                 </Tabs>
             </Box>
             <Box sx={{ mt: 3, bgcolor: "white" }}>
-                <ListItem>
+                <ListItem sx={{ justifyContent: 'space-between' }}>
                     <Typography variant="h5">
                         About
                     </Typography>
+                    <Tooltip title="Edit">
+                        <IconButton>
+                            <Edit />
+                        </IconButton>
+                    </Tooltip>
                 </ListItem>
                 <CardContent>
                     <Typography variant="body2">
