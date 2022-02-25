@@ -4,7 +4,6 @@ import { makeStyles } from "@mui/styles";
 import Description from "./components/Description";
 import Sidebar from "../../components/Sidebar";
 import Friends from "./components/Friends";
-import Skills from "./components/Skills";
 import User from "../../components/User";
 import Images from "./components/Images";
 import News from "../../components/News";
@@ -36,7 +35,6 @@ export default function Profile() {
                     </Grid>
                     <Grid item sm={6}>
                         <Description />
-                        <Skills />
                     </Grid>
                     <Grid item sm={3}>
                         <Images />
