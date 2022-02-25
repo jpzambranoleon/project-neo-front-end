@@ -41,19 +41,33 @@ const EditButton = () => {
                             <Grid item sm={6} xs={12}>
                                 <TextField id="standard-basic" label="Last Name" size="small" sx={{ width: '100%' }}/>
                             </Grid>
+                            <Grid item sm={12}>
+                                <TextField id="standard-basic" label="Headine" size="small" sx={{ width: '100%' }}/>
+                            </Grid>
+                            <Grid item sm={12}>
+                                <TextField id="standard-basic" label="Country/Region" size="small" sx={{ width: '100%' }}/>
+                            </Grid>
+                            <Grid item sm={12}>
+                                <TextField id="standard-basic" label="City/District" size="small" sx={{ width: '100%' }}/>
+                            </Grid>
+                            <Grid item sm={12}>
+                                <TextField id="standard-basic" label="Postal Code" size="small" sx={{ width: '100%' }}/>
+                            </Grid>
                         </Grid>
                     </Box>
-                    <Button
-                        variant="outlined"
-                        color="primary"
-                        sx={{ mr: 20 }}
-                        onClick={() => setOpenAlert(true)}
-                    >
-                        Update
-                    </Button>
-                    <Button variant="outlined" color="secondary" onClick={() => setOpen(false)}>
-                        Cancel
-                    </Button>
+                    <Box sx={{ mt: 3 }}>
+                        <Button
+                            variant="outlined"
+                            color="primary"
+                            sx={{ mr: 2 }}
+                            onClick={() => setOpenAlert(true)}
+                        >
+                            Update
+                        </Button>
+                        <Button variant="outlined" color="secondary" onClick={() => setOpen(false)}>
+                            Cancel
+                        </Button>
+                    </Box>
                 </CustomContainer>
             </Modal>
             <Snackbar
