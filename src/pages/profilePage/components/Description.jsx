@@ -64,6 +64,24 @@ const Description = () => {
                         </Typography>
                     </CardContent>
                 </Box>
+                <Box>
+                    <ListItem>
+                        <Typography variant="h5">
+                            Skills
+                        </Typography>
+                    </ListItem>
+                    <CardContent>
+                        <Typography variant="body2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Id, dolorum quae aliquam explicabo a in tenetur at. 
+                            Deserunt explicabo quis quaerat dolorem id iusto delectus, neque asperiores! 
+                            Tenetur, facere culpa. Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                            Voluptates asperiores magnam natus nisi officiis, 
+                            reprehenderit aperiam deserunt atque maxime at iusto, consequuntur esse, 
+                            ipsa fugit blanditiis praesentium laudantium rem distinctio?
+                        </Typography>
+                    </CardContent>
+                </Box>
             </Box>
         </Box>
     );
