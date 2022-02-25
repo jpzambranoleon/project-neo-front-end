@@ -1,4 +1,5 @@
 import { Alert, Box, Button, Container, Grid, Modal, Snackbar, styled, TextField, Typography } from "@mui/material";
+import { height } from "@mui/system";
 import { useState } from "react";
 
 const CustomContainer = styled(Container)(({ theme }) => ({
@@ -12,8 +13,8 @@ const CustomContainer = styled(Container)(({ theme }) => ({
     right: 0,
     margin: "auto",
     [theme.breakpoints.down("sm")]: {
-        width: '100vh',
-        height: '100vh'
+        width: "100%",
+        height: "100%"
     }
 }));
 
@@ -54,8 +55,16 @@ const EditButton = () => {
                                     size="small"
                                 />
                             </Grid>
-                            <Grid item sm={6} xs={12}>
-                                <TextField id="standard-basic" label="Last Name" size="small" sx={{ width: '100%' }}/>
+                            <Grid item xs={12} sm={6}>
+                                <TextField
+                                    required
+                                    fullWidth
+                                    id="lastName"
+                                    label="Last Name"
+                                    name="lastName"
+                                    autoComplete="family-name"
+                                    size="small"
+                                />
                             </Grid>
                             <Grid item sm={12}>
                                 <TextField id="standard-basic" label="Headine" size="small" sx={{ width: '100%' }}/>
