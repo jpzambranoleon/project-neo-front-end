@@ -1,9 +1,12 @@
 import { Edit } from "@mui/icons-material";
-import { Avatar, Box, Typography, Container, CardMedia, CardContent, Button, IconButton, ListItem, Tabs, Tab, Tooltip} from "@mui/material";
+import { Avatar, Box, Typography, Container, CardMedia, CardContent, Button, IconButton, ListItem, Tabs, Tab, Tooltip, Modal} from "@mui/material";
 import { grey } from "@mui/material/colors";
+import { useState } from "react";
 import EditButton from "./EditButton";
 
 const Description = () => {
+    const [open, setOpen] = useState(false);
+    
     return (
         <Box component="main">
             <Box sx={{ bgcolor: 'white' }}>
@@ -46,11 +49,18 @@ const Description = () => {
                         <Typography variant="h5">
                             About
                         </Typography>
-                        <Tooltip title="Edit">
+                        <Tooltip title="Edit" onClick={() => setOpen(true)}>
                             <IconButton>
                                 <Edit />
                             </IconButton>
                         </Tooltip>
+                        <Modal open={open}>
+                            <Container>
+                                <Typography>
+                                    Hello
+                                </Typography>
+                            </Container>
+                        </Modal>
                     </ListItem>
                     <CardContent>
                         <Typography variant="body2">
