@@ -28,7 +28,7 @@ const Description = () => {
                     <Typography variant="body2" color={grey[500]}>
                         Tokyo, Japan
                     </Typography>
-                    <Button sx={{ mt: 2, fontSize: 10 }} variant="contained" size="small">
+                    <Button sx={{ mt: 2, fontSize: 10, textTransform: 'none' }} variant="contained" size="small">
                         Contact Info
                     </Button>
                 </Container>
