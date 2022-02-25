@@ -1,4 +1,4 @@
-import { Alert, Box, Button, Container, Grid, Modal, Snackbar, styled, TextField } from "@mui/material";
+import { Alert, Box, Button, Container, Grid, Modal, Snackbar, styled, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 
 const CustomContainer = styled(Container)(({ theme }) => ({
@@ -33,7 +33,10 @@ const EditButton = () => {
             </Box>
             <Modal open={open}>
                 <CustomContainer>
-                    <Box sx={{ mt: 3 }} component="form">
+                    <Typography sx={{ mt: 2 }}>
+                        Edit Profile
+                    </Typography>
+                    <Box sx={{ mt: 2 }} component="form">
                         <Grid container spacing={2}>
                             <Grid item sm={6} xs={12}>
                                 <TextField id="standard-basic" label="First Name" size="small" sx={{ width: '100%' }}/>
