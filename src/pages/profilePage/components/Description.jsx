@@ -1,4 +1,4 @@
-import { Edit } from "@mui/icons-material";
+import { Cancel, Edit } from "@mui/icons-material";
 import { Avatar, Box, Typography, Container, CardMedia, CardContent, Button, IconButton, ListItem, Tabs, Tab, Tooltip, Modal, styled, TextField} from "@mui/material";
 import { grey } from "@mui/material/colors";
 import { useState } from "react";
@@ -72,9 +72,14 @@ const Description = () => {
                         </Tooltip>
                         <Modal open={open}>
                             <CustomContainer>
-                                <Typography>
-                                    Hello
-                                </Typography>
+                                <Box sx={{ mt: 2, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                                    <Typography>
+                                        About
+                                    </Typography>
+                                    <IconButton onClick={() => setOpen(false)}>
+                                        <Cancel />
+                                    </IconButton>
+                                </Box>
                                 <TextField 
                                     id="outline-multiline-static"
                                     multiline
