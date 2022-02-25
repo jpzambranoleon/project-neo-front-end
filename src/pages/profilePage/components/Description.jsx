@@ -88,7 +88,7 @@ const Description = () => {
                                 <Button>
                                     Save
                                 </Button>
-                                <Button>
+                                <Button variant="outlined" color="secondary" onClick={() => setOpen(false)}>
                                     Cancel
                                 </Button>
                             </CustomContainer>
