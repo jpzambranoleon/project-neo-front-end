@@ -66,8 +66,8 @@ const EditButton = () => {
                                     size="small"
                                 />
                             </Grid>
-                            <Grid item sm={12}>
-                                <TextField id="standard-basic" label="Headine" size="small" sx={{ width: '100%' }}/>
+                            <Grid item xs={12} sm={12}>
+                                <TextField id="standard-basic" label="Headline" size="small" sx={{ width: '100%' }}/>
                             </Grid>
                             <Grid item sm={12}>
                                 <TextField id="standard-basic" label="Country/Region" size="small" sx={{ width: '100%' }}/>
