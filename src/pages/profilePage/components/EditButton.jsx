@@ -10,7 +10,11 @@ const CustomContainer = styled(Container)(({ theme }) => ({
     bottom: 0,
     left: 0,
     right: 0,
-    margin: "auto"
+    margin: "auto",
+    [theme.breakpoints.down("sm")]: {
+        width: '100vh',
+        height: '100vh'
+    }
 }));
 
 const EditButton = () => {
@@ -38,8 +42,17 @@ const EditButton = () => {
                     </Typography>
                     <Box sx={{ mt: 2 }} component="form">
                         <Grid container spacing={2}>
-                            <Grid item sm={6} xs={12}>
-                                <TextField id="standard-basic" label="First Name" size="small" sx={{ width: '100%' }}/>
+                            <Grid item xs={12} sm={6}>
+                                <TextField
+                                    autoComplete="given-name"
+                                    name="fistName"
+                                    required
+                                    fullWidth
+                                    id="firstName"
+                                    label="First Name"
+                                    autoFocus
+                                    size="small"
+                                />
                             </Grid>
                             <Grid item sm={6} xs={12}>
                                 <TextField id="standard-basic" label="Last Name" size="small" sx={{ width: '100%' }}/>
