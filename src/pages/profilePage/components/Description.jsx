@@ -85,10 +85,10 @@ const Description = () => {
                                     size="small"
                                     sx={{ width: '100%' }}
                                 />
-                                <Button>
+                                <Button sx={{ textTransform: 'none' }} variant="outlined">
                                     Save
                                 </Button>
-                                <Button variant="outlined" color="secondary" onClick={() => setOpen(false)}>
+                                <Button sx={{ textTransform: 'none' }} variant="outlined" color="secondary" onClick={() => setOpen(false)}>
                                     Cancel
                                 </Button>
                             </CustomContainer>
