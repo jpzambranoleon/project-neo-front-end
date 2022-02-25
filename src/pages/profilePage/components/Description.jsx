@@ -1,8 +1,24 @@
 import { Edit } from "@mui/icons-material";
-import { Avatar, Box, Typography, Container, CardMedia, CardContent, Button, IconButton, ListItem, Tabs, Tab, Tooltip, Modal} from "@mui/material";
+import { Avatar, Box, Typography, Container, CardMedia, CardContent, Button, IconButton, ListItem, Tabs, Tab, Tooltip, Modal, styled} from "@mui/material";
 import { grey } from "@mui/material/colors";
 import { useState } from "react";
 import EditButton from "./EditButton";
+
+const CustomContainer = styled(Container)(({ theme }) => ({
+    width: 500,
+    height: 550,
+    backgroundColor: theme.palette.common.white,
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    margin: "auto",
+    [theme.breakpoints.down("sm")]: {
+        width: "100%",
+        height: "100%"
+    }
+}));
 
 const Description = () => {
     const [open, setOpen] = useState(false);
@@ -55,11 +71,11 @@ const Description = () => {
                             </IconButton>
                         </Tooltip>
                         <Modal open={open}>
-                            <Container>
+                            <CustomContainer>
                                 <Typography>
                                     Hello
                                 </Typography>
-                            </Container>
+                            </CustomContainer>
                         </Modal>
                     </ListItem>
                     <CardContent>
