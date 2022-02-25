@@ -43,6 +43,14 @@ const EditButton = () => {
                             </Grid>
                         </Grid>
                     </Box>
+                    <Button
+                        variant="outlined"
+                        color="primary"
+                        sx={{ mr: 20 }}
+                        onClick={() => setOpenAlert(true)}
+                    >
+                        Update
+                    </Button>
                     <Button variant="outlined" color="secondary" onClick={() => setOpen(false)}>
                         Cancel
                     </Button>
