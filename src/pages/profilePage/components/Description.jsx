@@ -41,27 +41,29 @@ const Description = () => {
                 </Tabs>
             </Box>
             <Box sx={{ mt: 3, bgcolor: "white" }}>
-                <ListItem sx={{ justifyContent: 'space-between' }}>
-                    <Typography variant="h5">
-                        About
-                    </Typography>
-                    <Tooltip title="Edit">
-                        <IconButton>
-                            <Edit />
-                        </IconButton>
-                    </Tooltip>
-                </ListItem>
-                <CardContent>
-                    <Typography variant="body2">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Id, dolorum quae aliquam explicabo a in tenetur at. 
-                        Deserunt explicabo quis quaerat dolorem id iusto delectus, neque asperiores! 
-                        Tenetur, facere culpa. Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                        Voluptates asperiores magnam natus nisi officiis, 
-                        reprehenderit aperiam deserunt atque maxime at iusto, consequuntur esse, 
-                        ipsa fugit blanditiis praesentium laudantium rem distinctio?
-                    </Typography>
-                </CardContent>
+                <Box>
+                    <ListItem sx={{ justifyContent: 'space-between' }}>
+                        <Typography variant="h5">
+                            About
+                        </Typography>
+                        <Tooltip title="Edit">
+                            <IconButton>
+                                <Edit />
+                            </IconButton>
+                        </Tooltip>
+                    </ListItem>
+                    <CardContent>
+                        <Typography variant="body2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Id, dolorum quae aliquam explicabo a in tenetur at. 
+                            Deserunt explicabo quis quaerat dolorem id iusto delectus, neque asperiores! 
+                            Tenetur, facere culpa. Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                            Voluptates asperiores magnam natus nisi officiis, 
+                            reprehenderit aperiam deserunt atque maxime at iusto, consequuntur esse, 
+                            ipsa fugit blanditiis praesentium laudantium rem distinctio?
+                        </Typography>
+                    </CardContent>
+                </Box>
             </Box>
         </Box>
     );
