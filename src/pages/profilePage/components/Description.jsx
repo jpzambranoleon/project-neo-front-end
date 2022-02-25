@@ -76,9 +76,6 @@ const Description = () => {
                                     <Typography>
                                         About
                                     </Typography>
-                                    <IconButton onClick={() => setOpen(false)}>
-                                        <Cancel />
-                                    </IconButton>
                                 </Box>
                                 <TextField 
                                     id="outline-multiline-static"
@@ -88,6 +85,12 @@ const Description = () => {
                                     size="small"
                                     sx={{ width: '100%' }}
                                 />
+                                <Button>
+                                    Save
+                                </Button>
+                                <Button>
+                                    Cancel
+                                </Button>
                             </CustomContainer>
                         </Modal>
                     </ListItem>
