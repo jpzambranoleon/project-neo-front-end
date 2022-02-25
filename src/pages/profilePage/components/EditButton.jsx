@@ -2,8 +2,7 @@ import { Alert, Box, Button, Container, Grid, Modal, Snackbar, styled, TextField
 import { useState } from "react";
 
 const CustomContainer = styled(Container)(({ theme }) => ({
-    width: 500,
-    height: 550,
+    
     backgroundColor: theme.palette.common.white,
     position: 'absolute',
     top: 0,
