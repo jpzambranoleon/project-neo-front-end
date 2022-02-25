@@ -66,17 +66,52 @@ const EditButton = () => {
                                     size="small"
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={12}>
-                                <TextField id="standard-basic" label="Headline" size="small" sx={{ width: '100%' }}/>
+                            <Grid item xs={12}>
+                                <TextField
+                                    required
+                                    fullWidth
+                                    id="email"
+                                    label="Email Address"
+                                    name="email"
+                                    autoComplete="email"
+                                    size="small"
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <TextField
+                                    fullWidth
+                                    id="headline"
+                                    label="Headline"
+                                    name="headline"
+                                    size="small"
+                                />
                             </Grid>
                             <Grid item sm={12}>
-                                <TextField id="standard-basic" label="Country/Region" size="small" sx={{ width: '100%' }}/>
+                                <TextField
+                                    fullWidth
+                                    id="country"
+                                    label="Country"
+                                    name="country"
+                                    size="small"
+                                />
                             </Grid>
                             <Grid item sm={12}>
-                                <TextField id="standard-basic" label="City/District" size="small" sx={{ width: '100%' }}/>
+                                <TextField
+                                    fullWidth 
+                                    id="city/district" 
+                                    label="City/District"
+                                    name="city/district" 
+                                    size="small"
+                                />
                             </Grid>
                             <Grid item sm={12}>
-                                <TextField id="standard-basic" label="Postal Code" size="small" sx={{ width: '100%' }}/>
+                                <TextField 
+                                    fullWidth
+                                    id="postalCode" 
+                                    label="Postal Code"
+                                    name="postalCode" 
+                                    size="small" 
+                                />
                             </Grid>
                         </Grid>
                     </Box>
