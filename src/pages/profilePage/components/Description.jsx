@@ -1,5 +1,5 @@
 import { Edit } from "@mui/icons-material";
-import { Avatar, Box, Typography, Container, CardMedia, CardContent, Button, IconButton, ListItem, Tabs, Tab, Tooltip, Modal, styled} from "@mui/material";
+import { Avatar, Box, Typography, Container, CardMedia, CardContent, Button, IconButton, ListItem, Tabs, Tab, Tooltip, Modal, styled, TextField} from "@mui/material";
 import { grey } from "@mui/material/colors";
 import { useState } from "react";
 import EditButton from "./EditButton";
@@ -75,6 +75,14 @@ const Description = () => {
                                 <Typography>
                                     Hello
                                 </Typography>
+                                <TextField 
+                                    id="outline-multiline-static"
+                                    multiline
+                                    rows={5}
+                                    variant="outlined"
+                                    size="small"
+                                    sx={{ width: '100%' }}
+                                />
                             </CustomContainer>
                         </Modal>
                     </ListItem>
