@@ -128,7 +128,7 @@ const EditButton = () => {
                             sx={{ mr: 2 }}
                             onClick={() => setOpenAlert(true)}
                         >
-                            Update
+                            Save
                         </Button>
                     </Box>
                 </CustomContainer>
