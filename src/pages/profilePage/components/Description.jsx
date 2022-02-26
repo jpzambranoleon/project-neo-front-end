@@ -23,7 +23,7 @@ const CustomContainer = styled(Container)(({ theme }) => ({
 const Description = () => {
     const [open, setOpen] = useState(false);
 
-    const [value, setValue] = useState('1');
+    const [value, setValue] = useState(0);
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
@@ -58,7 +58,7 @@ const Description = () => {
                     </Button>
                 </Container>
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }} >
-                    <Tabs centered>
+                    <Tabs value={value} onChange={handleChange} centered>
                         <Tab sx={{ textTransform: 'none' }} label="About" />
                         <Tab sx={{ textTransform: 'none' }} label="Posts" />
                         <Tab sx={{ textTransform: 'none' }} label="Projects" />
