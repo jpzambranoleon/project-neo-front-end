@@ -59,7 +59,7 @@ const Description = () => {
                     <Tab label="Saved" />
                 </Tabs>
             </Box>
-            <Box sx={{ mt: 3, bgcolor: "white" }}>
+            <Box sx={{ bgcolor: "white" }}>
                 <Box>
                     <ListItem sx={{ justifyContent: 'space-between' }}>
                         <Typography variant="h5">
