@@ -1,4 +1,4 @@
-import { Box, Grid, Paper, TextField } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import Navbar from "../../components/Navbar";
 import { makeStyles } from "@mui/styles";
 import Description from "./components/Description";
