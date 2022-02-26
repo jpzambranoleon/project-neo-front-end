@@ -1,4 +1,3 @@
-import { MoreVert } from "@mui/icons-material";
 import { Avatar, Box, Card, CardActionArea, CardContent, CardHeader, CardMedia, Container, Divider, IconButton, ListItem, ListItemAvatar, ListItemButton, Typography } from "@mui/material";
 
 const Projects = () => {
