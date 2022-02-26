@@ -1,4 +1,4 @@
-import { Avatar, Box, Card, CardActionArea, CardContent, CardHeader, CardMedia, Container, Divider, IconButton, ListItem, ListItemAvatar, ListItemButton, Typography } from "@mui/material";
+import { Box, CardActionArea, CardContent, CardMedia, ListItem, Typography } from "@mui/material";
 
 const Projects = () => {
     return (
