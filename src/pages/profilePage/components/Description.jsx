@@ -52,12 +52,14 @@ const Description = () => {
                         Contact Info
                     </Button>
                 </Container>
-                <Tabs centered>
-                    <Tab label="About" />
-                    <Tab label="Posts" />
-                    <Tab label="Projects" />
-                    <Tab label="Saved" />
-                </Tabs>
+                <Box sx={{ borderBottom: 1, borderColor: 'divider' }} >
+                    <Tabs centered>
+                        <Tab label="About" />
+                        <Tab label="Posts" />
+                        <Tab label="Projects" />
+                        <Tab label="Saved" />
+                    </Tabs>
+                </Box>
             </Box>
             <Box sx={{ bgcolor: "white" }}>
                 <Box>
