@@ -54,10 +54,10 @@ const Description = () => {
                 </Container>
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }} >
                     <Tabs centered>
-                        <Tab label="About" />
-                        <Tab label="Posts" />
-                        <Tab label="Projects" />
-                        <Tab label="Saved" />
+                        <Tab sx={{ textTransform: 'none' }} label="About" />
+                        <Tab sx={{ textTransform: 'none' }} label="Posts" />
+                        <Tab sx={{ textTransform: 'none' }} label="Projects" />
+                        <Tab sx={{ textTransform: 'none' }} label="Saved" />
                     </Tabs>
                 </Box>
             </Box>
