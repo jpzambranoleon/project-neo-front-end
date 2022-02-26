@@ -22,6 +22,11 @@ const CustomContainer = styled(Container)(({ theme }) => ({
 
 const Description = () => {
     const [open, setOpen] = useState(false);
+
+    const [value, setValue] = useState('1');
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
     
     return (
         <Box component="main">
