@@ -1,5 +1,5 @@
 import { Code, EmojiEmotions, Label, PermMedia,} from "@mui/icons-material";
-import { alpha, Button, InputBase, Typography, Paper, Box, ListItem } from "@mui/material";
+import { Button, Typography, Paper, Box, ListItem } from "@mui/material";
 
 const Post = () => {
     return (
