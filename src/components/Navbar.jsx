@@ -3,12 +3,9 @@ import { alpha, AppBar, Avatar, Badge, InputBase, Toolbar, Typography, styled, B
 import { useState } from "react";
 
 const CustomToolbar = styled(Toolbar)(({ theme }) => ({
-    display: 'flex',
-    justifyContent: 'space-between',
-    width: '80%',
-    margin: '0 auto',
-    [theme.breakpoints.down('sm')]: {
-        width: '100%'
+    [theme.breakpoints.up('sm')]: {
+        width: '80%',
+        margin: '0 auto'
     }
 }));
 
@@ -59,7 +56,7 @@ const Navbar = () => {
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar>
-                <Toolbar sx={{ width: '80%', margin: '0 auto' }}>
+                <CustomToolbar>
                     <IconButton
                         size="large"
                         edge="start"
@@ -73,7 +70,7 @@ const Navbar = () => {
                         MUI
                     </Typography>
                     <Button color="inherit">Login</Button>
-                </Toolbar>
+                </CustomToolbar>
             </AppBar>
         </Box>
     )
