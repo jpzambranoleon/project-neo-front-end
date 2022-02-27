@@ -65,7 +65,7 @@ const Navbar = () => {
                     component="div"
                     sx={{ display: { xs: 'block', sm: 'block' } }}
                 >
-                    Project-NEO
+                    NEO
                 </Typography>
 
                 <SearchField>
@@ -78,34 +78,21 @@ const Navbar = () => {
                     />
                 </SearchField>
                 <Box sx={{ flexGrow: 1 }} />
-                <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center' }}>
-                    <Box>
-                        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                            <Badge badgeContent={4} color="error">
-                                <Mail />
-                            </Badge>
-                        </IconButton>
-                        <IconButton
-                            size="large"
-                            aria-label="show 17 new notifications"
-                            color="inherit"
-                        >
-                            <Badge badgeContent={17} color="error">
-                                <Notifications />
-                            </Badge>
-                        </IconButton>
-                    </Box>
-                    <Box>
-                        <IconButton
-                            size="medium"
-                            edge="end"
-                            aria-label="account of current user"
-                            aria-haspopup="true"
-                            color="inherit"
-                        >
-                            <Avatar src="assets/person/diana.jpg"/>
-                        </IconButton>
-                    </Box>
+                <Box sx={{ alignItems: 'center' }}>
+                    <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+                        <Badge badgeContent={4} color="error">
+                            <Mail />
+                        </Badge>
+                    </IconButton>
+                    <IconButton
+                        size="large"
+                        aria-label="show 17 new notifications"
+                        color="inherit"
+                    >
+                        <Badge badgeContent={17} color="error">
+                            <Notifications />
+                        </Badge>
+                    </IconButton>
                 </Box>
             </CustomToolbar>
         </AppBar>
