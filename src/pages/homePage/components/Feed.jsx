@@ -21,7 +21,7 @@ const Feed = () => {
                 image="/assets/post/post5.jpg"
             />
             <CardActions disableSpacing sx={{ justifyContent: "space-between" }}>
-                <div>
+                <Box>
                     <IconButton>
                         <FavoriteBorderOutlined />
                     </IconButton>
@@ -31,12 +31,12 @@ const Feed = () => {
                     <IconButton>
                         <ShareOutlined />
                     </IconButton>
-                </div>
-                <div>
+                </Box>
+                <Box>
                     <IconButton>
                         <BookmarkBorderOutlined />
                     </IconButton>
-                </div>
+                </Box>
             </CardActions>
         </Paper>
     )
