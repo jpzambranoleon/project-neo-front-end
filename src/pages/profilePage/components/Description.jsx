@@ -126,6 +126,18 @@ const Description = () => {
                         <Button sx={{ mr: 3, textTransform: 'none' }}>
                             CSS
                         </Button>
+                        <Button sx={{ mr: 3, textTransform: 'none' }}>
+                            React
+                        </Button>
+                        <Button sx={{ mr: 3, textTransform: 'none' }}>
+                            Front-End Web Development
+                        </Button>
+                        <Button sx={{ mr: 3, textTransform: 'none' }}>
+                            MUI
+                        </Button>
+                        <Button sx={{ mr: 3, textTransform: 'none' }}>
+                            Node JS
+                        </Button>
                     </CardContent>
                 </Box>
             </Box>
