@@ -1,6 +1,5 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, styled } from "@mui/material";
 import Navbar from "../../components/Navbar";
-import { makeStyles } from "@mui/styles";
 import Feed from "./components/Feed";
 import Post from "./components/Post";
 import Sidebar from "../../components/Sidebar";
@@ -8,25 +7,20 @@ import User from "../../components/User";
 import Tags from "./components/Tags";
 import News from "../../components/News";
 
-const useStyles = makeStyles((theme) => ({
-    boxContainer: {
-        width: "80%",
-        margin:"0 auto",
-        marginTop: theme.spacing(10),
-
-        [theme.breakpoints.down("sm")]: {
-            width: "100%"
-        }
-    },
-}))
-
+const CustomBox = styled(Box)(({ theme }) => ({
+    width: '80%',
+    margin: '0 auto',
+    marginTop: theme.spacing(10),
+    [theme.breakpoints.down("sm")]: {
+        width: '100%'
+    }
+}));
 
 export default function Home() {
-    const classes = useStyles();
     return (
         <div>
             <Navbar />
-            <Box className={classes.boxContainer}>
+            <CustomBox>
                 <Grid container spacing={3} justifyContent="center">
                     <Grid item sm={3}>
                         <Box>
@@ -47,7 +41,7 @@ export default function Home() {
                         </Box>
                     </Grid>
                 </Grid>
-            </Box>
+            </CustomBox>
         </div>
     );
 }
