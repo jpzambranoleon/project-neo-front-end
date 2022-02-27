@@ -1,5 +1,5 @@
-import { AccountCircle, Cancel, Mail, Notifications, Search } from "@mui/icons-material";
-import { alpha, AppBar, Avatar, Badge, InputBase, Toolbar, Typography, styled, Box, IconButton, CardMedia, CardActionArea } from "@mui/material"
+import { AccountCircle, Cancel, Mail, Menu, Notifications, Search } from "@mui/icons-material";
+import { alpha, AppBar, Avatar, Badge, InputBase, Toolbar, Typography, styled, Box, IconButton, CardMedia, CardActionArea, Button } from "@mui/material"
 import { useState } from "react";
 
 const CustomToolbar = styled(Toolbar)(({ theme }) => ({
@@ -60,7 +60,19 @@ const Navbar = () => {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar>
                 <Toolbar>
-                    
+                    <IconButton
+                        size="large"
+                        edge="start"
+                        color="inherit"
+                        aria-label="menu"
+                        sx={{ mr: 2 }}
+                    >
+                        <Menu />
+                    </IconButton>
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                        MUI
+                    </Typography>
+                    <Button color="inherit">Login</Button>
                 </Toolbar>
             </AppBar>
         </Box>
