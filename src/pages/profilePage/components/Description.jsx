@@ -120,7 +120,12 @@ const Description = () => {
                         </Typography>
                     </ListItem>
                     <CardContent>
-                        
+                        <Button sx={{ mr: 3, textTransform: 'none' }}>
+                            JavaScript
+                        </Button>
+                        <Button sx={{ mr: 3, textTransform: 'none' }}>
+                            CSS
+                        </Button>
                     </CardContent>
                 </Box>
             </Box>
