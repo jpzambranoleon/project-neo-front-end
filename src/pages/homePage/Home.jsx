@@ -1,11 +1,9 @@
-import { Box, Button, Card, Divider, Grid, Link, Paper, Typography } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import Navbar from "../../components/Navbar";
 import { makeStyles } from "@mui/styles";
 import Feed from "./components/Feed";
 import Post from "./components/Post";
 import Sidebar from "../../components/Sidebar";
-import Follow from "./components/Follow";
-import Projects from "./components/Projects";
 import User from "../../components/User";
 import Tags from "./components/Tags";
 import News from "../../components/News";
