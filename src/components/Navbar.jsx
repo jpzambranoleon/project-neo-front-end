@@ -59,7 +59,9 @@ const Navbar = () => {
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar>
-                
+                <Toolbar>
+                    
+                </Toolbar>
             </AppBar>
         </Box>
     )
