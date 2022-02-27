@@ -59,43 +59,7 @@ const Navbar = () => {
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar>
-                <CustomToolbar>
-                    <Typography 
-                        variant="h6" 
-                        noWrap
-                        component="div"
-                        sx={{ display: { xs: 'block', sm: 'block' } }}
-                    >
-                        NEO
-                    </Typography>
-
-                    <SearchField>
-                        <SearchIconWrapper>
-                            <Search />
-                        </SearchIconWrapper>
-                        <StyledInputBase
-                            placeholder="Search…"
-                            inputProps={{ 'aria-label': 'search' }}
-                        />
-                    </SearchField>
-                    <Box sx={{ flexGrow: 1 }} />
-                    <Box sx={{ alignItems: 'center' }}>
-                        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                            <Badge badgeContent={4} color="error">
-                                <Mail />
-                            </Badge>
-                        </IconButton>
-                        <IconButton
-                            size="large"
-                            aria-label="show 17 new notifications"
-                            color="inherit"
-                        >
-                            <Badge badgeContent={17} color="error">
-                                <Notifications />
-                            </Badge>
-                        </IconButton>
-                    </Box>
-                </CustomToolbar>
+                
             </AppBar>
         </Box>
     )
