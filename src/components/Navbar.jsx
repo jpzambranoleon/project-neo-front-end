@@ -2,6 +2,16 @@ import { AccountCircle, Cancel, Mail, Notifications, Search } from "@mui/icons-m
 import { alpha, AppBar, Avatar, Badge, InputBase, Toolbar, Typography, styled, Box, IconButton, CardMedia, CardActionArea } from "@mui/material"
 import { useState } from "react";
 
+const CustomToolbar = styled(Toolbar)(({ theme }) => ({
+    display: 'flex',
+    justifyContent: 'space-between',
+    width: '80%',
+    margin: '0 auto',
+    [theme.breakpoints.down('sm')]: {
+        width: '100%'
+    }
+}));
+
 const SearchField = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -16,6 +26,9 @@ const SearchField = styled('div')(({ theme }) => ({
       marginLeft: theme.spacing(3),
       width: 'auto',
     },
+    [theme.breakpoints.down('sm')]: {
+        display: 'none'
+    }
 }));
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
@@ -37,7 +50,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
         transition: theme.transitions.create('width'),
         width: '100%',
         [theme.breakpoints.up('md')]: {
-        width: '20ch',
+            width: '20ch',
         },
     },
 }));
@@ -45,13 +58,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const Navbar = () => {
     return (
         <AppBar>
-            <Toolbar 
-                sx={{ 
-                    display: "flex",
-                    justifyContent: "space-between",
-                    width: "80%",
-                    margin: "0 auto" 
-                }}>
+            <CustomToolbar>
                 <Typography 
                     variant="h6" 
                     noWrap
@@ -100,7 +107,7 @@ const Navbar = () => {
                         </IconButton>
                     </Box>
                 </Box>
-            </Toolbar>
+            </CustomToolbar>
         </AppBar>
     )
 }
