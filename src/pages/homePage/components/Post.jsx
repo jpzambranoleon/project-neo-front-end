@@ -12,7 +12,7 @@ const Post = () => {
             <ListItem sx={{ mb: 2, display: 'flex', justifyContent: 'space-between' }}>
                 <Button>
                     <PermMedia htmlColor="green"/>
-                    <Box sx={{ ml: 1 }}>
+                    <Box sx={{ ml: 1, textTransform: 'none' }}>
                         <Typography variant="body3">
                             Media
                         </Typography>
@@ -20,7 +20,7 @@ const Post = () => {
                 </Button>
                 <Button>
                     <Label />
-                    <Box sx={{ ml: 1 }}>
+                    <Box sx={{ ml: 1, textTransform: 'none' }}>
                         <Typography variant="body3">
                             Tag
                         </Typography>
@@ -28,7 +28,7 @@ const Post = () => {
                 </Button>
                 <Button>
                     <Code htmlColor="goldenrod"/>
-                    <Box sx={{ ml: 1 }}>
+                    <Box sx={{ ml: 1, textTransform: 'none' }}>
                         <Typography variant="body3">
                             Code
                         </Typography>
@@ -36,7 +36,7 @@ const Post = () => {
                 </Button>
                 <Button>
                     <EmojiEmotions htmlColor="tomato"/>
-                    <Box sx={{ ml: 1 }}>
+                    <Box sx={{ ml: 1, textTransform: 'none' }}>
                         <Typography variant="body3">
                             Feelings
                         </Typography>
