@@ -2,13 +2,6 @@ import { AccountCircle, Cancel, Mail, Menu, Notifications, Search } from "@mui/i
 import { alpha, AppBar, Avatar, Badge, InputBase, Toolbar, Typography, styled, Box, IconButton, CardMedia, CardActionArea, Button } from "@mui/material"
 import { useState } from "react";
 
-const CustomToolbar = styled(Toolbar)(({ theme }) => ({
-    [theme.breakpoints.up('sm')]: {
-        width: '80%',
-        margin: '0 auto'
-    }
-}));
-
 const SearchField = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -56,13 +49,13 @@ const Navbar = () => {
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar>
-                <CustomToolbar>
+                <Toolbar sx={{ width: { sm: '80%' }, margin: { sm: '0 auto' } }}>
                     <IconButton
                         size="large"
                         edge="start"
                         color="inherit"
                         aria-label="menu"
-                        sx={{ mr: 2 }}
+                        sx={{ mr: 2, display: { sm: 'none' } }}
                     >
                         <Menu />
                     </IconButton>
@@ -70,7 +63,7 @@ const Navbar = () => {
                         MUI
                     </Typography>
                     <Button color="inherit">Login</Button>
-                </CustomToolbar>
+                </Toolbar>
             </AppBar>
         </Box>
     )
