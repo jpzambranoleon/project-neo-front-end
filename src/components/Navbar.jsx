@@ -1,6 +1,7 @@
 import { AccountCircle, Cancel, Mail, MenuTwoTone, Notifications, Search } from "@mui/icons-material";
 import { alpha, AppBar, Avatar, Badge, InputBase, Toolbar, Typography, styled, Box, IconButton, CardMedia, CardActionArea, Button, Tooltip, Menu, MenuItem } from "@mui/material"
 import { useState } from "react";
+import TemporaryDrawer from "./TemporaryDrawer";
 
 const SearchField = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -56,67 +57,70 @@ const Navbar = () => {
     };
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar>
-                <Toolbar sx={{ width: { sm: '80%' }, margin: { sm: '0 auto' } }}>
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="menu"
-                        sx={{ mr: 2, display: { sm: 'none' } }}
-                    >
-                        <MenuTwoTone />
-                    </IconButton>
-                    <Typography 
-                        variant="h6"
-                        noWrap 
-                        component="div" 
-                        sx={{ display: { xs: 'none', sm: 'block' } }}>
-                        LOGO
-                    </Typography>
-                    <SearchField>
-                        <SearchIconWrapper>
-                            <Search />
-                        </SearchIconWrapper>
-                        <StyledInputBase 
-                            placeholder="Search..."
-                            inputProps={{ 'aria-label': 'search' }}
-                        />
-                    </SearchField>
-                    <Box sx={{ flexGrow: 1 }}/>
-                    <Tooltip title="User">
-                        <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                            <Avatar alt="Diana Ayi" src="/assets/person/diana.jpg" />
+        <>
+            <TemporaryDrawer />
+            <Box sx={{ flexGrow: 1 }}>
+                <AppBar>
+                    <Toolbar sx={{ width: { sm: '80%' }, margin: { sm: '0 auto' } }}>
+                        <IconButton
+                            size="large"
+                            edge="start"
+                            color="inherit"
+                            aria-label="menu"
+                            sx={{ mr: 2, display: { sm: 'none' } }}
+                        >
+                            <MenuTwoTone />
                         </IconButton>
-                    </Tooltip>
-                    <Menu
-                        sx={{ mt: '45px' }}
-                        id="menu-appbar"
-                        anchorEl={anchorElUser}
-                        anchorOrigin={{
-                            vertical: 'top',
-                            horizontal: 'right',
-                        }}
-                        keepMounted
-                        transformOrigin={{
-                            vertical: 'top',
-                            horizontal: 'right',
-                        }}
-                        open={Boolean(anchorElUser)}
-                        onClose={handleCloseUserMenu}
-                    >
-                        {settings.map((setting) => (
-                            <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                <Typography textAlign="center">
-                                    {setting}
-                                </Typography>
-                            </MenuItem>
-                        ))}
-                    </Menu>
-                </Toolbar>
-            </AppBar>
-        </Box>
+                        <Typography 
+                            variant="h6"
+                            noWrap 
+                            component="div" 
+                            sx={{ display: { xs: 'none', sm: 'block' } }}>
+                            LOGO
+                        </Typography>
+                        <SearchField>
+                            <SearchIconWrapper>
+                                <Search />
+                            </SearchIconWrapper>
+                            <StyledInputBase 
+                                placeholder="Search..."
+                                inputProps={{ 'aria-label': 'search' }}
+                            />
+                        </SearchField>
+                        <Box sx={{ flexGrow: 1 }}/>
+                        <Tooltip title="User">
+                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                                <Avatar alt="Diana Ayi" src="/assets/person/diana.jpg" />
+                            </IconButton>
+                        </Tooltip>
+                        <Menu
+                            sx={{ mt: '45px' }}
+                            id="menu-appbar"
+                            anchorEl={anchorElUser}
+                            anchorOrigin={{
+                                vertical: 'top',
+                                horizontal: 'right',
+                            }}
+                            keepMounted
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'right',
+                            }}
+                            open={Boolean(anchorElUser)}
+                            onClose={handleCloseUserMenu}
+                        >
+                            {settings.map((setting) => (
+                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                                    <Typography textAlign="center">
+                                        {setting}
+                                    </Typography>
+                                </MenuItem>
+                            ))}
+                        </Menu>
+                    </Toolbar>
+                </AppBar>
+            </Box>
+        </>
     )
 }
 
