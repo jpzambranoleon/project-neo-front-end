@@ -9,10 +9,11 @@ const SearchField = styled('div')(({ theme }) => ({
     '&:hover': {
       backgroundColor: alpha(theme.palette.common.white, 0.25),
     },
+    marginRight: theme.spacing(2),
     marginLeft: 0,
     width: '100%',
     [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(1),
+      marginLeft: theme.spacing(3),
       width: 'auto',
     },
 }));
@@ -70,7 +71,7 @@ const Navbar = () => {
                     >
                         <MenuTwoTone />
                     </IconButton>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
                         LOGO
                     </Typography>
                     <SearchField>
