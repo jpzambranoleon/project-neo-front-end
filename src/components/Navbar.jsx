@@ -9,16 +9,12 @@ const SearchField = styled('div')(({ theme }) => ({
     '&:hover': {
       backgroundColor: alpha(theme.palette.common.white, 0.25),
     },
-    marginRight: theme.spacing(2),
     marginLeft: 0,
     width: '100%',
     [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(3),
+      marginLeft: theme.spacing(1),
       width: 'auto',
     },
-    [theme.breakpoints.down('sm')]: {
-        display: 'none'
-    }
 }));
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
@@ -40,7 +36,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
         transition: theme.transitions.create('width'),
         width: '100%',
         [theme.breakpoints.up('md')]: {
-            width: '20ch',
+            width: '12ch',
+            '&:focus': {
+                width: '20ch',
+            },
         },
     },
 }));
@@ -74,12 +73,22 @@ const Navbar = () => {
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         LOGO
                     </Typography>
+                    <SearchField>
+                        <SearchIconWrapper>
+                            <Search />
+                        </SearchIconWrapper>
+                        <StyledInputBase 
+                            placeholder="Search..."
+                            inputProps={{ 'aria-label': 'search' }}
+                        />
+                    </SearchField>
                     <Tooltip title="User">
-                        <IconButton>
+                        <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                             <Avatar alt="Diana Ayi" src="/assets/person/diana.jpg" />
                         </IconButton>
                     </Tooltip>
                     <Menu
+                        sx={{ mt: '45px' }}
                         id="menu-appbar"
                         anchorEl={anchorElUser}
                         anchorOrigin={{
