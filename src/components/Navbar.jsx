@@ -1,5 +1,5 @@
 import { AccountCircle, Cancel, Mail, Menu, Notifications, Search } from "@mui/icons-material";
-import { alpha, AppBar, Avatar, Badge, InputBase, Toolbar, Typography, styled, Box, IconButton, CardMedia, CardActionArea, Button } from "@mui/material"
+import { alpha, AppBar, Avatar, Badge, InputBase, Toolbar, Typography, styled, Box, IconButton, CardMedia, CardActionArea, Button, Tooltip } from "@mui/material"
 import { useState } from "react";
 
 const SearchField = styled('div')(({ theme }) => ({
@@ -62,7 +62,11 @@ const Navbar = () => {
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         LOGO
                     </Typography>
-                    <Button color="inherit">Login</Button>
+                    <Tooltip title="Open settings">
+                        <IconButton>
+                            <Avatar alt="Diana Ayi" src="/assets/person/diana.jpg" />
+                        </IconButton>
+                    </Tooltip>
                 </Toolbar>
             </AppBar>
         </Box>
