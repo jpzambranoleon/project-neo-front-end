@@ -1,5 +1,5 @@
-import { AccountCircle, Cancel, Mail, Menu, Notifications, Search } from "@mui/icons-material";
-import { alpha, AppBar, Avatar, Badge, InputBase, Toolbar, Typography, styled, Box, IconButton, CardMedia, CardActionArea, Button, Tooltip } from "@mui/material"
+import { AccountCircle, Cancel, Mail, MenuTwoTone, Notifications, Search } from "@mui/icons-material";
+import { alpha, AppBar, Avatar, Badge, InputBase, Toolbar, Typography, styled, Box, IconButton, CardMedia, CardActionArea, Button, Tooltip, Menu, MenuItem } from "@mui/material"
 import { useState } from "react";
 
 const SearchField = styled('div')(({ theme }) => ({
@@ -69,7 +69,7 @@ const Navbar = () => {
                         aria-label="menu"
                         sx={{ mr: 2, display: { sm: 'none' } }}
                     >
-                        <Menu />
+                        <MenuTwoTone />
                     </IconButton>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         LOGO
@@ -79,6 +79,29 @@ const Navbar = () => {
                             <Avatar alt="Diana Ayi" src="/assets/person/diana.jpg" />
                         </IconButton>
                     </Tooltip>
+                    <Menu
+                        id="menu-appbar"
+                        anchorEl={anchorElUser}
+                        anchorOrigin={{
+                            vertical: 'top',
+                            horizontal: 'right',
+                        }}
+                        keepMounted
+                        transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'right',
+                        }}
+                        open={Boolean(anchorElUser)}
+                        onClose={handleCloseUserMenu}
+                    >
+                        {settings.map((setting) => (
+                            <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                                <Typography textAlign="center">
+                                    {setting}
+                                </Typography>
+                            </MenuItem>
+                        ))}
+                    </Menu>
                 </Toolbar>
             </AppBar>
         </Box>
