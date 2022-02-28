@@ -45,7 +45,19 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
+const settings = ['Profile', 'Account', 'Logout']
+
 const Navbar = () => {
+    const [anchorElUser, setAnchorElUser] = useState(null);
+
+    const handleOpenUserMenu = (event) => {
+        setAnchorElUser(event.currentTarget);
+    };
+
+    const handleCloseUserMenu = () => {
+        setAnchorElUser(null);
+    };
+
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar>
@@ -62,7 +74,7 @@ const Navbar = () => {
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         LOGO
                     </Typography>
-                    <Tooltip title="Open settings">
+                    <Tooltip title="User">
                         <IconButton>
                             <Avatar alt="Diana Ayi" src="/assets/person/diana.jpg" />
                         </IconButton>
