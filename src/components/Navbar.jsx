@@ -31,14 +31,14 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: 'inherit',
     '& .MuiInputBase-input': {
-        padding: theme.spacing(1, 1, 1, 0),
-        // vertical padding + font size from searchIcon
-        paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-        transition: theme.transitions.create('width'),
-        width: '100%',
-        [theme.breakpoints.up('md')]: {
-            width: '20ch',
-        },
+      padding: theme.spacing(1, 1, 1, 0),
+      // vertical padding + font size from searchIcon
+      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+      transition: theme.transitions.create('width'),
+      width: '100%',
+      [theme.breakpoints.up('md')]: {
+        width: '20ch',
+      },
     },
 }));
 
@@ -68,7 +68,11 @@ const Navbar = () => {
                     >
                         <MenuTwoTone />
                     </IconButton>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
+                    <Typography 
+                        variant="h6"
+                        noWrap 
+                        component="div" 
+                        sx={{ display: { xs: 'none', sm: 'block' } }}>
                         LOGO
                     </Typography>
                     <SearchField>
@@ -80,6 +84,7 @@ const Navbar = () => {
                             inputProps={{ 'aria-label': 'search' }}
                         />
                     </SearchField>
+                    <Box sx={{ flexGrow: 1 }}/>
                     <Tooltip title="User">
                         <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                             <Avatar alt="Diana Ayi" src="/assets/person/diana.jpg" />
