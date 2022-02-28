@@ -46,6 +46,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const settings = ['Profile', 'Account', 'Logout']
 
 const Navbar = () => {
+
+    const [openDrawer, setOpenDrawer] = useState(false)
+
     const [anchorElUser, setAnchorElUser] = useState(null);
 
     const handleOpenUserMenu = (event) => {
@@ -58,7 +61,7 @@ const Navbar = () => {
 
     return (
         <>
-            <TemporaryDrawer />
+            <TemporaryDrawer openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
             <Box sx={{ flexGrow: 1 }}>
                 <AppBar>
                     <Toolbar sx={{ width: { sm: '80%' }, margin: { sm: '0 auto' } }}>
