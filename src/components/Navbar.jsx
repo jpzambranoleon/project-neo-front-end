@@ -47,6 +47,9 @@ const settings = ['Profile', 'Account', 'Logout']
 
 const Navbar = () => {
     const [openDrawer, setOpenDrawer] = useState(false);
+    const handleDrawerOpen = () => {
+        setOpenDrawer(true);
+    };
 
     const [anchorElUser, setAnchorElUser] = useState(null);
 
@@ -69,6 +72,7 @@ const Navbar = () => {
                             edge="start"
                             color="inherit"
                             aria-label="menu"
+                            onClick={handleDrawerOpen}
                             sx={{ mr: 2, display: { sm: 'none' } }}
                         >
                             <MenuTwoTone />

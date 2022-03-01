@@ -3,7 +3,7 @@ import { Box, Button, ClickAwayListener, Drawer, List, ListItem, ListItemButton,
 import { useState } from "react";
 
 
-const TemporaryDrawer = () => {
+const TemporaryDrawer = ({ openDrawer, setOpenDrawer }) => {
     const [open, setOpen] = useState(false);
 
     const handleClickAway = () => {
@@ -12,7 +12,7 @@ const TemporaryDrawer = () => {
 
     return (
         <ClickAwayListener onClickAway={handleClickAway}>
-        <Drawer anchor="left" sx={{ display: { sm: 'none' } }} >
+        <Drawer anchor="left" open={openDrawer} sx={{ display: { sm: 'none' } }} >
             <Box sx={{ width: 250 }}>
                 <ListItemButton>
                     <ListItemIcon>
