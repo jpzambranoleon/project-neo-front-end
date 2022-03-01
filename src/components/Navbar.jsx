@@ -1,4 +1,4 @@
-import { AccountCircle, Cancel, Mail, MenuTwoTone, Notifications, Search } from "@mui/icons-material";
+import { AccountCircle, Cancel, Mail, MenuTwoTone, Notifications, Search, SettingsInputAntennaTwoTone } from "@mui/icons-material";
 import { alpha, AppBar, Avatar, Badge, InputBase, Toolbar, Typography, styled, Box, IconButton, CardMedia, CardActionArea, Button, Tooltip, Menu, MenuItem } from "@mui/material"
 import { useState } from "react";
 import TemporaryDrawer from "./TemporaryDrawer";
@@ -47,13 +47,19 @@ const settings = ['Profile', 'Account', 'Logout']
 
 const Navbar = () => {
 
-    const [openDrawer, setOpenDrawer] = useState(false)
+    const [state, setState] = useState({
+        left: false
+    });
+
+    const toggleDrawer = (anchor, open) => (event) => {
+        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shit')) {
+            return;
+        }
+        
+        setState({ ...state, [anchor]: open });
+    };
 
     const [anchorElUser, setAnchorElUser] = useState(null);
-
-    const handleDrawerOpen = (event) => {
-        setOpenDrawer(true);
-    };
 
     const handleOpenUserMenu = (event) => {
         setAnchorElUser(event.currentTarget);
@@ -65,7 +71,7 @@ const Navbar = () => {
 
     return (
         <>
-            <TemporaryDrawer openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
+            <TemporaryDrawer  />
             <Box sx={{ flexGrow: 1 }}>
                 <AppBar>
                     <Toolbar sx={{ width: { sm: '80%' }, margin: { sm: '0 auto' } }}>
@@ -74,7 +80,6 @@ const Navbar = () => {
                             edge="start"
                             color="inherit"
                             aria-label="menu"
-                            onClick={handleDrawerOpen}
                             sx={{ mr: 2, display: { sm: 'none' } }}
                         >
                             <MenuTwoTone />
