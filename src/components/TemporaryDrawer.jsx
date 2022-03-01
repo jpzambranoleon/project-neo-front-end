@@ -1,5 +1,5 @@
 import { Apps, Bookmark, Close, Explore, Home, Inbox, LaptopChromebook, Message, Person, Settings } from "@mui/icons-material";
-import { Box, Button, ClickAwayListener, Container, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from "@mui/material";
+import { Avatar, Box, Button, CardActionArea, CardHeader, ClickAwayListener, Container, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Paper, Typography } from "@mui/material";
 import { useState } from "react";
 import User from "./User";
 
@@ -14,6 +14,7 @@ const TemporaryDrawer = ({ openDrawer, setOpenDrawer }) => {
         <Drawer anchor="left" open={openDrawer} sx={{ display: { sm: 'none' } }} >
             <ClickAwayListener onClickAway={handleDrawerClose}>
                 <Box sx={{ width: 250, height: '100%' }}>
+                    <div>
                     <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                         <Typography variant="h6">
                             Menu
@@ -86,6 +87,20 @@ const TemporaryDrawer = ({ openDrawer, setOpenDrawer }) => {
                             Settings
                         </ListItemText>
                     </ListItemButton>
+                    </div>
+                    <Container>
+                        <Paper>
+                            <CardActionArea>
+                                <CardHeader 
+                                    avatar={
+                                        <Avatar src="/assets/person/diana.jpg" />
+                                    }
+                                    title="Diana Ayi"
+                                    subheader="@dayi"
+                                />
+                            </CardActionArea>
+                        </Paper>
+                    </Container>
                 </Box>
             </ClickAwayListener>
         </Drawer>
