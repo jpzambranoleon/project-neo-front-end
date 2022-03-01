@@ -1,6 +1,7 @@
 import { Apps, Bookmark, Close, Explore, Home, Inbox, LaptopChromebook, Message, Person, Settings } from "@mui/icons-material";
 import { Box, Button, ClickAwayListener, Container, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from "@mui/material";
 import { useState } from "react";
+import User from "./User";
 
 
 const TemporaryDrawer = ({ openDrawer, setOpenDrawer }) => {
@@ -12,7 +13,7 @@ const TemporaryDrawer = ({ openDrawer, setOpenDrawer }) => {
     return (
         <Drawer anchor="left" open={openDrawer} sx={{ display: { sm: 'none' } }} >
             <ClickAwayListener onClickAway={handleDrawerClose}>
-                <Box sx={{ width: 250 }}>
+                <Box sx={{ width: 250, height: '100%' }}>
                     <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                         <Typography variant="h6">
                             Menu
