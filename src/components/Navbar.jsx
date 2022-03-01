@@ -51,6 +51,10 @@ const Navbar = () => {
 
     const [anchorElUser, setAnchorElUser] = useState(null);
 
+    const handleDrawerOpen = (event) => {
+        setOpenDrawer(true);
+    };
+
     const handleOpenUserMenu = (event) => {
         setAnchorElUser(event.currentTarget);
     };
@@ -70,6 +74,7 @@ const Navbar = () => {
                             edge="start"
                             color="inherit"
                             aria-label="menu"
+                            onClick={handleDrawerOpen}
                             sx={{ mr: 2, display: { sm: 'none' } }}
                         >
                             <MenuTwoTone />
