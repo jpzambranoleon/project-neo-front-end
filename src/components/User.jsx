@@ -2,7 +2,7 @@ import { Avatar, CardActionArea, CardHeader, Paper } from "@mui/material";
 
 const User = () => {
     return (
-        <Paper sx={{ mb: 2 }}>
+        <Paper sx={{ mb: 2, display: {xs: 'none', sm: 'block'} }}>
             <CardActionArea>
             <CardHeader
                 avatar={
