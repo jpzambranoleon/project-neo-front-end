@@ -1,4 +1,4 @@
-import { AccountCircle, Cancel, Mail, MenuTwoTone, Notifications, Search, SettingsInputAntennaTwoTone } from "@mui/icons-material";
+import { AccountCircle, Cancel, Mail, MenuTwoTone, Notifications, Search, SettingsInputAntennaTwoTone, SettingsPowerRounded } from "@mui/icons-material";
 import { alpha, AppBar, Avatar, Badge, InputBase, Toolbar, Typography, styled, Box, IconButton, CardMedia, CardActionArea, Button, Tooltip, Menu, MenuItem, ClickAwayListener } from "@mui/material"
 import { useState } from "react";
 import TemporaryDrawer from "./TemporaryDrawer";
@@ -46,7 +46,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const settings = ['Profile', 'Account', 'Logout']
 
 const Navbar = () => {
-
+    const [openDrawer, setOpenDrawer] = useState(false);
 
     const [anchorElUser, setAnchorElUser] = useState(null);
 
@@ -60,21 +60,19 @@ const Navbar = () => {
 
     return (
         <>
+            <TemporaryDrawer openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
             <Box sx={{ flexGrow: 1 }}>
                 <AppBar>
                     <Toolbar sx={{ width: { sm: '80%' }, margin: { sm: '0 auto' } }}>
-                        <ClickAwayListener>
                         <IconButton
                             size="large"
                             edge="start"
                             color="inherit"
                             aria-label="menu"
-                            
                             sx={{ mr: 2, display: { sm: 'none' } }}
                         >
                             <MenuTwoTone />
                         </IconButton>
-                        </ClickAwayListener>
                         <Typography 
                             variant="h6"
                             noWrap 
