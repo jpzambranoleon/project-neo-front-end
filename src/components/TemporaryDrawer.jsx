@@ -6,7 +6,7 @@ import { useState } from "react";
 const TemporaryDrawer = ({ openDrawer, setOpenDrawer }) => {
 
     return (
-        <Drawer anchor="left" open={openDrawer}>
+        <Drawer anchor="left" open={openDrawer} sx={{ display: { sm: 'none' } }} >
             <Box sx={{ width: 250 }}>
                 <ListItemButton>
                     <ListItemIcon>
