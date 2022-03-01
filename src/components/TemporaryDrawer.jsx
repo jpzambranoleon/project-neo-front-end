@@ -3,10 +3,10 @@ import { Box, Button, Drawer, List, ListItem, ListItemButton, ListItemIcon, List
 import { useState } from "react";
 
 
-const TemporaryDrawer = ({ openDrawer, setOpenDrawer }) => {
+const TemporaryDrawer = () => {
 
     return (
-        <Drawer anchor="left" open={openDrawer} sx={{ display: { sm: 'none' } }} >
+        <Drawer anchor="left" sx={{ display: { sm: 'none' } }} >
             <Box sx={{ width: 250 }}>
                 <ListItemButton>
                     <ListItemIcon>
