@@ -47,17 +47,8 @@ const settings = ['Profile', 'Account', 'Logout']
 
 const Navbar = () => {
 
-    const [state, setState] = useState({
-        left: false
-    });
+    const [openDrawer, setOpenDrawer] = useState(true);
 
-    const toggleDrawer = (anchor, open) => (event) => {
-        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shit')) {
-            return;
-        }
-        
-        setState({ ...state, [anchor]: open });
-    };
 
     const [anchorElUser, setAnchorElUser] = useState(null);
 
@@ -71,7 +62,7 @@ const Navbar = () => {
 
     return (
         <>
-            <TemporaryDrawer  />
+            <TemporaryDrawer openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
             <Box sx={{ flexGrow: 1 }}>
                 <AppBar>
                     <Toolbar sx={{ width: { sm: '80%' }, margin: { sm: '0 auto' } }}>
