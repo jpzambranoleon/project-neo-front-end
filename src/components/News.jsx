@@ -2,7 +2,7 @@ import { Box, Button, CardActionArea, CardContent, CardMedia, List, ListItem, Li
 
 const News = () => {
     return (
-        <Paper sx={{ mb: 2 }}>
+        <Paper>
             <Typography sx={{ ml: 1 }}>
                 News
             </Typography>
