@@ -6,6 +6,7 @@ import Sidebar from "../../components/Sidebar";
 import User from "../../components/User";
 import Tags from "./components/Tags";
 import News from "../../components/News";
+import Add from "./components/Add";
 
 const CustomBox = styled(Box)(({ theme }) => ({
     width: '80%',
@@ -43,6 +44,7 @@ export default function Home() {
                     </Grid>
                 </Grid>
             </CustomBox>
+            <Add />
         </div>
     );
 }
