@@ -1,4 +1,4 @@
-import { Box, Button, CardActionArea, CardContent, CardMedia, List, ListItem, ListItemButton, Paper, Typography } from "@mui/material";
+import { Button, CardActionArea, CardContent, CardMedia, Paper, Typography } from "@mui/material";
 
 const News = () => {
     return (
