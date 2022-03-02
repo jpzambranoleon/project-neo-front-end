@@ -2,7 +2,6 @@ import { Box, Grid, styled } from "@mui/material";
 import Navbar from "../../components/Navbar";
 import Description from "./components/Description";
 import Sidebar from "../../components/Sidebar";
-import Friends from "./components/Friends";
 import User from "../../components/User";
 import Images from "./components/Images";
 import News from "../../components/News";
@@ -36,7 +35,6 @@ export default function Profile() {
                     <Grid item sm={3}>
                         <Images />
                         <News />
-                        <Friends />
                     </Grid>
                 </Grid>
             </CustomBox>
