@@ -93,13 +93,10 @@ const Description = () => {
                                     rows={5}
                                     variant="outlined"
                                     size="small"
-                                    sx={{ mb: 2, width: '100%' }}
+                                    sx={{ mt: 2, width: '100%' }}
                                 />
-                                <Button sx={{ mr: 2, textTransform: 'none' }} variant="outlined">
+                                <Button sx={{ mt: 2, textTransform: 'none' }} variant="outlined">
                                     Save
-                                </Button>
-                                <Button sx={{ textTransform: 'none' }} variant="outlined" color="secondary" onClick={() => setOpen(false)}>
-                                    Exit
                                 </Button>
                             </CustomContainer>
                         </Modal>
