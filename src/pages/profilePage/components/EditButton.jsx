@@ -42,7 +42,7 @@ const EditButton = () => {
                         <Typography>
                             Edit Profile
                         </Typography>
-                        <IconButton>
+                        <IconButton onClick={() => setOpen(false)}>
                             <Cancel />
                         </IconButton>
                     </Box>
@@ -128,13 +128,6 @@ const EditButton = () => {
                             onClick={() => setOpenAlert(true)}
                         >
                             Save
-                        </Button>
-                        <Button
-                            variant="outlined"
-                            color="secondary"
-                            onClick={() => setOpen(false)}
-                        >
-                            Exit
                         </Button>
                     </Box>
                 </CustomContainer>
