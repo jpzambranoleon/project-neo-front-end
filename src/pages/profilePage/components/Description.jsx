@@ -83,7 +83,7 @@ const Description = () => {
                                     <Typography>
                                         About
                                     </Typography>
-                                    <IconButton>
+                                    <IconButton onClick={() => setOpen(false)}>
                                         <Close />
                                     </IconButton>
                                 </Box>
