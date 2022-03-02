@@ -1,4 +1,4 @@
-import { Edit } from "@mui/icons-material";
+import { Close, Edit } from "@mui/icons-material";
 import { Avatar, Box, Typography, Container, CardMedia, CardContent, Button, IconButton, ListItem, Tabs, Tab, Tooltip, Modal, styled, TextField, Divider} from "@mui/material";
 import { grey } from "@mui/material/colors";
 import { useState } from "react";
@@ -83,6 +83,9 @@ const Description = () => {
                                     <Typography>
                                         About
                                     </Typography>
+                                    <IconButton>
+                                        <Close />
+                                    </IconButton>
                                 </Box>
                                 <TextField 
                                     id="outline-multiline-static"
