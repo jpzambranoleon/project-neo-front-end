@@ -1,6 +1,18 @@
 import { Edit } from "@mui/icons-material";
-import { Alert, Box, Fab, Snackbar, styled, Tooltip } from "@mui/material"
+import { Alert, Box, Container, Fab, Modal, Snackbar, styled, Tooltip } from "@mui/material"
 import { useState } from "react"
+
+const CustomContainer = styled(Container)(({ theme }) => ({
+    width: 500,
+    height: 550,
+    backgroundColor: "white",
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    margin: "auto"
+}))
 
 const CustomFab = styled(Fab)(({ theme }) => ({
     position: 'fixed',
@@ -26,6 +38,13 @@ const Add = () => {
                     <Edit />
                 </CustomFab>
             </Tooltip>
+            <Modal open={open}>
+                <CustomContainer>
+                    <Box>
+                        
+                    </Box>
+                </CustomContainer>
+            </Modal>
             <Snackbar
                 open={openAlert}
                 autoHideDuration={4000}
