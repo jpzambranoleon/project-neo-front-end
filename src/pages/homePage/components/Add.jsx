@@ -55,7 +55,7 @@ const Add = () => {
                         size="small"
                         sx={{ mt: 2, width: '100%' }}
                     />
-                    <Box sx={{ mb: 2, position: 'absolute', bottom: 0  }}>
+                    <Box sx={{ mb: 2, position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'space-between'  }}>
                         <Box>
                         <Tooltip title="Media" placement="top">
                             <IconButton>
@@ -78,7 +78,7 @@ const Add = () => {
                             </IconButton>
                         </Tooltip>
                         </Box>
-                        <Box sx={{ position: 'relative' }}>
+                        <Box>
                             <Fab sx={{ textTransform: 'none' }} variant="extended" color="secondary">
                                 Post
                                 <Send sx={{ ml: 2  }} />
