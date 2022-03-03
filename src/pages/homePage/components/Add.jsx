@@ -1,4 +1,4 @@
-import { Cancel, Code, Edit, EmojiEmotions, PermMedia, Tag } from "@mui/icons-material";
+import { Cancel, Code, Edit, EmojiEmotions, PermMedia, Send, Tag } from "@mui/icons-material";
 import { Alert, Box, Container, Divider, Fab, IconButton, Modal, Snackbar, styled, Tooltip, Typography } from "@mui/material"
 import { useState } from "react"
 
@@ -68,8 +68,9 @@ const Add = () => {
                                 <EmojiEmotions />
                             </IconButton>
                         </Tooltip>
-                        <Fab variant="extended">
+                        <Fab sx={{ textTransform: 'none' }} variant="extended">
                             Post
+                            <Send />
                         </Fab>
                     </Box>
                 </CustomContainer>
