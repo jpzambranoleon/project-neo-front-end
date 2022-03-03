@@ -1,5 +1,5 @@
-import { Edit } from "@mui/icons-material";
-import { Alert, Box, Container, Fab, Modal, Snackbar, styled, Tooltip } from "@mui/material"
+import { Cancel, Edit } from "@mui/icons-material";
+import { Alert, Box, Container, Fab, IconButton, Modal, Snackbar, styled, Tooltip, Typography } from "@mui/material"
 import { useState } from "react"
 
 const CustomContainer = styled(Container)(({ theme }) => ({
@@ -40,8 +40,13 @@ const Add = () => {
             </Tooltip>
             <Modal open={open}>
                 <CustomContainer>
-                    <Box>
-                        
+                    <Box sx={{ mt: 2, display: 'flex', alignItems: 'center', justifyContent: 'space-between'  }}>
+                        <Typography>
+                            Create a post
+                        </Typography>
+                        <IconButton>
+                            <Cancel />
+                        </IconButton>
                     </Box>
                 </CustomContainer>
             </Modal>
