@@ -1,5 +1,5 @@
 import { Cancel, Code, Edit, EmojiEmotions, PermMedia, Send, Tag } from "@mui/icons-material";
-import { Alert, Box, Container, Divider, Fab, IconButton, Modal, Snackbar, styled, Tooltip, Typography } from "@mui/material"
+import { Alert, Box, Container, Divider, Fab, IconButton, Modal, Snackbar, styled, TextField, Tooltip, Typography } from "@mui/material"
 import { useState } from "react"
 
 const CustomContainer = styled(Container)(({ theme }) => ({
@@ -47,6 +47,14 @@ const Add = () => {
                             <Cancel />
                         </IconButton>
                     </Box>
+                    <TextField 
+                        id="outline-multiline-static"
+                        multiline
+                        rows={5}
+                        variant="outlined"
+                        size="small"
+                        sx={{ mt: 2, width: '100%' }}
+                    />
                     <Box sx={{ mb: 2, position: 'absolute', bottom: 0 }}>
                         <Tooltip title="Media" placement="top">
                             <IconButton>
