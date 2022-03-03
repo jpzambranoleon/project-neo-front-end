@@ -68,9 +68,9 @@ const Add = () => {
                                 <EmojiEmotions />
                             </IconButton>
                         </Tooltip>
-                        <Fab sx={{ textTransform: 'none' }} variant="extended">
+                        <Fab sx={{ textTransform: 'none' }} variant="extended" color="secondary">
                             Post
-                            <Send />
+                            <Send sx={{ ml: 2  }} />
                         </Fab>
                     </Box>
                 </CustomContainer>
