@@ -1,5 +1,5 @@
 import { Edit } from "@mui/icons-material";
-import { Alert, Fab, Snackbar, styled, Tooltip } from "@mui/material"
+import { Alert, Box, Fab, Snackbar, styled, Tooltip } from "@mui/material"
 import { useState } from "react"
 
 const CustomFab = styled(Fab)(({ theme }) => ({
@@ -20,23 +20,23 @@ const Add = () => {
     };
 
     return (
-        <>
-        <Tooltip title="Create" onClick={() => setOpen(true)}>
-            <CustomFab color="secondary" aria-label="create">
-                <Edit />
-            </CustomFab>
-        </Tooltip>
-        <Snackbar
-            open={openAlert}
-            autoHideDuration={4000}
-            onClose={handleClose}
-            anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
-        >
-            <Alert onClose={handleClose} severity="success">
-                This is a success message!
-            </Alert>
-        </Snackbar>
-        </>
+        <Box sx={{ display: {xs: 'block', sm: 'none'} }}>
+            <Tooltip title="Create" onClick={() => setOpen(true)}>
+                <CustomFab color="secondary" aria-label="create">
+                    <Edit />
+                </CustomFab>
+            </Tooltip>
+            <Snackbar
+                open={openAlert}
+                autoHideDuration={4000}
+                onClose={handleClose}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+            >
+                <Alert onClose={handleClose} severity="success">
+                    This is a success message!
+                </Alert>
+            </Snackbar>
+        </Box>
     );
 };
 
