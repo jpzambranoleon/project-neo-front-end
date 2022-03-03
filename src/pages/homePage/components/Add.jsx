@@ -1,5 +1,5 @@
 import { Edit } from "@mui/icons-material";
-import { Fab, Snackbar, styled, Tooltip } from "@mui/material"
+import { Alert, Fab, Snackbar, styled, Tooltip } from "@mui/material"
 import { useState } from "react"
 
 const CustomFab = styled(Fab)(({ theme }) => ({
@@ -30,9 +30,11 @@ const Add = () => {
             open={openAlert}
             autoHideDuration={4000}
             onClose={handleClose}
-            anchorOrigin={{ vertical: 'bottom', horizontal = 'left' }}
+            anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
         >
-
+            <Alert onClose={handleClose} severity="success">
+                This is a success message!
+            </Alert>
         </Snackbar>
         </>
     );
