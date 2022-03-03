@@ -76,10 +76,12 @@ const Add = () => {
                                 <EmojiEmotions />
                             </IconButton>
                         </Tooltip>
-                        <Fab sx={{ textTransform: 'none' }} variant="extended" color="secondary">
-                            Post
-                            <Send sx={{ ml: 2  }} />
-                        </Fab>
+                        <Box>
+                            <Fab sx={{ textTransform: 'none' }} variant="extended" color="secondary">
+                                Post
+                                <Send sx={{ ml: 2  }} />
+                            </Fab>
+                        </Box>
                     </Box>
                 </CustomContainer>
             </Modal>
