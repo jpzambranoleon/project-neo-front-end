@@ -1,4 +1,4 @@
-import { Cancel, Edit, PermMedia } from "@mui/icons-material";
+import { Cancel, Code, Edit, EmojiEmotions, PermMedia, Tag } from "@mui/icons-material";
 import { Alert, Box, Container, Divider, Fab, IconButton, Modal, Snackbar, styled, Tooltip, Typography } from "@mui/material"
 import { useState } from "react"
 
@@ -54,19 +54,19 @@ const Add = () => {
                                 <PermMedia />
                             </IconButton>
                         </Tooltip>
-                        <Tooltip title="Media" placement="top">
+                        <Tooltip title="Tag" placement="top">
                             <IconButton>
-                                <PermMedia />
+                                <Tag />
                             </IconButton>
                         </Tooltip>
-                        <Tooltip title="Media" placement="top">
+                        <Tooltip title="Write Code" placement="top">
                             <IconButton>
-                                <PermMedia />
+                                <Code />
                             </IconButton>
                         </Tooltip>
-                        <Tooltip title="Media" placement="top">
+                        <Tooltip title="Feelings" placement="top">
                             <IconButton>
-                                <PermMedia />
+                                <EmojiEmotions />
                             </IconButton>
                         </Tooltip>
                     </Box>
