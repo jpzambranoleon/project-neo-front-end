@@ -11,6 +11,14 @@ const CustomFab = styled(Fab)(({ theme }) => ({
 const Add = () => {
     const [open, setOpen] = useState(false);
     const [openAlert, setOpenAlert] = useState(false);
+
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+        setOpenAlert(false);
+    };
+
     return (
         <>
         <Tooltip title="Create" onClick={() => setOpen(true)}>
