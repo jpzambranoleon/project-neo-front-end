@@ -3,7 +3,6 @@ import { Alert, Box, Container, Divider, Fab, IconButton, Modal, Snackbar, style
 import { useState } from "react"
 
 const CustomContainer = styled(Container)(({ theme }) => ({
-    width: 500,
     height: 550,
     backgroundColor: "white",
     position: "absolute",
@@ -44,7 +43,7 @@ const Add = () => {
                         <Typography>
                             Create a post
                         </Typography>
-                        <IconButton>
+                        <IconButton onClick={() => setOpen(false)}>
                             <Cancel />
                         </IconButton>
                     </Box>
