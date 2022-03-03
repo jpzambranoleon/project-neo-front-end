@@ -18,7 +18,12 @@ const Add = () => {
                 <Edit />
             </CustomFab>
         </Tooltip>
-        <Snackbar>
+        <Snackbar
+            open={openAlert}
+            autoHideDuration={4000}
+            onClose={handleClose}
+            anchorOrigin={{ vertical: 'bottom', horizontal = 'left' }}
+        >
 
         </Snackbar>
         </>
