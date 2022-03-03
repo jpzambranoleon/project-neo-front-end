@@ -68,6 +68,9 @@ const Add = () => {
                                 <EmojiEmotions />
                             </IconButton>
                         </Tooltip>
+                        <Fab variant="extended">
+                            Post
+                        </Fab>
                     </Box>
                 </CustomContainer>
             </Modal>
