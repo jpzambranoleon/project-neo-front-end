@@ -76,7 +76,7 @@ const Add = () => {
                                 <EmojiEmotions />
                             </IconButton>
                         </Tooltip>
-                        <Fab sx={{ textTransform: 'none' }} variant="extended" color="secondary">
+                        <Fab sx={{ textTransform: 'none', position: 'absolute' }} variant="extended" color="secondary">
                             Post
                             <Send sx={{ ml: 2  }} />
                         </Fab>
