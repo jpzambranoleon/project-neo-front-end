@@ -56,6 +56,7 @@ const Add = () => {
                         sx={{ mt: 2, width: '100%' }}
                     />
                     <Box sx={{ mb: 2, position: 'absolute', bottom: 0  }}>
+                        <Box>
                         <Tooltip title="Media" placement="top">
                             <IconButton>
                                 <PermMedia />
@@ -76,10 +77,13 @@ const Add = () => {
                                 <EmojiEmotions />
                             </IconButton>
                         </Tooltip>
-                        <Fab sx={{ textTransform: 'none', position: 'absolute' }} variant="extended" color="secondary">
-                            Post
-                            <Send sx={{ ml: 2  }} />
-                        </Fab>
+                        </Box>
+                        <Box sx={{ position: 'relative' }}>
+                            <Fab sx={{ textTransform: 'none' }} variant="extended" color="secondary">
+                                Post
+                                <Send sx={{ ml: 2  }} />
+                            </Fab>
+                        </Box>
                     </Box>
                 </CustomContainer>
             </Modal>
