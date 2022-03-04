@@ -3,7 +3,6 @@ import { Alert, Box, Button, Container, Divider, Fab, IconButton, Modal, Snackba
 import { useState } from "react"
 
 const CustomContainer = styled(Container)(({ theme }) => ({
-    height: 255,
     backgroundColor: "white",
     position: "absolute",
     top: 65,
@@ -54,7 +53,7 @@ const Add = () => {
                         size="small"
                         sx={{ mt: 2, width: '100%' }}
                     />
-                    <Box sx={{ mb: 2, position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'space-between'  }}>
+                    <Box sx={{ mt: 2, mb: 2, position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'space-between'  }}>
                         <Box>
                         <Tooltip title="Media" placement="top">
                             <IconButton>
@@ -80,7 +79,6 @@ const Add = () => {
                         <Box>
                             <Button sx={{ textTransform: 'none' }} variant="contained" color="secondary">
                                 Post
-                                <Send sx={{ ml: 2  }} />
                             </Button>
                         </Box>
                     </Box>
