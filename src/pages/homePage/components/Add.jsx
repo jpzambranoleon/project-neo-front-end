@@ -10,7 +10,12 @@ const CustomContainer = styled(Container)(({ theme }) => ({
     top: 65,
     left: 0,
     right: 0,
-    margin: "auto"
+    margin: "auto",
+    [theme.breakpoints.down("sm")]: {
+        top: 0,
+        width: "100%",
+        height: "100%"
+    }
 }))
 
 const CustomFab = styled(Fab)(({ theme }) => ({
