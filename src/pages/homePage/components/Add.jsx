@@ -3,11 +3,10 @@ import { Alert, Box, Container, Divider, Fab, IconButton, Modal, Snackbar, style
 import { useState } from "react"
 
 const CustomContainer = styled(Container)(({ theme }) => ({
-    height: 550,
+    height: 255,
     backgroundColor: "white",
     position: "absolute",
-    top: 0,
-    bottom: 0,
+    top: 65,
     left: 0,
     right: 0,
     margin: "auto"
