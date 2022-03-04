@@ -1,5 +1,5 @@
 import { Cancel, Code, Edit, EmojiEmotions, PermMedia, Send, Tag } from "@mui/icons-material";
-import { Alert, Box, Container, Divider, Fab, IconButton, Modal, Snackbar, styled, TextField, Tooltip, Typography } from "@mui/material"
+import { Alert, Box, Button, Container, Divider, Fab, IconButton, Modal, Snackbar, styled, TextField, Tooltip, Typography } from "@mui/material"
 import { useState } from "react"
 
 const CustomContainer = styled(Container)(({ theme }) => ({
@@ -78,10 +78,10 @@ const Add = () => {
                         </Tooltip>
                         </Box>
                         <Box>
-                            <Fab sx={{ textTransform: 'none' }} variant="extended" color="secondary">
+                            <Button sx={{ textTransform: 'none' }} variant="contained" color="secondary">
                                 Post
                                 <Send sx={{ ml: 2  }} />
-                            </Fab>
+                            </Button>
                         </Box>
                     </Box>
                 </CustomContainer>
