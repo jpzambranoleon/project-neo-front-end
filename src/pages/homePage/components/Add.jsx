@@ -3,6 +3,8 @@ import { Alert, Box, Button, Container, Divider, Fab, IconButton, Modal, Snackba
 import { useState } from "react"
 
 const CustomContainer = styled(Container)(({ theme }) => ({
+    width: 500,
+    height: 550,
     backgroundColor: "white",
     position: "absolute",
     top: 65,
