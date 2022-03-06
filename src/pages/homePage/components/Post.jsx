@@ -3,7 +3,7 @@ import { Button, Typography, Paper, Box, ListItem } from "@mui/material";
 
 const Post = () => {
     return (
-        <Paper>
+        <Paper sx={{ display: { xs: 'none', sm: 'block' } }}>
             <ListItem>
                 <Button fullWidth variant="outlined">
                     What's on your mind?
