@@ -1,5 +1,5 @@
 import { Code, EmojiEmotions, Label, PermMedia,} from "@mui/icons-material";
-import { Button, Typography, Paper, Box, ListItem } from "@mui/material";
+import { Button, Typography, Paper, Box, ListItem, TextField } from "@mui/material";
 
 const Post = () => {
     return (
@@ -9,9 +9,16 @@ const Post = () => {
                     Create a post
                 </Typography>
             </ListItem>
-                <Button fullWidth variant="outlined">
-                    What's on your mind?
-                </Button>
+            <ListItem>
+                <TextField 
+                    id="outline-multiline-static"
+                    multiline
+                    rows={5}
+                    variant="outlined"
+                    size="small"
+                    sx={{ width: '100%' }}
+                />
+            </ListItem>
             <ListItem sx={{ mb: 2, display: 'flex', justifyContent: 'space-between' }}>
                 <Button>
                     <PermMedia htmlColor="green"/>
