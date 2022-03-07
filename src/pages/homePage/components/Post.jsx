@@ -4,14 +4,14 @@ import { Button, Typography, Paper, Box, ListItem } from "@mui/material";
 const Post = () => {
     return (
         <Paper sx={{ display: { xs: 'none', sm: 'block' } }}>
-            <Typography>
-                Create a post
-            </Typography>
             <ListItem>
+                <Typography>
+                    Create a post
+                </Typography>
+            </ListItem>
                 <Button fullWidth variant="outlined">
                     What's on your mind?
                 </Button>
-            </ListItem>
             <ListItem sx={{ mb: 2, display: 'flex', justifyContent: 'space-between' }}>
                 <Button>
                     <PermMedia htmlColor="green"/>
