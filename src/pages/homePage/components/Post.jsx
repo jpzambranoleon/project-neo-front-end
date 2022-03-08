@@ -40,37 +40,10 @@ const Post = () => {
                         <EmojiEmotions />
                     </IconButton>
                 </Tooltip>
-                <Button>
-                    <PermMedia htmlColor="green"/>
-                    <Box sx={{ ml: 1, textTransform: 'none' }}>
-                        <Typography variant="body3">
-                            Media
-                        </Typography>
-                    </Box>
-                </Button>
-                <Button>
-                    <Label />
-                    <Box sx={{ ml: 1, textTransform: 'none' }}>
-                        <Typography variant="body3">
-                            Tag
-                        </Typography>
-                    </Box>
-                </Button>
-                <Button>
-                    <Code htmlColor="goldenrod"/>
-                    <Box sx={{ ml: 1, textTransform: 'none' }}>
-                        <Typography variant="body3">
-                            Code
-                        </Typography>
-                    </Box>
-                </Button>
-                <Button>
-                    <EmojiEmotions htmlColor="tomato"/>
-                    <Box sx={{ ml: 1, textTransform: 'none' }}>
-                        <Typography variant="body3">
-                            Feelings
-                        </Typography>
-                    </Box>
+                <Button variant="contained" color="secondary">
+                    <Typography variant="body3">
+                        Post
+                    </Typography>
                 </Button>
             </ListItem>
         </Paper>
