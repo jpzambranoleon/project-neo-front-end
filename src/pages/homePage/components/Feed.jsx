@@ -3,7 +3,7 @@ import { Avatar, CardActions, CardHeader, CardMedia, IconButton, Box, Paper } fr
 
 const Feed = () => {
     return (
-        <Paper>
+        <Paper sx={{ mt: 2 }}>
             <CardHeader 
                 avatar={
                     <Avatar src="/assets/person/diana.jpg" />
