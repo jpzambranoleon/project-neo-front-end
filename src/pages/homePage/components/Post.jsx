@@ -1,5 +1,5 @@
 import { Code, EmojiEmotions, Label, PermMedia, Tag,} from "@mui/icons-material";
-import { Button, Typography, Paper, Box, ListItem, TextField, Tooltip, IconButton } from "@mui/material";
+import { Button, Typography, Paper, Box, ListItem, TextField, Tooltip, IconButton, InputBase, Divider } from "@mui/material";
 
 const Post = () => {
     return (
@@ -10,15 +10,13 @@ const Post = () => {
                 </Typography>
             </ListItem>
             <ListItem>
-                <TextField 
-                    id="outline-multiline-static"
+                <InputBase 
+                    placeholder="What's on your mind?"
+                    fullWidth
                     multiline
-                    rows={5}
-                    variant="outlined"
-                    size="small"
-                    sx={{ width: '100%' }}
                 />
             </ListItem>
+            <Divider />
             <ListItem sx={{ mb: 2, display: 'flex', justifyContent: 'space-between' }}>
                 <Tooltip title="Media" placement="top">
                     <IconButton>
@@ -41,7 +39,7 @@ const Post = () => {
                     </IconButton>
                 </Tooltip>
                 <Button variant="contained" color="secondary">
-                    <Typography variant="body3">
+                    <Typography>
                         Post
                     </Typography>
                 </Button>
