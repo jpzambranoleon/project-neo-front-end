@@ -30,6 +30,16 @@ const Post = () => {
                         <Tag />
                     </IconButton>
                 </Tooltip>
+                <Tooltip title="Write Code" placement="top">
+                    <IconButton>
+                        <Code />
+                    </IconButton>
+                </Tooltip>
+                <Tooltip title="Feelings" placement="top">
+                    <IconButton>
+                        <EmojiEmotions />
+                    </IconButton>
+                </Tooltip>
                 <Button>
                     <PermMedia htmlColor="green"/>
                     <Box sx={{ ml: 1, textTransform: 'none' }}>
