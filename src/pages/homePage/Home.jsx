@@ -23,7 +23,7 @@ export default function Home() {
         <div>
             <Navbar />
             <CustomBox>
-                <Grid container spacing={3} justifyContent="center">
+                <Grid container spacing={2} justifyContent="center">
                     <Grid item sm={3}>
                         <Box>
                             <User />
