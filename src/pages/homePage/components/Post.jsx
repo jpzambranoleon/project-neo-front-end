@@ -1,5 +1,5 @@
-import { Code, EmojiEmotions, Label, PermMedia,} from "@mui/icons-material";
-import { Button, Typography, Paper, Box, ListItem, TextField } from "@mui/material";
+import { Code, EmojiEmotions, Label, PermMedia, Tag,} from "@mui/icons-material";
+import { Button, Typography, Paper, Box, ListItem, TextField, Tooltip, IconButton } from "@mui/material";
 
 const Post = () => {
     return (
@@ -20,6 +20,16 @@ const Post = () => {
                 />
             </ListItem>
             <ListItem sx={{ mb: 2, display: 'flex', justifyContent: 'space-between' }}>
+                <Tooltip title="Media" placement="top">
+                    <IconButton>
+                        <PermMedia />
+                    </IconButton>
+                </Tooltip>
+                <Tooltip title="Tag" placement="top">
+                    <IconButton>
+                        <Tag />
+                    </IconButton>
+                </Tooltip>
                 <Button>
                     <PermMedia htmlColor="green"/>
                     <Box sx={{ ml: 1, textTransform: 'none' }}>
