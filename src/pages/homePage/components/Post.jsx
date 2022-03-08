@@ -17,7 +17,7 @@ const Post = () => {
                 />
             </ListItem>
             <Divider />
-            <ListItem sx={{ display: 'flex', justifyContent: 'space-between' }}>
+            <ListItem sx={{ mb: 2, display: 'flex', justifyContent: 'space-between' }}>
                 <Tooltip title="Media" placement="top">
                     <IconButton>
                         <PermMedia />
