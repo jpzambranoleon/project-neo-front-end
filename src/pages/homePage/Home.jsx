@@ -34,6 +34,7 @@ export default function Home() {
                         <Box>
                             <Post />
                             <Feed />
+                            <Feed />
                         </Box>
                     </Grid>
                     <Grid item sm={3}>
