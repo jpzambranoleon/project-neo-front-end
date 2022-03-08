@@ -46,7 +46,7 @@ const Add = () => {
                 <CustomContainer>
                     <Box sx={{ mt: 2, display: 'flex', alignItems: 'center', justifyContent: 'space-between'  }}>
                         <Typography>
-                            Create a post
+                            What's on your mind?
                         </Typography>
                         <IconButton onClick={() => setOpen(false)}>
                             <Cancel />
