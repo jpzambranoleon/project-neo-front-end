@@ -18,26 +18,28 @@ const Post = () => {
             </ListItem>
             <Divider />
             <ListItem sx={{ mb: 2, display: 'flex', justifyContent: 'space-between' }}>
-                <Tooltip title="Media" placement="top">
-                    <IconButton>
-                        <PermMedia />
-                    </IconButton>
-                </Tooltip>
-                <Tooltip title="Tag" placement="top">
-                    <IconButton>
-                        <Tag />
-                    </IconButton>
-                </Tooltip>
-                <Tooltip title="Write Code" placement="top">
-                    <IconButton>
-                        <Code />
-                    </IconButton>
-                </Tooltip>
-                <Tooltip title="Feelings" placement="top">
-                    <IconButton>
-                        <EmojiEmotions />
-                    </IconButton>
-                </Tooltip>
+                <Box>
+                    <Tooltip title="Media" placement="top">
+                        <IconButton>
+                            <PermMedia />
+                        </IconButton>
+                    </Tooltip>
+                    <Tooltip title="Tag" placement="top">
+                        <IconButton>
+                            <Tag />
+                        </IconButton>
+                    </Tooltip>
+                    <Tooltip title="Write Code" placement="top">
+                        <IconButton>
+                            <Code />
+                        </IconButton>
+                    </Tooltip>
+                    <Tooltip title="Feelings" placement="top">
+                        <IconButton>
+                            <EmojiEmotions />
+                        </IconButton>
+                    </Tooltip>
+                </Box>
                 <Button variant="contained" color="secondary">
                     <Typography>
                         Post
