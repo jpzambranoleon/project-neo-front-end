@@ -62,26 +62,26 @@ const Add = () => {
                     />
                     <Box sx={{ mt: 2, mb: 2, position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'space-between'  }}>
                         <Box>
-                        <Tooltip title="Media" placement="top">
-                            <IconButton>
-                                <PermMedia />
-                            </IconButton>
-                        </Tooltip>
-                        <Tooltip title="Tag" placement="top">
-                            <IconButton>
-                                <Tag />
-                            </IconButton>
-                        </Tooltip>
-                        <Tooltip title="Write Code" placement="top">
-                            <IconButton>
-                                <Code />
-                            </IconButton>
-                        </Tooltip>
-                        <Tooltip title="Feelings" placement="top">
-                            <IconButton>
-                                <EmojiEmotions />
-                            </IconButton>
-                        </Tooltip>
+                            <Tooltip title="Media" placement="top">
+                                <IconButton>
+                                    <PermMedia />
+                                </IconButton>
+                            </Tooltip>
+                            <Tooltip title="Tag" placement="top">
+                                <IconButton>
+                                    <Tag />
+                                </IconButton>
+                            </Tooltip>
+                            <Tooltip title="Write Code" placement="top">
+                                <IconButton>
+                                    <Code />
+                                </IconButton>
+                            </Tooltip>
+                            <Tooltip title="Feelings" placement="top">
+                                <IconButton>
+                                    <EmojiEmotions />
+                                </IconButton>
+                            </Tooltip>
                         </Box>
                         <Box>
                             <Button sx={{ textTransform: 'none' }} variant="contained" color="secondary">
