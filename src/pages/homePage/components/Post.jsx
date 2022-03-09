@@ -40,10 +40,8 @@ const Post = () => {
                         </IconButton>
                     </Tooltip>
                 </Box>
-                <Button variant="contained" color="secondary">
-                    <Typography>
-                        Post
-                    </Typography>
+                <Button sx={{ textTransform: 'none' }} variant="contained" color="secondary">
+                    Post
                 </Button>
             </ListItem>
         </Paper>
