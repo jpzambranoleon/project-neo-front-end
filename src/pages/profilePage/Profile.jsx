@@ -12,7 +12,7 @@ const CustomBox = styled(Box)(({ theme }) => ({
     marginTop: theme.spacing(10),
     [theme.breakpoints.down("sm")]: {
         width: '100%',
-        marginTop: theme.spacing(5)
+        marginTop: theme.spacing(4)
     }
 }));
 
