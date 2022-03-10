@@ -6,7 +6,7 @@ const Post = () => {
         <Paper sx={{ display: { xs: 'none', sm: 'block' } }}>
             <ListItem>
                 <Typography variant="h6">
-                    Home
+                    Create a post
                 </Typography>
             </ListItem>
             <ListItem>
