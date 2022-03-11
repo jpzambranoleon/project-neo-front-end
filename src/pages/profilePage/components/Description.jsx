@@ -22,6 +22,7 @@ const CustomContainer = styled(Container)(({ theme }) => ({
 
 const Description = () => {
     const [open, setOpen] = useState(false);
+    const [openContact, setOpenContact] = useState(false);
 
     const [value, setValue] = useState(0);
     const handleChange = (event, newValue) => {
@@ -53,9 +54,21 @@ const Description = () => {
                     <Typography variant="body2" color={grey[500]}>
                         Tokyo, Japan
                     </Typography>
-                    <Button sx={{ mt: 2, fontSize: 10, textTransform: 'none' }} variant="contained" size="small">
+                    <Button onClick={() => setOpenContact(true)} sx={{ mt: 2, fontSize: 10, textTransform: 'none' }} variant="contained" size="small">
                         Contact Info
                     </Button>
+                    <Modal open={openContact}>
+                        <CustomContainer>
+                            <Box sx={{ mt: 2, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                                <Typography>
+                                    About
+                                </Typography>
+                                <IconButton onClick={() => setOpenContact(false)}>
+                                    <Close />
+                                </IconButton>
+                            </Box>
+                        </CustomContainer>
+                    </Modal>
                 </Container>
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }} >
                     <Tabs value={value} onChange={handleChange} centered>
