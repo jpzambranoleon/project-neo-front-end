@@ -2,6 +2,7 @@ import { Close, Edit } from "@mui/icons-material";
 import { Avatar, Box, Typography, Container, CardMedia, CardContent, Button, IconButton, ListItem, Tabs, Tab, Tooltip, Modal, styled, TextField, Divider} from "@mui/material";
 import { grey } from "@mui/material/colors";
 import { useState } from "react";
+import ContactInfo from "./ContactInfo";
 import EditButton from "./EditButton";
 
 const CustomContainer = styled(Container)(({ theme }) => ({
@@ -22,7 +23,6 @@ const CustomContainer = styled(Container)(({ theme }) => ({
 
 const Description = () => {
     const [open, setOpen] = useState(false);
-    const [openContact, setOpenContact] = useState(false);
 
     const [value, setValue] = useState(0);
     const handleChange = (event, newValue) => {
@@ -54,21 +54,7 @@ const Description = () => {
                     <Typography variant="body2" color={grey[500]}>
                         Tokyo, Japan
                     </Typography>
-                    <Button onClick={() => setOpenContact(true)} sx={{ mt: 2, fontSize: 10, textTransform: 'none' }} variant="contained" size="small">
-                        Contact Info
-                    </Button>
-                    <Modal open={openContact}>
-                        <CustomContainer>
-                            <Box sx={{ mt: 2, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                                <Typography>
-                                    About
-                                </Typography>
-                                <IconButton onClick={() => setOpenContact(false)}>
-                                    <Close />
-                                </IconButton>
-                            </Box>
-                        </CustomContainer>
-                    </Modal>
+                    <ContactInfo />
                 </Container>
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }} >
                     <Tabs value={value} onChange={handleChange} centered>
