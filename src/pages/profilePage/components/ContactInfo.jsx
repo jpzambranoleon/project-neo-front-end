@@ -3,7 +3,7 @@ import { Box, Button, Container, IconButton, Modal, styled, Typography } from "@
 import { useState } from "react";
 
 const CustomContainer = styled(Container)(({ theme }) => ({
-    width: 400,
+    width: 300,
     height: 400,
     backgroundColor: "white",
     position: "absolute",
@@ -35,6 +35,14 @@ const ContactInfo = () => {
                         <IconButton onClick={() => setOpen(false)}>
                             <Cancel />
                         </IconButton>
+                    </Box>
+                    <Box sx={{ mt: 2 }}>
+                        <Typography>
+                            Phone: 555-555-5555
+                        </Typography>
+                        <Typography>
+                            Email: dayi@gmail.com
+                        </Typography>
                     </Box>
                 </CustomContainer>
             </Modal>
