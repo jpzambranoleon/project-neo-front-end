@@ -30,7 +30,7 @@ const ContactInfo = () => {
                 <CustomContainer>
                     <Box sx={{ mt: 2, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                         <Typography>
-                            Edit Profile
+                            Contact Information
                         </Typography>
                         <IconButton onClick={() => setOpen(false)}>
                             <Cancel />
