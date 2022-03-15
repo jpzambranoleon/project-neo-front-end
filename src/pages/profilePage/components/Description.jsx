@@ -7,7 +7,7 @@ import EditButton from "./EditButton";
 
 const CustomContainer = styled(Container)(({ theme }) => ({
     width: 500,
-    height: 550,
+    height: 275,
     backgroundColor: theme.palette.common.white,
     position: 'absolute',
     top: 0,
