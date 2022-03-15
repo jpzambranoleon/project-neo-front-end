@@ -61,7 +61,7 @@ const Description = () => {
                         <Tab sx={{ textTransform: 'none' }} label="About" />
                         <Tab sx={{ textTransform: 'none' }} label="Posts" />
                         <Tab sx={{ textTransform: 'none' }} label="Projects" />
-                        <Tab sx={{ textTransform: 'none' }} label="Contacts" />
+                        <Tab sx={{ textTransform: 'none' }} label="Bookmarks" />
                     </Tabs>
                 </Box>
             </Box>
