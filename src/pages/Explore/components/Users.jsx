@@ -22,16 +22,16 @@ const Users = () => {
             </ListItem>
             <ListItem>
                 <Grid container spacing={2}>
-                    <Grid item sm={3}>
+                    <Grid item sm={3} xs={6}>
                         <UserCard />
                     </Grid>
-                    <Grid item sm={3}>
+                    <Grid item sm={3} xs={6}>
                         <UserCard/>
                     </Grid>
-                    <Grid item sm={3}>
+                    <Grid item sm={3} xs={6}>
                         <UserCard />
                     </Grid>
-                    <Grid item sm={3}>
+                    <Grid item sm={3} xs={6}>
                         <UserCard />
                     </Grid>
                 </Grid>
