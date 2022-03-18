@@ -1,5 +1,5 @@
 import { Apps, Bookmark, Close, Explore, Home, LaptopChromebook, Logout, Message, Person, Settings } from "@mui/icons-material";
-import { Avatar, Box, Button, CardActionArea, CardHeader, ClickAwayListener, Container, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Paper, Typography } from "@mui/material";
+import { Avatar, Box, Button, CardActionArea, CardHeader, ClickAwayListener, Container, Drawer, IconButton, ListItemButton, ListItemIcon, ListItemText, Paper, Typography } from "@mui/material";
 
 
 const TemporaryDrawer = ({ openDrawer, setOpenDrawer }) => {
