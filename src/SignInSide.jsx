@@ -1,116 +1,111 @@
+import { useContext } from "react";
+import { InfoContext } from "./utility/InfoProvider";
 import { LockOutlined } from "@mui/icons-material";
-import { Avatar, Box, Button, Checkbox, createTheme, CssBaseline, FormControlLabel, Grid, Link, Paper, TextField, ThemeProvider, Typography } from "@mui/material";
+import { Avatar, Box, Button, Checkbox, createTheme, CssBaseline, FormControlLabel, Grid, Paper, TextField, ThemeProvider, Typography } from "@mui/material";
+import { useNavigate, Link } from "react-router-dom";
+import axios from "axios";
 
 function Copyright(props) {
-    return (
-        <Typography variant="body2" color="text.secondary" align="center" {...props}>
-            {'Copyright © '}
-            <Link color="inherit" href="https://mui.com/">
-                Your Website
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
+  return (
+    <Typography variant="body2" color="text.secondary" align="center" {...props}>
+      {"Copyright © "}
+      <Link color="inherit" to="http://localhost:3000/">
+        Your Website
+      </Link>{" "}
+      {new Date().getFullYear()}
+      {"."}
+    </Typography>
+  );
 }
 
-const theme = createTheme()
+const theme = createTheme();
 
 export default function SignInSide() {
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        // eslint-disable-next-line no-console
-        console.log({
-            email: data.get('email'),
-            password: data.get('password'),
-        });
-    };
+  const { setStatus, setAuthorized } = useContext(InfoContext);
+  const navigate = useNavigate();
 
-    return (
-        <ThemeProvider theme={theme}>
-            <Grid container component="main" sx={{ height: '100vh' }}>
-                <CssBaseline />
-                <Grid 
-                    item
-                    xs={false}
-                    sm={4}
-                    md={7}
-                    sx={{
-                        backgroundImage: 'url(/assets/background/loginBackground.jpg)',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundColor: (t) =>
-                            t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                    }}
-                />
-                <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
-                    <Box
-                        sx={{
-                            my: 8,
-                            mx: 4,
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                        }}
-                    >
-                        <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-                            <LockOutlined />
-                        </Avatar>
-                        <Typography component="h1" variant="h5">
-                            Sign in
-                        </Typography>
-                        <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1}}>
-                            <TextField 
-                                margin="normal"
-                                required
-                                fullWidth
-                                id="email"
-                                label="Email Address"
-                                name="email"
-                                autoComplete="email"
-                                autoFocus
-                            />
-                            <TextField
-                                margin="normal"
-                                required
-                                fullWidth
-                                name="password"
-                                label="Password"
-                                type="password"
-                                id="password"
-                                autoComplete="current-password"
-                            />
-                            <FormControlLabel 
-                                control={<Checkbox  value="remember" color="primary" />}
-                                label="Remember me"
-                            />
-                            <Button
-                                type="submit"
-                                fullWidth
-                                variant="contained"
-                                sx={{ mt: 3, mb: 2 }}
-                            >
-                                Sign In
-                            </Button>
-                            <Grid container>
-                                <Grid item xs>
-                                    <Link href="#" variant="body2">
-                                        Forgot password?
-                                    </Link>
-                                </Grid>
-                                <Grid item>
-                                    <Link href="#" variant="body2">
-                                        {"Don't have an account? Sign Up"}
-                                    </Link>
-                                </Grid>
-                            </Grid>
-                            <Copyright sx={{ mt: 5 }} />
-                        </Box>
-                    </Box>
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const data = Object.fromEntries(new FormData(event.currentTarget));
+
+    axios
+      .post("/auth/login", data)
+      .then((res) => {
+        setStatus({
+          open: true,
+          message: res.data.message,
+          severity: "success",
+        });
+        setAuthorized(true);
+        localStorage.setItem("token", res.data.accessToken);
+        axios.defaults.headers.common["Authorization"] = res.data.accessToken;
+
+        setAuthorized(true);
+        navigate("/");
+      })
+      .catch((err) => {
+        let message = err.response ? err.response.data.message : err.message;
+        setStatus({ open: true, message: message, severity: "error" });
+      });
+  };
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Grid container component="main" sx={{ height: "100vh" }}>
+        <CssBaseline />
+        <Grid
+          item
+          xs={false}
+          sm={4}
+          md={7}
+          sx={{
+            backgroundImage: "url(/assets/background/loginBackground.jpg)",
+            backgroundRepeat: "no-repeat",
+            backgroundColor: (t) => (t.palette.mode === "light" ? t.palette.grey[50] : t.palette.grey[900]),
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+          <Box
+            sx={{
+              my: 8,
+              mx: 4,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+              <LockOutlined />
+            </Avatar>
+            <Typography component="h1" variant="h5">
+              Sign in
+            </Typography>
+            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+              <TextField margin="normal" required fullWidth id="email" label="Email Address" name="email" autoComplete="email" autoFocus />
+              <TextField margin="normal" required fullWidth name="password" label="Password" type="password" id="password" autoComplete="current-password" />
+              <FormControlLabel control={<Checkbox value="remember" color="primary" />} label="Remember me" />
+              <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
+                Sign In
+              </Button>
+              <Grid container>
+                <Grid item xs>
+                  <Link href="#" variant="body2" to="">
+                    Forgot password?
+                  </Link>
                 </Grid>
-            </Grid>
-        </ThemeProvider>
-    )
+                <Grid item>
+                  <Link href="#" variant="body2" to="/sign-up">
+                    {"Don't have an account? Sign Up"}
+                  </Link>
+                </Grid>
+              </Grid>
+              <Copyright sx={{ mt: 5 }} />
+            </Box>
+          </Box>
+        </Grid>
+      </Grid>
+    </ThemeProvider>
+  );
 }
