@@ -51,6 +51,10 @@ const Navbar = () => {
         setOpenDrawer(true);
     };
 
+    const handleDrawerClose = () => {
+        setOpenDrawer(false);
+    };
+
     const [anchorElUser, setAnchorElUser] = useState(null);
 
     const handleOpenUserMenu = (event) => {
