@@ -5,11 +5,14 @@ import Users from "./components/Users";
 export default function Explore() {
   return (
     <>
-      <Grid item sm={9}>
         <Box>
-          <Users />
+            
         </Box>
-      </Grid>
+        <Grid item sm={9}>
+            <Box>
+            <Users />
+            </Box>
+        </Grid>
     </>
   );
 }
