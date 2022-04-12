@@ -1,14 +1,20 @@
-import { ThemeProvider } from '@mui/material';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import { theme } from './theme'
+import axios from "axios";
+import { ThemeProvider } from "@mui/material";
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import { theme } from "./theme";
+import { InfoProvider } from "./utility/InfoProvider";
+
+axios.defaults.baseURL = "http://localhost:5000";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={ theme }>
-      <App />
-    </ThemeProvider>
+    <InfoProvider>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+    </InfoProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
