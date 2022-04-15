@@ -1,5 +1,4 @@
 import { Box, Grid, InputBase, Paper, styled, TextField } from "@mui/material";
-import Navbar from "../../components/Navbar";
 import Users from "./components/Users";
 
 export default function Explore() {
