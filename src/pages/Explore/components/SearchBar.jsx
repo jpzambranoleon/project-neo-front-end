@@ -3,14 +3,14 @@ import { Divider, IconButton, InputBase, Paper } from "@mui/material";
 
 const SearchBar = () => {
     return (
-        <Paper component="form" sx={{ p: '2px 4px', display: 'flex', alignItems: 'center' }}>
+        <Paper component="form" sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', mb: 2 }}>
               <IconButton>
                 <Menu />
               </IconButton>
               <InputBase
                 sx={{ ml: 1, flex: 1 }}
-                placeholder="Search Google Maps"
-                inputProps={{ 'aria-label': 'search google maps' }}
+                placeholder="Search Users"
+                inputProps={{ 'aria-label': 'search users' }}
               />
               <IconButton type="submit" sx={{ p: '10px' }} aria-label="search">
                 <Search />
