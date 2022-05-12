@@ -10,7 +10,7 @@ import Add from "./components/Add";
 export default function Home() {
   return (
     <>
-      <Grid item sm={6} xs={12}>
+      <Grid item sm={6}>
         <Box>
           <Post />
           <Feed />
