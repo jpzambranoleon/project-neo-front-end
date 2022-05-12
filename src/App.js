@@ -31,8 +31,8 @@ function App() {
                     <Route path="/explore" element={<Explore />} />
                   </>
                 </Routes>
-                <RightBar />
               </Router>
+              <RightBar />
             </Grid>
           </CustomBox>
         </>
