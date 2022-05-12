@@ -3,7 +3,7 @@ import { Button, Typography, Paper, Box, ListItem, Tooltip, IconButton, InputBas
 
 const Post = () => {
     return (
-        <Paper sx={{ display: { xs: 'none', sm: 'block' } }}>
+        <Paper>
             <ListItem>
                 <Typography variant="h6">
                     Create a post
