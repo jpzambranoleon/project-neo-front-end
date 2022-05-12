@@ -39,7 +39,6 @@ function App() {
       ) : (
         <Router>
           <Routes>
-            
             <Route path="/sign-in" element={<SignInSide />}/>
             <Route path="/sign-up" element={<SignUp />} />
           </Routes>
