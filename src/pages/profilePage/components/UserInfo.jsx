@@ -1,18 +1,10 @@
 import { Avatar, Box, CardMedia, Container, Typography } from "@mui/material";
+import { grey } from "@mui/material/colors";
+import { useState } from "react";
 import ContactInfo from "./ContactInfo";
 import EditButton from "./EditButton";
 
-const UploadProfileImgs = () => {
-    const [open, setOpen] = useState(false);
-    const [openAlert, setOpenAlert] = useState(false);
-
-    const handleClose = (event, reason) => {
-        if (reason === 'clickaway') {
-            return;
-        }
-        setOpenAlert(false);
-    };
-
+const UserInfo = () => {
     return (
         <>
             <CardMedia 
@@ -43,4 +35,4 @@ const UploadProfileImgs = () => {
     );
 };
 
-export default UploadProfileImgs;
+export default UserInfo;
