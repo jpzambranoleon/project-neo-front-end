@@ -57,13 +57,13 @@ const ProfileImg = () => {
                         alignItems="center"
                         justifyContent="center"
                     >
-                        <Avatar src="/assets/person/diana.jpg" sx={{ width: 250, height: 250 }}/>
+                        <Avatar src="/assets/person/diana.jpg" sx={{ width: 300, height: 300, mt: 5 }}/>
                     </Grid>
-                    <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2}}>
-                        <Button>
+                    <Box sx={{ position: 'absolute', bottom: '0px', mb: 2}}>
+                        <Button variant="outlined" sx={{ mr: 2 }}>
                             Cancel
                         </Button>
-                        <Button>
+                        <Button variant="outlined">
                             Save
                         </Button>
                     </Box>
