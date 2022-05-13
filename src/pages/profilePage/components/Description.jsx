@@ -1,9 +1,7 @@
 import { Close, Edit } from "@mui/icons-material";
-import { Avatar, Box, Typography, Container, CardMedia, CardContent, Button, IconButton, ListItem, Tabs, Tab, Tooltip, Modal, styled, TextField, Divider} from "@mui/material";
-import { grey } from "@mui/material/colors";
+import { Box, Typography, Container, CardContent, Button, IconButton, ListItem, Tabs, Tab, Tooltip, Modal, styled, TextField, Divider} from "@mui/material";
 import { useState } from "react";
-import ContactInfo from "./ContactInfo";
-import EditButton from "./EditButton";
+import UserInfo from "./UserInfo";
 
 const CustomContainer = styled(Container)(({ theme }) => ({
     width: 500,
@@ -32,30 +30,7 @@ const Description = () => {
     return (
         <Box component="main">
             <Box sx={{ bgcolor: 'white' }}>
-                <CardMedia
-                    component="img"
-                    height="160"
-                    image="/assets/cover/cover.jpg"
-                />
-                <Container sx={{ mt: -10 }}>
-                    <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                        <Avatar src="/assets/person/diana.jpg" sx={{ width: 150, height: 150 }}/>
-                        <EditButton />
-                    </Box>
-                    <Typography component="h1" variant="h4">
-                        Diana Ayi
-                    </Typography>
-                    <Typography color={grey[500]}>
-                        @dayi
-                    </Typography>
-                    <Typography variant="body2">
-                        User Interface Designer and Front-End Developer
-                    </Typography>
-                    <Typography variant="body2" color={grey[500]}>
-                        Tokyo, Japan
-                    </Typography>
-                    <ContactInfo />
-                </Container>
+                <UserInfo />
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }} >
                     <Tabs value={value} onChange={handleChange} centered>
                         <Tab sx={{ textTransform: 'none' }} label="About" />
