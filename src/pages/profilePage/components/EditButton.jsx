@@ -53,11 +53,11 @@ const EditButton = () => {
                             <IconButton onClick={handleClose}>
                                 <Cancel />
                             </IconButton>
-                            <Typography>
+                            <Typography variant="h6">
                                 Edit Profile
                             </Typography>
                         </Box>
-                        <Button variant="outlined" onClick={() => setOpenAlert(true)}>
+                        <Button sx={{ mr: 2 }} variant="outlined" onClick={() => setOpenAlert(true)}>
                             Save
                         </Button>
                     </Box>
@@ -66,9 +66,9 @@ const EditButton = () => {
                         height="160"
                         image="/assets/cover/cover.jpg"
                     />
-                    <Container sx={{ mt: -10 }}>
+                    <Container sx={{ mt: -8 }}>
                         <Box>
-                            <Avatar src="/assets/person/diana.jpg" sx={{ width: 150, height: 150 }}/>
+                            <Avatar src="/assets/person/diana.jpg" sx={{ width: 130, height: 130 }}/>
                         </Box>
                     </Container>
                     <Container>
