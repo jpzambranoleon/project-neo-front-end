@@ -72,80 +72,80 @@ const EditButton = () => {
                         </Box>
                     </Container>
                     <Container>
-                    <Box sx={{ mt: 2, mb: 2 }} component="form">
-                        <Grid container spacing={2}>
-                            <Grid item xs={12} sm={6}>
-                                <TextField
-                                    autoComplete="given-name"
-                                    name="fistName"
-                                    required
-                                    fullWidth
-                                    id="firstName"
-                                    label="First Name"
-                                    autoFocus
-                                    size="small"
-                                />
+                        <Box sx={{ mt: 2, mb: 2 }} component="form">
+                            <Grid container spacing={2}>
+                                <Grid item xs={12} sm={6}>
+                                    <TextField
+                                        autoComplete="given-name"
+                                        name="fistName"
+                                        required
+                                        fullWidth
+                                        id="firstName"
+                                        label="First Name"
+                                        autoFocus
+                                        size="small"
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={6}>
+                                    <TextField
+                                        required
+                                        fullWidth
+                                        id="lastName"
+                                        label="Last Name"
+                                        name="lastName"
+                                        autoComplete="family-name"
+                                        size="small"
+                                    />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <TextField
+                                        required
+                                        fullWidth
+                                        id="email"
+                                        label="Email Address"
+                                        name="email"
+                                        autoComplete="email"
+                                        size="small"
+                                    />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <TextField
+                                        fullWidth
+                                        id="headline"
+                                        label="Headline"
+                                        name="headline"
+                                        size="small"
+                                    />
+                                </Grid>
+                                <Grid item sm={12}>
+                                    <TextField
+                                        fullWidth
+                                        id="country"
+                                        label="Country"
+                                        name="country"
+                                        size="small"
+                                    />
+                                </Grid>
+                                <Grid item sm={12}>
+                                    <TextField
+                                        fullWidth 
+                                        id="city/district" 
+                                        label="City/District"
+                                        name="city/district" 
+                                        size="small"
+                                    />
+                                </Grid>
+                                <Grid item sm={12}>
+                                    <TextField 
+                                        fullWidth
+                                        id="postalCode" 
+                                        label="Postal Code"
+                                        name="postalCode" 
+                                        size="small" 
+                                    />
+                                </Grid>
                             </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <TextField
-                                    required
-                                    fullWidth
-                                    id="lastName"
-                                    label="Last Name"
-                                    name="lastName"
-                                    autoComplete="family-name"
-                                    size="small"
-                                />
-                            </Grid>
-                            <Grid item xs={12}>
-                                <TextField
-                                    required
-                                    fullWidth
-                                    id="email"
-                                    label="Email Address"
-                                    name="email"
-                                    autoComplete="email"
-                                    size="small"
-                                />
-                            </Grid>
-                            <Grid item xs={12}>
-                                <TextField
-                                    fullWidth
-                                    id="headline"
-                                    label="Headline"
-                                    name="headline"
-                                    size="small"
-                                />
-                            </Grid>
-                            <Grid item sm={12}>
-                                <TextField
-                                    fullWidth
-                                    id="country"
-                                    label="Country"
-                                    name="country"
-                                    size="small"
-                                />
-                            </Grid>
-                            <Grid item sm={12}>
-                                <TextField
-                                    fullWidth 
-                                    id="city/district" 
-                                    label="City/District"
-                                    name="city/district" 
-                                    size="small"
-                                />
-                            </Grid>
-                            <Grid item sm={12}>
-                                <TextField 
-                                    fullWidth
-                                    id="postalCode" 
-                                    label="Postal Code"
-                                    name="postalCode" 
-                                    size="small" 
-                                />
-                            </Grid>
-                        </Grid>
-                    </Box>
+                        </Box>
                     </Container>
                 </CustomBox>
            </Modal>
