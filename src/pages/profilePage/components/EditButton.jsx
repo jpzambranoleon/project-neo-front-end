@@ -1,8 +1,8 @@
 import { Cancel } from "@mui/icons-material";
-import { Alert, Box, Button, Container, Grid, IconButton, Modal, Snackbar, styled, TextField, Typography } from "@mui/material";
+import { Alert, Avatar, Box, Button, CardMedia, Container, Grid, IconButton, Modal, Snackbar, styled, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 
-const CustomContainer = styled(Container)(({ theme }) => ({
+const CustomBox = styled(Box)(({ theme }) => ({
     width: 500,
     height: 550,
     backgroundColor: theme.palette.common.white,
@@ -12,6 +12,8 @@ const CustomContainer = styled(Container)(({ theme }) => ({
     left: 0,
     right: 0,
     margin: "auto",
+    overflow: "hidden",
+    overflowY: "scroll",
     [theme.breakpoints.down("sm")]: {
         width: "100%",
         height: "100%"
@@ -22,7 +24,10 @@ const EditButton = () => {
     const [open, setOpen] = useState(false);
     const [openAlert, setOpenAlert] = useState(false);
 
-    const handleClose = (event, reason) => {
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+    const handleClose2 = (event, reason) => {
         if (reason === 'clickaway') {
             return;
         }
@@ -32,21 +37,42 @@ const EditButton = () => {
     return (
         <>
             <Box sx={{ mt: 8 }}>
-                <Button variant="outlined" onClick={() => setOpen(true)}>
+                <Button variant="outlined" onClick={handleOpen}>
                     Edit Profile
                 </Button>
-            </Box>
-            <Modal open={open}>
-                <CustomContainer>
-                    <Box sx={{ mt: 2, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                        <Typography>
-                            Edit Profile
-                        </Typography>
-                        <IconButton onClick={() => setOpen(false)}>
-                            <Cancel />
-                        </IconButton>
+           </Box>
+           <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+           >
+                <CustomBox>
+                    <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                            <IconButton onClick={handleClose}>
+                                <Cancel />
+                            </IconButton>
+                            <Typography>
+                                Edit Profile
+                            </Typography>
+                        </Box>
+                        <Button variant="outlined" onClick={() => setOpenAlert(true)}>
+                            Save
+                        </Button>
                     </Box>
-                    <Box sx={{ mt: 2 }} component="form">
+                    <CardMedia 
+                        component="img"
+                        height="160"
+                        image="/assets/cover/cover.jpg"
+                    />
+                    <Container sx={{ mt: -10 }}>
+                        <Box>
+                            <Avatar src="/assets/person/diana.jpg" sx={{ width: 150, height: 150 }}/>
+                        </Box>
+                    </Container>
+                    <Container>
+                    <Box sx={{ mt: 2, mb: 2 }} component="form">
                         <Grid container spacing={2}>
                             <Grid item xs={12} sm={6}>
                                 <TextField
@@ -120,25 +146,16 @@ const EditButton = () => {
                             </Grid>
                         </Grid>
                     </Box>
-                    <Box sx={{ mt: 3 }}>
-                        <Button
-                            variant="outlined"
-                            color="primary"
-                            sx={{ mr: 2 }}
-                            onClick={() => setOpenAlert(true)}
-                        >
-                            Save
-                        </Button>
-                    </Box>
-                </CustomContainer>
-            </Modal>
-            <Snackbar
+                    </Container>
+                </CustomBox>
+           </Modal>
+           <Snackbar
                 open={openAlert}
                 autoHideDuration={4000}
-                onClose={handleClose}
+                onClose={handleClose2}
                 anchorOrigin={{ vertical: "botto", horizontal: "left" }}
             >
-                <Alert onClose={handleClose} severity="success">
+                <Alert onClose={handleClose2} severity="success">
                     This is a success message!
                 </Alert>
             </Snackbar>
