@@ -52,12 +52,12 @@ const EditButton = () => {
                 aria-describedby="modal-modal-description"
            >
                 <CustomBox>
-                    <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mt: 1, mb: 1 }}>
                         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                            <IconButton onClick={handleClose}>
+                            <IconButton onClick={handleClose} sx={{ ml: 1 }}>
                                 <Cancel />
                             </IconButton>
-                            <Typography variant="h6">
+                            <Typography variant="h6" sx={{ ml: 3 }}>
                                 Edit Profile
                             </Typography>
                         </Box>
@@ -72,7 +72,7 @@ const EditButton = () => {
                             image="/assets/cover/cover.jpg"
                         />
                         <Stack direction="row" alignItems="center" spacing={2}>
-                            <Box sx={{ mt: -23, ml: 23 }}>
+                            <Box sx={{ mt: -23, ml: 25 }}>
                                 <label htmlFor="icon-button-file">
                                     <Input accept="image/*" id="icon-button-file" type="file" />
                                     <Button variant="contained" component="span">
@@ -94,7 +94,7 @@ const EditButton = () => {
                         </Box>
                     </Container>
                     <Container>
-                        <Box sx={{ mt: 2, mb: 2 }} component="form">
+                        <Box sx={{ mb: 2 }} component="form">
                             <Grid container spacing={2}>
                                 <Grid item xs={12} sm={6}>
                                     <TextField
