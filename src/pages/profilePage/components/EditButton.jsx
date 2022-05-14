@@ -1,4 +1,4 @@
-import { Cancel } from "@mui/icons-material";
+import { Cancel, PhotoCamera } from "@mui/icons-material";
 import { Alert, Avatar, Box, Button, CardMedia, Container, Grid, IconButton, Modal, Snackbar, styled, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 
@@ -61,14 +61,22 @@ const EditButton = () => {
                             Save
                         </Button>
                     </Box>
-                    <CardMedia 
-                        component="img"
-                        height="160"
-                        image="/assets/cover/cover.jpg"
-                    />
+                    <Box>
+                        <IconButton color="primary" aria-label="upload picture" sx={{ mb: -21, ml: 23 }}>
+                            <PhotoCamera />
+                        </IconButton>
+                        <CardMedia
+                            component="img"
+                            height="160"
+                            image="/assets/cover/cover.jpg"
+                        />
+                    </Box>
                     <Container sx={{ mt: -8 }}>
                         <Box>
-                            <Avatar src="/assets/person/diana.jpg" sx={{ width: 130, height: 130 }}/>
+                            <Avatar src="/assets/person/diana.jpg" sx={{ height: 130, width: 130 }}/>
+                            <IconButton color="primary" aria-label="upload picture" sx={{ mt: -20, ml: 5.5 }}>
+                                <PhotoCamera />
+                            </IconButton>
                         </Box>
                     </Container>
                     <Container>
