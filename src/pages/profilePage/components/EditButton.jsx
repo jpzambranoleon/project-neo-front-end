@@ -1,5 +1,5 @@
 import { Cancel, PhotoCamera } from "@mui/icons-material";
-import { Alert, Avatar, Box, Button, CardMedia, Container, Grid, IconButton, Modal, Snackbar, styled, TextField, Typography } from "@mui/material";
+import { Alert, Avatar, Box, Button, CardMedia, Container, Grid, IconButton, Modal, Snackbar, Stack, styled, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 
 const CustomBox = styled(Box)(({ theme }) => ({
@@ -19,6 +19,10 @@ const CustomBox = styled(Box)(({ theme }) => ({
         height: "100%"
     }
 }));
+
+const Input = styled('input')({
+    display: 'none',
+});
 
 const EditButton = () => {
     const [open, setOpen] = useState(false);
@@ -62,21 +66,31 @@ const EditButton = () => {
                         </Button>
                     </Box>
                     <Box>
-                        <IconButton color="primary" aria-label="upload picture" sx={{ mb: -21, ml: 23 }}>
-                            <PhotoCamera />
-                        </IconButton>
                         <CardMedia
                             component="img"
                             height="160"
                             image="/assets/cover/cover.jpg"
                         />
+                        <Stack direction="row" alignItems="center" spacing={2}>
+                            <Box sx={{ mt: -23, ml: 23 }}>
+                                <label htmlFor="icon-button-file">
+                                    <Input accept="image/*" id="icon-button-file" type="file" />
+                                    <Button variant="contained" component="span">
+                                        Upload
+                                    </Button>
+                                </label>
+                            </Box>
+                        </Stack>
                     </Box>
                     <Container sx={{ mt: -8 }}>
                         <Box>
                             <Avatar src="/assets/person/diana.jpg" sx={{ height: 130, width: 130 }}/>
-                            <IconButton color="primary" aria-label="upload picture" sx={{ mt: -20, ml: 5.5 }}>
-                                <PhotoCamera />
-                            </IconButton>
+                            <label htmlFor="icon-button-file">
+                                <Input accept="image/*" id="icon-button-file" type="file" />
+                                <IconButton color="primary" aria-label="upload picture" component="span" sx={{ mt: -20, ml: 5.5 }}>
+                                    <PhotoCamera />
+                                </IconButton>
+                            </label>
                         </Box>
                     </Container>
                     <Container>
