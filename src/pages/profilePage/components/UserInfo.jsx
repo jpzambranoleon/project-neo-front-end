@@ -3,7 +3,7 @@ import { grey } from "@mui/material/colors";
 import { useState } from "react";
 import ContactInfo from "./ContactInfo";
 import EditButton from "./EditButton";
-import ProfileImg from "./ProfileImg";
+import EditButton2 from "./EditButton2";
 
 const UserInfo = () => {
     const [open, setOpen] = useState(false);
@@ -24,7 +24,10 @@ const UserInfo = () => {
                 image="/assets/cover/cover.jpg"
             />
             <Container sx={{ mt: -10 }}>
-                <ProfileImg />
+                <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                    <Avatar src="/assets/person/diana.jpg" sx={{ width: 150, height: 150 }}/>
+                    <EditButton2 />
+                </Box>
                 <Typography component="h1" variant="h4">
                     Diana Ayi
                 </Typography>
