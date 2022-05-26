@@ -10,7 +10,6 @@ import Navbar from "./components/Navbar";
 import LeftBar from "./components/SideMenu/LeftBar";
 import RightBar from "./components/SideMenu/RightBar";
 import { InfoContext } from "./utility/InfoProvider";
-import { Navigate } from "react-router-dom";
 
 function App() {
   const { authorized } = useContext(InfoContext);
