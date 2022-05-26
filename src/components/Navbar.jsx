@@ -3,6 +3,7 @@ import { alpha, AppBar, Avatar, Badge, InputBase, Toolbar, Typography, styled, B
 import { useState } from "react";
 import TemporaryDrawer from "./TemporaryDrawer";
 
+
 const SearchField = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -47,6 +48,7 @@ const settings = ['Profile', 'Account', 'Logout']
 
 const Navbar = () => {
     const [openDrawer, setOpenDrawer] = useState(false);
+
     const handleDrawerOpen = () => {
         setOpenDrawer(true);
     };
@@ -64,6 +66,13 @@ const Navbar = () => {
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
+
+    const onContextMenuClick = (action) => {
+        if (action.toLowerCase() === 'logout') {
+            localStorage.removeItem("token");
+            window.location.reload();
+        }
+    }
 
     return (
         <>
@@ -120,7 +129,7 @@ const Navbar = () => {
                             onClose={handleCloseUserMenu}
                         >
                             {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                                <MenuItem key={setting} onClick={() => onContextMenuClick(setting)}>
                                     <Typography textAlign="center">
                                         {setting}
                                     </Typography>
