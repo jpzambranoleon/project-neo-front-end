@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { Box, Grid, styled } from "@mui/material";
 import Explore from "./pages/Explore/Explore";
 import Home from "./pages/homePage/Home";
@@ -39,7 +39,8 @@ function App() {
       ) : (
         <Router>
           <Routes>
-            <Route path="/sign-in" element={<SignInSide />}/>
+            <Route path="/" element={<Navigate to="/sign-in" />} />
+            <Route path="/sign-in" element={<SignInSide />} />
             <Route path="/sign-up" element={<SignUp />} />
           </Routes>
         </Router>
