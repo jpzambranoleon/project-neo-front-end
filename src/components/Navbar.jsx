@@ -1,5 +1,5 @@
-import { AccountCircle, Cancel, Mail, MenuTwoTone, Notifications, Search, SettingsInputAntennaTwoTone, SettingsPowerRounded } from "@mui/icons-material";
-import { alpha, AppBar, Avatar, Badge, InputBase, Toolbar, Typography, styled, Box, IconButton, CardMedia, CardActionArea, Button, Tooltip, Menu, MenuItem, ClickAwayListener } from "@mui/material"
+import { MenuTwoTone, Search } from "@mui/icons-material";
+import { alpha, AppBar, Avatar, InputBase, Toolbar, Typography, styled, Box, IconButton, Tooltip, Menu, MenuItem } from "@mui/material"
 import { useState } from "react";
 import TemporaryDrawer from "./TemporaryDrawer";
 

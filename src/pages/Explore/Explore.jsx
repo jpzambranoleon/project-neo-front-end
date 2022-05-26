@@ -1,15 +1,14 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Grid,} from "@mui/material";
+import SearchBar from "./components/SearchBar";
 import Users from "./components/Users";
 
 export default function Explore() {
   return (
     <>
-        <Box>
-            
-        </Box>
         <Grid item sm={9}>
+            <SearchBar />
             <Box>
-            <Users />
+              <Users />
             </Box>
         </Grid>
     </>
