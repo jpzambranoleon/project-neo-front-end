@@ -11,43 +11,6 @@ import LeftBar from "./components/SideMenu/LeftBar";
 import RightBar from "./components/SideMenu/RightBar";
 import { InfoContext } from "./utility/InfoProvider";
 
-function App() {
-  const { authorized } = useContext(InfoContext);
-
-  return (
-    <div className="App">
-      {authorized ? (
-        <>
-          <Navbar />
-          <CustomBox>
-            <Grid container spacing={3}>
-              <LeftBar />
-              <Router>
-                <Routes>
-                  <>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/profile" element={<Profile />} />
-                    <Route path="/explore" element={<Explore />} />
-                  </>
-                </Routes>
-              </Router>
-              <RightBar />
-            </Grid>
-          </CustomBox>
-        </>
-      ) : (
-        <Router>
-          <Routes>
-            <Route path="/" element={<Navigate to="/sign-in" />} />
-            <Route path="/sign-in" element={<SignInSide />} />
-            <Route path="/sign-up" element={<SignUp />} />
-          </Routes>
-        </Router>
-      )}
-    </div>
-  );
-}
-
 const CustomBox = styled(Box)(({ theme }) => ({
   width: "80%",
   margin: "0 auto",
@@ -57,5 +20,39 @@ const CustomBox = styled(Box)(({ theme }) => ({
     marginTop: theme.spacing(4),
   },
 }));
+
+function App() {
+  const { authorized } = useContext(InfoContext);
+
+  return (
+    <div className="App">
+      { authorized ? (
+        <>
+        <Navbar />
+        <CustomBox>
+          <Grid container spacing={3}>
+            <LeftBar />
+            <Router>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/explore" element={<Explore />} />
+              </Routes>
+            </Router>
+            <RightBar />
+          </Grid>
+        </CustomBox>
+        </>
+      ) : (
+        <Router>
+          <Routes>
+            <Route path="/sign-in" element={<SignInSide />} />
+            <Route path="/sign-up" element={<SignUp />} />
+          </Routes>
+        </Router>
+      )}
+    </div>
+  );
+}
 
 export default App;
