@@ -39,8 +39,6 @@ export default function SignInSide() {
         setAuthorized(true);
         localStorage.setItem("token", res.data.accessToken);
         axios.defaults.headers.common["Authorization"] = res.data.accessToken;
-
-        setAuthorized(true);
         navigate("/");
       })
       .catch((err) => {

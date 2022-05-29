@@ -10,7 +10,16 @@ import Navbar from "./components/Navbar";
 import LeftBar from "./components/SideMenu/LeftBar";
 import RightBar from "./components/SideMenu/RightBar";
 import { InfoContext } from "./utility/InfoProvider";
-import { Navigate } from "react-router-dom";
+
+const CustomBox = styled(Box)(({ theme }) => ({
+  width: "80%",
+  margin: "0 auto",
+  marginTop: theme.spacing(10),
+  [theme.breakpoints.down("sm")]: {
+    width: "100%",
+    marginTop: theme.spacing(4),
+  },
+}));
 
 function App() {
   const { authorized } = useContext(InfoContext);
@@ -25,11 +34,9 @@ function App() {
               <LeftBar />
               <Router>
                 <Routes>
-                  <>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/profile" element={<Profile />} />
-                    <Route path="/explore" element={<Explore />} />
-                  </>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/profile" element={<Profile />} />
+                  <Route path="/explore" element={<Explore />} />
                 </Routes>
               </Router>
               <RightBar />
@@ -39,23 +46,14 @@ function App() {
       ) : (
         <Router>
           <Routes>
-            <Route path="/sign-in" element={<SignInSide />} />
+            <Route path="*" element={<SignInSide />} />
             <Route path="/sign-up" element={<SignUp />} />
+            <Route path="/sign-in" element={<SignInSide />} />
           </Routes>
         </Router>
       )}
     </div>
   );
 }
-
-const CustomBox = styled(Box)(({ theme }) => ({
-  width: "80%",
-  margin: "0 auto",
-  marginTop: theme.spacing(10),
-  [theme.breakpoints.down("sm")]: {
-    width: "100%",
-    marginTop: theme.spacing(4),
-  },
-}));
 
 export default App;
