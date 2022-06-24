@@ -19,7 +19,7 @@ function App() {
       {authorized ? (
         <>
           <Navbar />
-          <Box sx={{ bgcolor: 'background.paper', pt: 5, pb: 6, }}>
+          <Box sx={{ bgcolor: 'background.paper', pt: { md: 5, sm: 2 }, pb: 2, }}>
             <Container>
               <Grid container spacing={3}>
                 <LeftBar />
