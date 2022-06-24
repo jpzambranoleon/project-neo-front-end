@@ -1,10 +1,21 @@
 import { Apps, Bookmark, Explore, Home, LaptopChromebook, Message, Person, Settings } from "@mui/icons-material";
 import { ListItemButton, ListItemIcon, Paper, Typography } from "@mui/material";
+import { useState } from "react";
 
 const Sidebar = () => {
+    const [selectedIndex, setSelectedIndex] = useState(0);
+
+    const handleListItemClick = (event, index) => {
+        setSelectedIndex(index);
+    };
+
     return (
         <Paper sx={{ display: {xs: 'none', sm: 'block' } }}>
-            <ListItemButton sx={{ padding: "20px 20px" }}>
+            <ListItemButton 
+                selected={selectedIndex === 0}
+                onClick={(event) => handleListItemClick(event, 0)} 
+                sx={{ padding: "20px 20px" }}
+            >
                 <ListItemIcon>
                     <Home />
                 </ListItemIcon>
@@ -12,7 +23,11 @@ const Sidebar = () => {
                     Home
                 </Typography>
             </ListItemButton>
-            <ListItemButton sx={{ padding: "20px 20px" }}>
+            <ListItemButton
+                selected={selectedIndex === 1}
+                onClick={(event) => handleListItemClick(event, 1)}
+                sx={{ padding: "20px 20px" }}
+            >
                 <ListItemIcon>
                     <Person />
                 </ListItemIcon>
@@ -20,7 +35,11 @@ const Sidebar = () => {
                     Profile
                 </Typography>
             </ListItemButton>
-            <ListItemButton sx={{ padding: "20px 20px" }}>
+            <ListItemButton
+                selected={selectedIndex === 2}
+                onClick={(event) => handleListItemClick(event, 2)} 
+                sx={{ padding: "20px 20px" }}
+            >
                 <ListItemIcon>
                     <Message />
                 </ListItemIcon>
@@ -28,7 +47,11 @@ const Sidebar = () => {
                     Messages
                 </Typography>
             </ListItemButton>
-            <ListItemButton sx={{ padding: "20px 20px" }}>
+            <ListItemButton
+                selected={selectedIndex === 3}
+                onClick={(event) => handleListItemClick(event, 3)} 
+                sx={{ padding: "20px 20px" }}
+            >
                 <ListItemIcon>
                     <Explore />
                 </ListItemIcon>
@@ -36,7 +59,11 @@ const Sidebar = () => {
                     Explore
                 </Typography>
             </ListItemButton>
-            <ListItemButton sx={{ padding: "20px 20px" }}>
+            <ListItemButton
+                selected={selectedIndex === 4}
+                onClick={(event) => handleListItemClick(event, 4)} 
+                sx={{ padding: "20px 20px" }}
+            >
                 <ListItemIcon>
                     <LaptopChromebook />
                 </ListItemIcon>
@@ -44,7 +71,11 @@ const Sidebar = () => {
                     Courses
                 </Typography>
             </ListItemButton>
-            <ListItemButton sx={{ padding: "20px 20px" }}>
+            <ListItemButton
+                selected={selectedIndex === 5}
+                onClick={(event) => handleListItemClick(event, 5)} 
+                sx={{ padding: "20px 20px" }}
+            >
                 <ListItemIcon>
                     <Apps />
                 </ListItemIcon>
@@ -52,7 +83,11 @@ const Sidebar = () => {
                     Projects
                 </Typography>
             </ListItemButton>
-            <ListItemButton sx={{ padding: "20px 20px" }}>
+            <ListItemButton
+                selected={selectedIndex === 6}
+                onClick={(event) => handleListItemClick(event, 6)} 
+                sx={{ padding: "20px 20px" }}
+            >
                 <ListItemIcon>
                     <Bookmark />
                 </ListItemIcon>
@@ -60,7 +95,11 @@ const Sidebar = () => {
                     Bookmarks
                 </Typography>
             </ListItemButton>
-            <ListItemButton sx={{ padding: "20px 20px" }}>
+            <ListItemButton
+                selected={selectedIndex === 7}
+                onClick={(event) => handleListItemClick(event, 7)}
+                sx={{ padding: "20px 20px" }}
+            >
                 <ListItemIcon>
                     <Settings />
                 </ListItemIcon>
