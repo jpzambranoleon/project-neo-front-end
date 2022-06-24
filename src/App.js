@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import { Box, Grid, styled } from "@mui/material";
+import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
+import { Box, Container, Grid, } from "@mui/material";
 import Explore from "./pages/Explore/Explore";
 import Home from "./pages/homePage/Home";
 import Profile from "./pages/profilePage/Profile";
@@ -11,16 +11,6 @@ import LeftBar from "./components/SideMenu/LeftBar";
 import RightBar from "./components/SideMenu/RightBar";
 import { InfoContext } from "./utility/InfoProvider";
 
-const CustomBox = styled(Box)(({ theme }) => ({
-  width: "80%",
-  margin: "0 auto",
-  marginTop: theme.spacing(10),
-  [theme.breakpoints.down("sm")]: {
-    width: "100%",
-    marginTop: theme.spacing(4),
-  },
-}));
-
 function App() {
   const { authorized } = useContext(InfoContext);
 
@@ -29,7 +19,8 @@ function App() {
       {authorized ? (
         <>
           <Navbar />
-          <CustomBox>
+          <Box sx={{ bgcolor: 'background.paper', pt: 5, pb: 6, }}>
+            <Container>
             <Grid container spacing={3}>
               <LeftBar />
               <Router>
@@ -41,7 +32,8 @@ function App() {
               </Router>
               <RightBar />
             </Grid>
-          </CustomBox>
+            </Container>
+          </Box>
         </>
       ) : (
         <Router>

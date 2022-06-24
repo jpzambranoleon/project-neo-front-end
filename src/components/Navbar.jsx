@@ -1,48 +1,7 @@
-import { MenuTwoTone, Search } from "@mui/icons-material";
-import { alpha, AppBar, Avatar, InputBase, Toolbar, Typography, styled, Box, IconButton, Tooltip, Menu, MenuItem } from "@mui/material"
+import { AdbOutlined, AdbRounded, MenuTwoTone, } from "@mui/icons-material";
+import { AppBar, Avatar, Toolbar, Typography, Box, IconButton, Tooltip, Menu, MenuItem } from "@mui/material"
 import { useState } from "react";
 import TemporaryDrawer from "./TemporaryDrawer";
-
-
-const SearchField = styled('div')(({ theme }) => ({
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
-    '&:hover': {
-      backgroundColor: alpha(theme.palette.common.white, 0.25),
-    },
-    marginRight: theme.spacing(2),
-    marginLeft: 0,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(3),
-      width: 'auto',
-    },
-}));
-
-const SearchIconWrapper = styled('div')(({ theme }) => ({
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-}));
-  
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: 'inherit',
-    '& .MuiInputBase-input': {
-      padding: theme.spacing(1, 1, 1, 0),
-      // vertical padding + font size from searchIcon
-      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-      transition: theme.transitions.create('width'),
-      width: '100%',
-      [theme.breakpoints.up('md')]: {
-        width: '20ch',
-      },
-    },
-}));
 
 const settings = ['Profile', 'Account', 'Logout']
 
@@ -51,10 +10,6 @@ const Navbar = () => {
 
     const handleDrawerOpen = () => {
         setOpenDrawer(true);
-    };
-
-    const handleDrawerClose = () => {
-        setOpenDrawer(false);
     };
 
     const [anchorElUser, setAnchorElUser] = useState(null);
@@ -77,68 +32,91 @@ const Navbar = () => {
     return (
         <>
             <TemporaryDrawer openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
-            <Box sx={{ flexGrow: 1 }}>
-                <AppBar>
-                    <Toolbar sx={{ width: { sm: '80%' }, margin: { sm: '0 auto' } }}>
+            <AppBar position="relative">
+                <Toolbar sx={{ width: { xl: '76%', lg: '90%' }, margin: { xl: '0 auto', lg: '0 auto' }, justifyContent: 'space-between' }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                        <AdbRounded sx={{ display: {xs: 'none', md: 'flex' }, mr: 1 }}/>
+                        <Typography 
+                            variant="h6"
+                            noWrap
+                            component="a"
+                            href="/"
+                            sx={{
+                                mr: 2,
+                                display: {xs: 'none', md: 'flex'},
+                                fontFamily: 'monospace',
+                                fontWeight: 700,
+                                letterSpacing: '.3rem',
+                                color: 'inherit',
+                                textDecoration: 'none'
+                            }}
+                        >
+                            DeviCate
+                        </Typography>
+                    </Box>
+
+                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
-                            size="large"
-                            edge="start"
-                            color="inherit"
-                            aria-label="menu"
+                            size='large'
+                            aria-label="account of current user"
+                            aria-controls="menu-appbar"
+                            aria-haspopup="true"
                             onClick={handleDrawerOpen}
-                            sx={{ mr: 2, display: { sm: 'none' } }}
+                            color="inherit"
                         >
                             <MenuTwoTone />
                         </IconButton>
-                        <Typography 
-                            variant="h6"
-                            noWrap 
-                            component="div" 
-                            sx={{ display: { xs: 'none', sm: 'block' } }}>
-                            LOGO
-                        </Typography>
-                        <SearchField>
-                            <SearchIconWrapper>
-                                <Search />
-                            </SearchIconWrapper>
-                            <StyledInputBase 
-                                placeholder="Search..."
-                                inputProps={{ 'aria-label': 'search' }}
-                            />
-                        </SearchField>
-                        <Box sx={{ flexGrow: 1 }}/>
-                        <Tooltip title="User">
-                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar alt="Diana Ayi" src="/assets/person/diana.jpg" />
-                            </IconButton>
-                        </Tooltip>
-                        <Menu
-                            sx={{ mt: '45px' }}
-                            id="menu-appbar"
-                            anchorEl={anchorElUser}
-                            anchorOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            open={Boolean(anchorElUser)}
-                            onClose={handleCloseUserMenu}
-                        >
-                            {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={() => onContextMenuClick(setting)}>
-                                    <Typography textAlign="center">
-                                        {setting}
-                                    </Typography>
-                                </MenuItem>
-                            ))}
-                        </Menu>
-                    </Toolbar>
-                </AppBar>
-            </Box>
+                    </Box>
+                    <AdbOutlined sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+                    <Typography
+                        variant="h5"
+                        noWrap
+                        component="a"
+                        href=""
+                        sx={{
+                        mr: 2,
+                            display: { xs: 'flex', md: 'none' },
+                            flexGrow: 1,
+                            fontFamily: 'monospace',
+                            fontWeight: 700,
+                            letterSpacing: '.3rem',
+                            color: 'inherit',
+                            textDecoration: 'none',
+                        }}
+                    >
+                        DeviCate
+                    </Typography>
+                    <Tooltip title="Open settings">
+                        <IconButton onClick={handleOpenUserMenu} >
+                            <Avatar alt="Diana Ayi" src="/assets/person/diana.jpg" />
+                        </IconButton>
+                    </Tooltip>
+                    <Menu
+                        sx={{ mt: '45px' }}
+                        id="menu-appbar"
+                        anchorEl={anchorElUser}
+                        anchorOrigin={{
+                            vertical: 'top',
+                            horizontal: 'right',
+                        }}
+                        keepMounted
+                        transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'right',
+                        }}
+                        open={Boolean(anchorElUser)}
+                        onClose={handleCloseUserMenu}
+                    >
+                        {settings.map((setting) => (
+                            <MenuItem key={setting} onClick={() => onContextMenuClick(setting)}>
+                                <Typography textAlign="center">
+                                    {setting}
+                                </Typography>
+                            </MenuItem>
+                        ))}
+                    </Menu>
+                </Toolbar>
+            </AppBar>
         </>
     )
 }
