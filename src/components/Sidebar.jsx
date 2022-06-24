@@ -54,7 +54,9 @@ const Sidebar = () => {
             </ListItemButton>
             <ListItemButton
                 selected={selectedIndex === 3}
-                onClick={(event) => handleListItemClick(event, 3)} 
+                onClick={(event) => handleListItemClick(event, 3)}
+                component={Link}
+                to="explore" 
                 sx={{ padding: "20px 20px" }}
             >
                 <ListItemIcon>

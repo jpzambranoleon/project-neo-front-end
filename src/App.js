@@ -18,22 +18,22 @@ function App() {
     <div className="App">
       {authorized ? (
         <>
-          <Navbar />
-          <Box sx={{ bgcolor: 'background.paper', pt: { md: 5, sm: 2 }, pb: 2, }}>
-            <Container>
-              <Grid container spacing={3}>
-                <Router>
+          <Router>
+            <Navbar />
+            <Box sx={{ bgcolor: 'background.paper', pt: { md: 5, sm: 2 }, pb: 2, }}>
+              <Container>
+                <Grid container spacing={3}>
                   <LeftBar />
                   <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/explore" element={<Explore />} />
                   </Routes>
-                </Router>
-                <RightBar />
-              </Grid>
-            </Container>
-          </Box>
+                  <RightBar />
+                </Grid>
+              </Container>
+            </Box>
+          </Router>
         </>
       ) : (
         <Router>
