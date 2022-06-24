@@ -22,8 +22,8 @@ function App() {
           <Box sx={{ bgcolor: 'background.paper', pt: { md: 5, sm: 2 }, pb: 2, }}>
             <Container>
               <Grid container spacing={3}>
-                <LeftBar />
                 <Router>
+                  <LeftBar />
                   <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/profile" element={<Profile />} />

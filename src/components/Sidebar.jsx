@@ -1,5 +1,6 @@
 import { Apps, Bookmark, Explore, Home, LaptopChromebook, Message, Person, Settings } from "@mui/icons-material";
 import { ListItemButton, ListItemIcon, Paper, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Sidebar = () => {
@@ -13,7 +14,9 @@ const Sidebar = () => {
         <Paper sx={{ display: {xs: 'none', sm: 'block' } }}>
             <ListItemButton 
                 selected={selectedIndex === 0}
-                onClick={(event) => handleListItemClick(event, 0)} 
+                onClick={(event) => handleListItemClick(event, 0)}
+                component={Link}
+                to="/"
                 sx={{ padding: "20px 20px" }}
             >
                 <ListItemIcon>
@@ -26,6 +29,8 @@ const Sidebar = () => {
             <ListItemButton
                 selected={selectedIndex === 1}
                 onClick={(event) => handleListItemClick(event, 1)}
+                component={Link}
+                to="profile"
                 sx={{ padding: "20px 20px" }}
             >
                 <ListItemIcon>
