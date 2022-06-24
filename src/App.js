@@ -21,17 +21,17 @@ function App() {
           <Navbar />
           <Box sx={{ bgcolor: 'background.paper', pt: 5, pb: 6, }}>
             <Container>
-            <Grid container spacing={3}>
-              <LeftBar />
-              <Router>
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/profile" element={<Profile />} />
-                  <Route path="/explore" element={<Explore />} />
-                </Routes>
-              </Router>
-              <RightBar />
-            </Grid>
+              <Grid container spacing={3}>
+                <LeftBar />
+                <Router>
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/explore" element={<Explore />} />
+                  </Routes>
+                </Router>
+                <RightBar />
+              </Grid>
             </Container>
           </Box>
         </>
