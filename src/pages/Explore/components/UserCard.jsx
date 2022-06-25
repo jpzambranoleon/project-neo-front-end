@@ -1,29 +1,26 @@
-import { Avatar, Button, Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
+import { Avatar, Button, Card, CardActions, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 
 const UserCard = () => {
     return(
-        <Card>
-            <CardMedia
-                component="img"
-                src="/assets/cover/cover.jpg"
-                    
-            />
-            <Grid container direction="column" sx={{ alignItems: "center", mt: -7 }}>
-                <Avatar src="/assets/person/diana.jpg" sx={{ width: 95, height: 95 }}/>
-                <Typography variant="h2" sx={{ fontWeight: 500, fontSize: "20px" }}>
+        <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+            <CardContent sx={{ flexGrow: 1 }}>
+                <Grid container align="center">
+                    <Grid item xs={12}>
+                        <Avatar alt="Diana Ayi" src="/assets/person/diana.jpg" sx={{ width: 90, height: 90 }} />
+                    </Grid>
+                </Grid>
+                <Typography gutterBottom variant="h6" align="center">
                     Diana Ayi
                 </Typography>
-                <CardContent>
-                <Typography variant="body2" color="text.secondary">
-                    User Interface Designer and Front-End Developer
+                <Typography variant="body2" align="center">
+                    This is a media card. You can use this section to describe the
+                    content.
                 </Typography>
-                </CardContent>
-                <CardContent>
-                    <Button variant="outlined">
-                        Recruit
-                    </Button>
-                </CardContent>
-            </Grid>
+            </CardContent>
+            <CardActions>
+                <Button size="small">View</Button>
+                <Button size="small">Edit</Button>
+            </CardActions>
         </Card>
     )
 }
