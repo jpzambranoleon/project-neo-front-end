@@ -7,7 +7,7 @@ export default function Explore() {
     <>
         <Grid item sm={6}>
             <Paper>
-            <SearchBar />
+              <SearchBar />
               <Container>
                 <Grid container spacing={2}>
                   <Grid item xs={12} sm={6}>
