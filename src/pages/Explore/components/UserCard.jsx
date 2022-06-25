@@ -12,7 +12,7 @@ const UserCard = () => {
                 <Typography gutterBottom variant="h6" align="center">
                     Diana Ayi
                 </Typography>
-                <Typography variant="body2" align="center">
+                <Typography variant="body2" align="left" color="text.secondary">
                     This is a media card. You can use this section to describe the
                     content.
                 </Typography>
