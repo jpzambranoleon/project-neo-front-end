@@ -1,28 +1,28 @@
-import { Avatar, Box, Button, CardActions, CardContent, Container, Divider, getSkeletonUtilityClass, Grid, Paper, Stack, Tab, Tabs, Typography } from "@mui/material";
+import { Avatar, Box, Button, CardActions, CardContent, Container, Divider, Grid, Paper, Stack, Tab, Tabs, Typography } from "@mui/material";
 import { useState } from "react";
 import Description from "./components/Description";
 
 const skills = [
   {
-    name: 'javascript'
+    title: 'javascript'
   },
   {
-    name: 'nodejs'
+    title: 'nodejs'
   },
   {
-    name: 'react'
+    title: 'react'
   },
   {
-    name: 'full stack web developer'
+    title: 'full stack web developer'
   },
   {
-    name: 'html'
+    title: 'html'
   },
   {
-    name: 'css'
+    title: 'css'
   },
   {
-    name: 'python'
+    title: 'python'
   }
 ]
 
@@ -70,11 +70,11 @@ export default function Profile() {
             </Typography>
             {skills.map((skill) => (
               <Button
-                key={skill.name} 
+                key={skill.title} 
                 variant="outlined"
                 sx={{ mr: 2, mt: 2 }}
               >
-                {skill.name}
+                {skill.title}
               </Button>
             ))}
           </CardContent>
