@@ -1,5 +1,6 @@
 import { Box, Grid } from "@mui/material";
-import Feed from "./components/Feed";
+import Feed from "../../components/Feed";
+import Facebook from "../../components/Feed";
 import Post from "./components/Post";
 
 export default function Home() {
@@ -7,8 +8,6 @@ export default function Home() {
     <>
       <Grid item sm={6}>
         <Box>
-          <Post />
-          <Feed />
           <Feed />
         </Box>
       </Grid>
