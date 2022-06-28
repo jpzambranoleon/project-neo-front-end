@@ -73,6 +73,7 @@ const Navbar = () => {
     };
 
     const onContextMenuClick = (action) => {
+        setAnchorElUser(null);
         if (action.toLowerCase() === 'logout') {
             localStorage.removeItem("token");
             window.location.reload();
@@ -83,7 +84,7 @@ const Navbar = () => {
         <>
             <TemporaryDrawer openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
             <AppBar position="relative">
-                <Toolbar sx={{ width: { xl: "76%", lg: "90%" }, margin: { xl: "0 auto", lg: "0 auto" }, display: 'flex', justifyContent: 'space-between' }}>
+                <Toolbar sx={{ width: { xl: "76%", lg: "90%", }, margin: { xl: "0 auto", lg: "0 auto" }, display: 'flex', justifyContent: 'space-between' }}>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size='large'
@@ -165,7 +166,10 @@ const Navbar = () => {
                         onClose={handleCloseUserMenu}
                     >
                         {settings.map((setting) => (
-                            <MenuItem key={setting} onClick={() => onContextMenuClick(setting)}>
+                            <MenuItem 
+                                key={setting} 
+                                onClick={() => onContextMenuClick(setting)}    
+                            >
                                 <Typography textAlign="center">
                                     {setting}
                                 </Typography>
