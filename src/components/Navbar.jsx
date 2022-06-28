@@ -1,17 +1,7 @@
-import { AdbOutlined, AdbRounded, Mail, MenuTwoTone, Notifications, Search, } from "@mui/icons-material";
-import { AppBar, Avatar, Toolbar, Typography, Box, IconButton, Tooltip, Menu, MenuItem, styled, alpha, InputBase, Badge } from "@mui/material"
+import { AdbRounded, Mail, MenuTwoTone, Notifications, Search, } from "@mui/icons-material";
+import { AppBar, Avatar, Toolbar, Typography, Box, IconButton, Tooltip, Menu, MenuItem, styled, alpha, InputBase, Badge, } from "@mui/material"
 import { useState } from "react";
 import TemporaryDrawer from "./TemporaryDrawer";
-
-const StyledToolBar = styled(Toolbar)(({theme}) => ({
-    display: 'flex',
-    justifyContent: 'space-between',
-    width: '76%',
-    margin: '0 auto',
-    [theme.breakpoints.down('sm')]: {
-        width: '100%',
-    }
-}));
 
 const StyledSearch = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -83,30 +73,29 @@ const Navbar = () => {
     return (
         <>
             <TemporaryDrawer openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
-            <AppBar position="relative">
-                <Toolbar sx={{ width: { xl: "76%", lg: "90%", }, margin: { xl: "0 auto", lg: "0 auto" }, display: 'flex', justifyContent: 'space-between' }}>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <Box sx={{ flexGrow: 1 }}>
+                <AppBar position="relative">
+                    <Toolbar sx={{ width: { xl: '76%', lg: '90%' }, margin: { xl: '0 auto', lg: '0 auto'} }}>
                         <IconButton
-                            size='large'
-                            aria-label="account of current user"
+                            size="large"
+                            edge="start"
+                            color="inherit"
+                            aria-label="open drawer"
                             aria-controls="menu-appbar"
                             aria-haspopup="true"
                             onClick={handleDrawerOpen}
-                            color="inherit"
+                            sx={{ display: {xs: 'flex', sm: 'none'}, mr: 2 }}
                         >
                             <MenuTwoTone />
                         </IconButton>
-                    </Box>
-                    <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                        <AdbRounded sx={{ display: {xs: 'none', md: 'flex' }, mr: 1 }}/>
-                        <Typography 
+                        <AdbRounded sx={{ display: {xs: 'none', sm: 'flex' }, mr: 1 }} />
+                        <Typography
                             variant="h6"
                             noWrap
                             component="a"
                             href="/"
-                            sx={{
-                                mr: 2,
-                                display: {xs: 'none', md: 'flex'},
+                            sx={{ 
+                                display: { xs: 'none', sm: 'block' }, 
                                 fontFamily: 'monospace',
                                 fontWeight: 700,
                                 letterSpacing: '.3rem',
@@ -114,70 +103,69 @@ const Navbar = () => {
                                 textDecoration: 'none'
                             }}
                         >
-                            DeviCate
+                            Devicate
                         </Typography>
                         <StyledSearch>
                             <SearchIconWrapper>
                                 <Search />
                             </SearchIconWrapper>
-                            <StyledInputBase 
-                                placeholder="Search..."
+                            <StyledInputBase
+                                placeholder="Search…"
                                 inputProps={{ 'aria-label': 'search' }}
                             />
                         </StyledSearch>
-                    </Box>
-               
-                    <Box sx={{ flexGrow: 1 }} />
-                    <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                            <Badge badgeContent={4} color="error">
-                                <Mail />
-                            </Badge>
-                        </IconButton>
-                        <IconButton 
-                            size="large"
-                            aria-label="show 17 new notifications"
-                            color="inherit"    
-                        >
-                            <Badge badgeContent={17} color="error">
-                                <Notifications />
-                            </Badge>
-                        </IconButton>
-                    </Box>
-                    <Tooltip title="Open settings">
-                        <IconButton onClick={handleOpenUserMenu} >
-                            <Avatar alt="Diana Ayi" src="/assets/person/diana.jpg" />
-                        </IconButton>
-                    </Tooltip>
-                    <Menu
-                        sx={{ mt: '45px' }}
-                        id="menu-appbar"
-                        anchorEl={anchorElUser}
-                        anchorOrigin={{
-                        vertical: 'top',
-                        horizontal: 'right',
-                        }}
-                        keepMounted
-                        transformOrigin={{
+                        <Box sx={{ flexGrow: 1 }} />
+                        <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+                            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+                                <Badge badgeContent={4} color="error">
+                                    <Mail />
+                                </Badge>
+                            </IconButton>
+                            <IconButton
+                                size="large"
+                                aria-label="show 17 new notifications"
+                                color="inherit"
+                            >
+                                <Badge badgeContent={17} color="error">
+                                    <Notifications />
+                                </Badge>
+                            </IconButton>
+                        </Box>
+                        <Tooltip title="Open settings">
+                            <IconButton edge="end" onClick={handleOpenUserMenu} >
+                                <Avatar alt="Diana Ayi" src="/assets/person/diana.jpg" />
+                            </IconButton>
+                        </Tooltip>
+                        <Menu
+                            sx={{ mt: '45px' }}
+                            id="menu-appbar"
+                            anchorEl={anchorElUser}
+                            anchorOrigin={{
                             vertical: 'top',
                             horizontal: 'right',
-                        }}
-                        open={Boolean(anchorElUser)}
-                        onClose={handleCloseUserMenu}
-                    >
-                        {settings.map((setting) => (
-                            <MenuItem 
-                                key={setting} 
-                                onClick={() => onContextMenuClick(setting)}    
-                            >
-                                <Typography textAlign="center">
-                                    {setting}
-                                </Typography>
-                            </MenuItem>
-                        ))}
-                    </Menu>
-                </Toolbar>
-            </AppBar>
+                            }}
+                            keepMounted
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'right',
+                            }}
+                            open={Boolean(anchorElUser)}
+                            onClose={handleCloseUserMenu}
+                        >
+                            {settings.map((setting) => (
+                                <MenuItem 
+                                    key={setting} 
+                                    onClick={() => onContextMenuClick(setting)}    
+                                >
+                                    <Typography textAlign="center">
+                                        {setting}
+                                    </Typography>
+                                </MenuItem>
+                            ))}
+                        </Menu>
+                    </Toolbar>
+                </AppBar>
+            </Box>
         </>
     )
 }
