@@ -37,7 +37,11 @@ export default function Profile() {
     <Grid item sm={6} xs={12}>
       <Paper>
         <Container>
-          <Avatar alt="Diana Ayi" src="/assets/person/diana.jpg" sx={{ width: 90, height: 90 }} />
+          <Grid container align="center">
+            <Grid item xs={12} sx={{ mt: 2 }}>
+              <Avatar alt="Diana Ayi" src="/assets/person/diana.jpg" sx={{ width: 150, height: 150 }} />
+            </Grid>
+          </Grid>
           <Typography gutterBottom variant="h4" align="center">
             Diana Ayi
           </Typography>
