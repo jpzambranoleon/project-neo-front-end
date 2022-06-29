@@ -56,11 +56,10 @@ function Media(props) {
                 }
             />
             {loading ? (
-                <Skeleton sx={{ height: 350 }} animation="wave" variant="rectangular" />
+                <Skeleton sx={{ height: 330 }} animation="wave" variant="rectangular" />
             ) : (
                 <CardMedia
                     component="img"
-                    height="350"
                     image="/assets/post/post5.jpg"
                     alt="Nicola Sturgeon on a TED talk stage"
                 />
