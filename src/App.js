@@ -21,7 +21,7 @@ function App() {
           <Router>
             <Navbar />
             <Container>
-              <Grid sx={{ bgcolor: 'background.paper', pt: { md: 5, sm: 2 }, pb: 2, }} container spacing={3}>
+              <Grid sx={{ bgcolor: 'background.paper', pt: { md: 3, sm: 2 }, pb: 2, }} container spacing={3}>
                   <Grid item sm={3}>
                     <SideMenu />
                   </Grid>
