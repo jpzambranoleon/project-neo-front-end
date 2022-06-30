@@ -1,10 +1,10 @@
-import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Paper, Button, Switch, CardActionArea, CardHeader, Avatar } from "@mui/material";
+import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Paper, Button, CardActionArea, CardHeader, Avatar } from "@mui/material";
 import { Apps, Bookmark, Explore, Home, LaptopChromebook, Message, Person, Settings } from "@mui/icons-material";
 import ThemeSwitch from "./ThemeSwitch";
 
 export default function SideMenu() {
   return (
-    <Box component="div" aria-label="Leftbar" sx={{ display: {xs: 'none', sm: 'block'}, }}>
+    <Box position="fixed" component="div" aria-label="Leftbar" sx={{ display: {xs: 'none', sm: 'block', minWidth: 270}, }}>
       <Paper sx={{ mb: 2, }}>
         <CardActionArea>
           <CardHeader
