@@ -47,7 +47,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     },
 }));
 
-const MuiSwitch = () => {
+const ThemeSwitch = () => {
     return (
         <FormGroup>
             <FormControlLabel 
@@ -58,4 +58,4 @@ const MuiSwitch = () => {
     );
 };
 
-export default MuiSwitch;
+export default ThemeSwitch;
