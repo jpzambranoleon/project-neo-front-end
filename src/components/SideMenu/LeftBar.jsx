@@ -1,7 +1,8 @@
-import { Grid, Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Paper, Button } from "@mui/material";
+import { Grid, Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Paper, Button, Switch } from "@mui/material";
 import User from "../User";
 import Sidebar from "../Sidebar";
 import { Apps, Bookmark, Explore, Home, LaptopChromebook, Message, Person, Settings } from "@mui/icons-material";
+import ThemeSwitch from "../ThemeSwitch";
 
 export default function SideMenu() {
   return (
@@ -76,6 +77,9 @@ export default function SideMenu() {
                 </ListItemIcon>
                 <ListItemText primary="Settings" />
               </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ThemeSwitch />
             </ListItem>
           </List>
         </Paper>
