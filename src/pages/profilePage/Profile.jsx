@@ -34,56 +34,54 @@ export default function Profile() {
   };
 
   return (
-    <Grid item sm={6} xs={12}>
-      <Paper>
-        <Container>
-          <Grid container align="center">
-            <Grid item xs={12} sx={{ mt: 2 }}>
-              <Avatar alt="Diana Ayi" src="/assets/person/diana.jpg" sx={{ width: 150, height: 150 }} />
-            </Grid>
+    <Paper>
+      <Container>
+        <Grid container align="center">
+          <Grid item xs={12} sx={{ mt: 2 }}>
+            <Avatar alt="Diana Ayi" src="/assets/person/diana.jpg" sx={{ width: 150, height: 150 }} />
           </Grid>
-          <Typography gutterBottom variant="h4" align="center">
-            Diana Ayi
+        </Grid>
+        <Typography gutterBottom variant="h4" align="center">
+          Diana Ayi
+        </Typography>
+        <Typography paragraph variant="body2" color="text.secondary">
+          Full Stack Web Developer
+        </Typography>
+      </Container>
+      <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
+        <Tabs value={value} onChange={handleChange} centered>
+          <Tab label="Item One" />
+          <Tab label="Item Two" />
+          <Tab label="Item Three" />
+        </Tabs>
+      </Box>
+      <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
+        <CardContent>
+          <Typography gutterBottom variant="h5">
+            About
           </Typography>
-          <Typography paragraph variant="body2" color="text.secondary">
-            Full Stack Web Developer
+          <Typography>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque eveniet explicabo consequatur optio itaque quisquam doloremque, neque iure culpa minima atque architecto at voluptatum velit nam eligendi officia dolorem in!
           </Typography>
-        </Container>
-        <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
-          <Tabs value={value} onChange={handleChange} centered>
-            <Tab label="Item One" />
-            <Tab label="Item Two" />
-            <Tab label="Item Three" />
-          </Tabs>
-        </Box>
-        <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
-          <CardContent>
-            <Typography gutterBottom variant="h5">
-              About
-            </Typography>
-            <Typography>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque eveniet explicabo consequatur optio itaque quisquam doloremque, neque iure culpa minima atque architecto at voluptatum velit nam eligendi officia dolorem in!
-            </Typography>
-          </CardContent>
-        </Box>
-        <Divider />
-        <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
-          <CardContent>
-            <Typography variant="h5">
-              Skills
-            </Typography>
-            {skills.map((skill) => (
-              <Button
-                key={skill.title} 
-                variant="outlined"
-                sx={{ mr: 2, mt: 2 }}
-              >
-                {skill.title}
-              </Button>
-            ))}
-          </CardContent>
-        </Box>
-      </Paper>
-    </Grid>
+        </CardContent>
+      </Box>
+      <Divider />
+      <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
+        <CardContent>
+          <Typography variant="h5">
+            Skills
+          </Typography>
+          {skills.map((skill) => (
+            <Button
+              key={skill.title} 
+              variant="outlined"
+              sx={{ mr: 2, mt: 2 }}
+            >
+              {skill.title}
+            </Button>
+          ))}
+        </CardContent>
+      </Box>
+    </Paper>
   );
 }

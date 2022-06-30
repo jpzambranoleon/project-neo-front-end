@@ -74,7 +74,7 @@ const Navbar = () => {
         <>
             <TemporaryDrawer openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
             <Box sx={{ flexGrow: 1 }}>
-                <AppBar position="relative">
+                <AppBar position="fixed">
                     <Toolbar sx={{ width: { xl: '76%', lg: '90%' }, margin: { xl: '0 auto', lg: '0 auto'} }}>
                         <IconButton
                             size="large"
@@ -165,6 +165,7 @@ const Navbar = () => {
                         </Menu>
                     </Toolbar>
                 </AppBar>
+                <Toolbar />
             </Box>
         </>
     )

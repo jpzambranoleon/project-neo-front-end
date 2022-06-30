@@ -4,13 +4,9 @@ import Tags from "../Tags";
 
 export default function RightBar() {
   return (
-    <>
-      <Grid item sm={3}>
-        <Box>
-          <News />
-          <Tags />
-        </Box>
-      </Grid>
-    </>
+    <Box>
+      <News />
+      <Tags />
+    </Box>
   );
 }

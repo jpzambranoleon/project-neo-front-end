@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
-import { Box, Container, Grid, } from "@mui/material";
+import { Container, Grid, } from "@mui/material";
 import Explore from "./pages/Explore/Explore";
 import Home from "./pages/homePage/Home";
 import Profile from "./pages/profilePage/Profile";
 import SignInSide from "./SignInSide";
 import SignUp from "./SignUp";
 import Navbar from "./components/Navbar";
-import LeftBar from "./components/SideMenu/LeftBar";
+import SideMenu from "./components/SideMenu";
 import RightBar from "./components/SideMenu/RightBar";
 import { InfoContext } from "./utility/InfoProvider";
 
@@ -20,19 +20,23 @@ function App() {
         <>
           <Router>
             <Navbar />
-            <Box sx={{ bgcolor: 'background.paper', pt: { md: 5, sm: 2 }, pb: 2, }}>
-              <Container>
-                <Grid container spacing={3}>
-                  <LeftBar />
-                  <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/profile" element={<Profile />} />
-                    <Route path="/explore" element={<Explore />} />
-                  </Routes>
-                  <RightBar />
-                </Grid>
-              </Container>
-            </Box>
+            <Container>
+              <Grid sx={{ bgcolor: 'background.paper', pt: { md: 5, sm: 2 }, pb: 2, }} container spacing={3}>
+                  <Grid item sm={3}>
+                    <SideMenu />
+                  </Grid>
+                  <Grid item sm={6} xs={12}>
+                    <Routes>
+                      <Route path="/" element={<Home />} />
+                      <Route path="/profile" element={<Profile />} />
+                      <Route path="/explore" element={<Explore />} />
+                    </Routes>
+                  </Grid>
+                  <Grid item sm={3}>
+                    <RightBar />
+                  </Grid>
+              </Grid>
+            </Container>
           </Router>
         </>
       ) : (
