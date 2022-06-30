@@ -1,5 +1,6 @@
 import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Paper, Button, CardActionArea, CardHeader, Avatar } from "@mui/material";
 import { Apps, Bookmark, Explore, Home, LaptopChromebook, Message, Person, Settings } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 import ThemeSwitch from "./ThemeSwitch";
 
 export default function SideMenu() {
@@ -19,7 +20,7 @@ export default function SideMenu() {
       <Paper flex={1} sx={{ mb: 2 }}>
         <List>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="#home">
+            <ListItemButton component={Link} to="/">
               <ListItemIcon>
                 <Home />
               </ListItemIcon>
@@ -27,7 +28,7 @@ export default function SideMenu() {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="#profile">
+            <ListItemButton component={Link} to="/profile">
               <ListItemIcon>
                 <Person />
               </ListItemIcon>
