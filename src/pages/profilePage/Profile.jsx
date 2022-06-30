@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, CardActions, CardContent, Container, Divider, Grid, Paper, Stack, Tab, Tabs, Typography } from "@mui/material";
+import { Avatar, Box, Button, CardContent, Container, Divider, Grid, Paper, Tab, Tabs, Typography } from "@mui/material";
 import { useState } from "react";
 import Description from "./components/Description";
 
