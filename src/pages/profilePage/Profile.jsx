@@ -62,6 +62,7 @@ export default function Profile() {
           </Typography>
           <Typography>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque eveniet explicabo consequatur optio itaque quisquam doloremque, neque iure culpa minima atque architecto at voluptatum velit nam eligendi officia dolorem in!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque labore nobis eum culpa sed corrupti dignissimos earum, inventore omnis iure at deserunt animi voluptatibus commodi quia! Eum, vero? Et, eos.
           </Typography>
         </CardContent>
       </Box>
