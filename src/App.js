@@ -7,8 +7,8 @@ import Profile from "./pages/profilePage/Profile";
 import SignInSide from "./SignInSide";
 import SignUp from "./SignUp";
 import Navbar from "./components/Navbar";
-import SideMenu from "./components/SideMenu";
-import RightBar from "./components/SideMenu/RightBar";
+import LeftBar from "./components/LeftBar";
+import RightBar from "./components/RightBar";
 import { InfoContext } from "./utility/InfoProvider";
 
 function App() {
@@ -17,28 +17,26 @@ function App() {
   return (
     <div className="App">
       {authorized ? (
-        <>
-          <Router>
-            <Navbar />
-            <Container>
-              <Grid sx={{ bgcolor: 'background.paper', pt: { md: 3, sm: 2 }, pb: 2, }} container spacing={3}>
-                  <Grid item sm={3}>
-                    <SideMenu />
-                  </Grid>
-                  <Grid item sm={6} xs={12}>
-                    <Routes>
-                      <Route path="/" element={<Home />} />
-                      <Route path="/profile" element={<Profile />} />
-                      <Route path="/explore" element={<Explore />} />
-                    </Routes>
-                  </Grid>
-                  <Grid item sm={3}>
-                    <RightBar />
-                  </Grid>
-              </Grid>
-            </Container>
-          </Router>
-        </>
+        <Router>
+          <Navbar />
+          <Container>
+            <Grid sx={{ bgcolor: 'background.paper', pt: { md: 3, sm: 2 }, pb: 2, }} container spacing={3}>
+                <Grid item sm={3}>
+                  <LeftBar />
+                </Grid>
+                <Grid item sm={6} xs={12}>
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/explore" element={<Explore />} />
+                  </Routes>
+                </Grid>
+                <Grid item sm={3}>
+                  <RightBar />
+                </Grid>
+            </Grid>
+          </Container>
+        </Router>
       ) : (
         <Router>
           <Routes>
