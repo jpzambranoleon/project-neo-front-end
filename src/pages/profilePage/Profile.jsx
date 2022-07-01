@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, CardContent, Container, Divider, Grid, Paper, Tab, Tabs, Typography } from "@mui/material";
+import { Avatar, Box, Button, ButtonGroup, CardContent, CardMedia, Chip, Container, Divider, Grid, ListItem, Paper, Stack, Tab, Tabs, Typography } from "@mui/material";
 import { useState } from "react";
 
 const skills = [
@@ -34,18 +34,28 @@ export default function Profile() {
 
   return (
     <Paper>
-      <Container>
+      <CardMedia 
+        component="img"
+        height="160"
+        image="/assets/post/post5.jpg"
+        sx={{ borderTopLeftRadius: 2, borderTopRightRadius: 2 }}
+      />
+      <Container sx={{ mt: -12 }}>
         <Grid container align="center">
           <Grid item xs={12} sx={{ mt: 2 }}>
-            <Avatar alt="Diana Ayi" src="/assets/person/diana.jpg" sx={{ width: 150, height: 150 }} />
+            <Avatar alt="Diana Ayi" src="/assets/person/diana.jpg" sx={{ width: 150, height: 150, }} />
           </Grid>
         </Grid>
         <Typography gutterBottom variant="h4" align="center">
           Diana Ayi
         </Typography>
-        <Typography paragraph variant="body2" color="text.secondary">
-          Full Stack Web Developer
+        <Typography variant="body1" color="text.primary">
+          Full Stack Web Developer at Leone Digitale
         </Typography>
+        <Typography gutterBottom variant="body2" color="text.secondary">
+          Tokyo, Japan
+        </Typography>
+        <Button size="small" variant="contained">Edit</Button>
       </Container>
       <Box sx={{ width: '100%' }}>
         <Tabs value={value} onChange={handleChange} centered>
@@ -68,17 +78,17 @@ export default function Profile() {
       <Divider />
       <Box sx={{ width: '100%' }}>
         <CardContent>
-          <Typography variant="h5">
+          <Typography gutterBottom variant="h5">
             Skills
           </Typography>
           {skills.map((skill) => (
-            <Button
-              key={skill.title} 
-              variant="outlined"
-              sx={{ mr: 2, mt: 2 }}
-            >
-              {skill.title}
-            </Button>
+              <Chip 
+                label={skill.title}
+                component="a"
+                href="#basic-chip"
+                clickable
+                sx={{ mr: 2, mb: 1 }}
+              />
           ))}
         </CardContent>
       </Box>
