@@ -1,6 +1,5 @@
 import { Avatar, Box, Button, CardContent, Container, Divider, Grid, Paper, Tab, Tabs, Typography } from "@mui/material";
 import { useState } from "react";
-import Description from "./components/Description";
 
 const skills = [
   {
@@ -48,14 +47,14 @@ export default function Profile() {
           Full Stack Web Developer
         </Typography>
       </Container>
-      <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
+      <Box sx={{ width: '100%' }}>
         <Tabs value={value} onChange={handleChange} centered>
           <Tab label="Item One" />
           <Tab label="Item Two" />
           <Tab label="Item Three" />
         </Tabs>
       </Box>
-      <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
+      <Box sx={{ width: '100%' }}>
         <CardContent>
           <Typography gutterBottom variant="h5">
             About
@@ -67,7 +66,7 @@ export default function Profile() {
         </CardContent>
       </Box>
       <Divider />
-      <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
+      <Box sx={{ width: '100%' }}>
         <CardContent>
           <Typography variant="h5">
             Skills

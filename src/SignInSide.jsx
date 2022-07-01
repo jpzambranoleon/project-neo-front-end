@@ -48,7 +48,7 @@ export default function SignInSide() {
   };
 
   return (
-    <ThemeProvider theme={theme}>
+    <Box bgcolor={"background.default"} color="text.primary">
       <Grid container component="main" sx={{ height: "100vh" }}>
         <CssBaseline />
         <Grid
@@ -104,6 +104,6 @@ export default function SignInSide() {
           </Box>
         </Grid>
       </Grid>
-    </ThemeProvider>
+    </Box>
   );
 }

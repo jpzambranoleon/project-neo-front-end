@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { LockOutlined } from "@mui/icons-material";
-import { Avatar, Box, Button, Checkbox, Container, createTheme, CssBaseline, FormControlLabel, Grid, TextField, ThemeProvider, Typography } from "@mui/material";
+import { Avatar, Box, Button, Checkbox, Container, CssBaseline, FormControlLabel, Grid, TextField, Typography } from "@mui/material";
 import axios from "axios";
 import { InfoContext } from "./utility/InfoProvider";
 import { useNavigate, Link } from "react-router-dom";
@@ -17,8 +17,6 @@ function Copyright(props) {
     </Typography>
   );
 }
-
-const theme = createTheme();
 
 export default function SignUp() {
   const { setStatus, setAuthorized } = useContext(InfoContext);
@@ -49,7 +47,7 @@ export default function SignUp() {
   };
 
   return (
-    <ThemeProvider theme={theme}>
+    <Box bgcolor={"background.default"} color="text.primary">
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
@@ -98,6 +96,6 @@ export default function SignUp() {
         </Box>
         <Copyright sx={{ mt: 5 }} />
       </Container>
-    </ThemeProvider>
+    </Box>
   );
 }

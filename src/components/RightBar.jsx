@@ -1,7 +1,5 @@
 import { Grid, Box, Paper, Typography, AvatarGroup, Avatar, ImageList, ImageListItem, List, ListItem, ListItemAvatar, ListItemText, Divider } from "@mui/material";
 import React from "react";
-import News from "./News";
-import Tags from "./Tags";
 
 export default function RightBar() {
   return (
@@ -68,10 +66,11 @@ export default function RightBar() {
             />
           </ImageListItem>
         </ImageList>
-        <Typography variant="h6" fontWeight={100} mt={2}>
+        <Paper>
+        <Typography variant="h6" color="primary" fontWeight={100} mt={2} ml={1}>
           Latest Conversations
         </Typography>
-        <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+        <List sx={{ width: '100%', maxWidth: 360 }}>
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
               <Avatar alt="Remy Sharp" src="https://material-ui.com/static/images/avatar/3.jpg" />
@@ -138,6 +137,7 @@ export default function RightBar() {
             />
           </ListItem>
         </List>
+        </Paper>
       </Box>
     </Box>
   );
