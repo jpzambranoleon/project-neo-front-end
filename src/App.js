@@ -1,6 +1,6 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
-import { Container, Grid, } from "@mui/material";
+import { Box, Container, createTheme, Grid, ThemeProvider, } from "@mui/material";
 import Explore from "./pages/Explore/Explore";
 import Home from "./pages/homePage/Home";
 import Profile from "./pages/profilePage/Profile";
@@ -12,17 +12,27 @@ import RightBar from "./components/RightBar";
 import { InfoContext } from "./utility/InfoProvider";
 
 function App() {
+  const [mode, setMode] = useState("light")
+
+  const darkTheme = createTheme({
+    palette: {
+      mode: mode
+    }
+  });
+
   const { authorized } = useContext(InfoContext);
 
   return (
+    <ThemeProvider theme={darkTheme}>
     <div className="App">
+    <Box bgcolor={"background.default"} color="text.primary">
       {authorized ? (
         <Router>
           <Navbar />
           <Container>
-            <Grid sx={{ bgcolor: 'background.paper', pt: { md: 3, sm: 2 }, pb: 2, }} container spacing={3}>
+            <Grid sx={{ pt: { md: 3, sm: 2 }, pb: 2, }} container spacing={3}>
                 <Grid item sm={3}>
-                  <LeftBar />
+                  <LeftBar setMode={setMode} mode={mode} />
                 </Grid>
                 <Grid item sm={6} xs={12}>
                   <Routes>
@@ -46,7 +56,9 @@ function App() {
           </Routes>
         </Router>
       )}
+      </Box>
     </div>
+    </ThemeProvider>
   );
 }
 
