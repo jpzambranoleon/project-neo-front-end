@@ -2,6 +2,7 @@ import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Paper,
 import { Apps, Bookmark, Explore, Home, LaptopChromebook, Message, Person, Settings } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import ThemeSwitch from "./ThemeSwitch";
+import CreatePostButton from "./CreatePostButton";
 
 export default function LeftBar() {
   return (
@@ -89,13 +90,7 @@ export default function LeftBar() {
             </ListItem>
           </List>
         </Paper>
-        <Button 
-          variant="contained" 
-          fullWidth 
-          size="large"
-        >
-          Create Post
-        </Button>
+        <CreatePostButton />
       </Box>
     </Box>
   );
