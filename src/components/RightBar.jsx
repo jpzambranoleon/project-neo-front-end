@@ -1,4 +1,4 @@
-import { Grid, Box, Paper, Typography, AvatarGroup, Avatar, ImageList, ImageListItem, List, ListItem, ListItemAvatar, ListItemText, Divider } from "@mui/material";
+import { Box, Paper, Typography, AvatarGroup, Avatar, ImageList, ImageListItem, List, ListItem, ListItemAvatar, ListItemText, Divider } from "@mui/material";
 import React from "react";
 
 export default function RightBar() {

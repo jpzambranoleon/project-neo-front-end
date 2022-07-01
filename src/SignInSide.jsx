@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { InfoContext } from "./utility/InfoProvider";
 import { LockOutlined } from "@mui/icons-material";
-import { Avatar, Box, Button, Checkbox, createTheme, CssBaseline, FormControlLabel, Grid, Paper, TextField, ThemeProvider, Typography } from "@mui/material";
+import { Avatar, Box, Button, Checkbox, CssBaseline, FormControlLabel, Grid, Paper, TextField, Typography } from "@mui/material";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
@@ -17,8 +17,6 @@ function Copyright(props) {
     </Typography>
   );
 }
-
-const theme = createTheme();
 
 export default function SignInSide() {
   const { setStatus, setAuthorized } = useContext(InfoContext);

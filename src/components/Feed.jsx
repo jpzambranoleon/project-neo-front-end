@@ -11,9 +11,14 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Skeleton from '@mui/material/Skeleton';
 import { Box, CardActions, Checkbox } from '@mui/material';
 import { Bookmark, BookmarkBorderOutlined, Favorite, FavoriteBorderOutlined, MessageOutlined, ShareOutlined } from '@mui/icons-material';
+import { useState } from 'react';
 
 function Media(props) {
-    const { loading = false } = props;
+    const [loading, setLoading] = useState(true);
+
+    setTimeout(() => {
+        setLoading(false);
+    }, [3000]);
 
     return (
         <Card sx={{ mb: 2 }}>
@@ -108,7 +113,7 @@ const Feed = () => {
   return (
         <div>
             <Media />
-            <Media loading />
+            <Media />
         </div>
     );
 }
