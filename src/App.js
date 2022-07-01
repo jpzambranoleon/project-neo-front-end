@@ -24,40 +24,40 @@ function App() {
 
   return (
     <ThemeProvider theme={darkTheme}>
-    <div className="App">
-    <Box bgcolor={"background.default"} color="text.primary">
-      {authorized ? (
-        <Router>
-          <Navbar />
-          <Container>
-            <Grid sx={{ pt: { md: 3, sm: 2 }, pb: 2, }} container spacing={3}>
-                <Grid item sm={3}>
-                  <LeftBar setMode={setMode} mode={mode} />
+      <div className="App">
+        <Box bgcolor={"background.default"} color="text.primary">
+          {authorized ? (
+            <Router>
+              <Navbar />
+              <Container>
+                <Grid sx={{ pt: { md: 3, sm: 2 } }} container spacing={3}>
+                    <Grid item sm={3}>
+                      <LeftBar setMode={setMode} mode={mode} />
+                    </Grid>
+                    <Grid item sm={6} xs={12}>
+                      <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/profile" element={<Profile />} />
+                        <Route path="/explore" element={<Explore />} />
+                      </Routes>
+                    </Grid>
+                    <Grid item sm={3}>
+                      <RightBar />
+                    </Grid>
                 </Grid>
-                <Grid item sm={6} xs={12}>
-                  <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/profile" element={<Profile />} />
-                    <Route path="/explore" element={<Explore />} />
-                  </Routes>
-                </Grid>
-                <Grid item sm={3}>
-                  <RightBar />
-                </Grid>
-            </Grid>
-          </Container>
-        </Router>
-      ) : (
-        <Router>
-          <Routes>
-            <Route path="*" element={<SignInSide />} />
-            <Route path="/sign-up" element={<SignUp />} />
-            <Route path="/sign-in" element={<SignInSide />} />
-          </Routes>
-        </Router>
-      )}
-      </Box>
-    </div>
+              </Container>
+            </Router>
+          ) : (
+            <Router>
+              <Routes>
+                <Route path="*" element={<SignInSide />} />
+                <Route path="/sign-up" element={<SignUp />} />
+                <Route path="/sign-in" element={<SignInSide />} />
+              </Routes>
+            </Router>
+          )}
+        </Box>
+      </div>
     </ThemeProvider>
   );
 }
