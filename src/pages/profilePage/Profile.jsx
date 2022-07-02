@@ -1,5 +1,6 @@
 import { Avatar, Box, Button, ButtonGroup, CardContent, CardMedia, Chip, Container, Divider, Grid, ListItem, Paper, Stack, Tab, Tabs, Typography } from "@mui/material";
 import { useState } from "react";
+import Edit from "./components/Edit";
 
 const skills = [
   {
@@ -55,7 +56,7 @@ export default function Profile() {
         <Typography gutterBottom variant="body2" color="text.secondary">
           Tokyo, Japan
         </Typography>
-        <Button size="small" variant="contained">Edit</Button>
+        <Edit />
       </Container>
       <Box sx={{ width: '100%' }}>
         <Tabs value={value} onChange={handleChange} centered>
