@@ -1,6 +1,7 @@
-import { Avatar, Box, Button, ButtonGroup, CardContent, CardMedia, Chip, Container, Divider, Grid, ListItem, Paper, Stack, Tab, Tabs, Typography } from "@mui/material";
+import { AccountCircle, Wallpaper } from "@mui/icons-material";
+import { Avatar, Box, CardContent, CardMedia, Chip, Container, Divider, Grid, IconButton, Paper, Stack, Tab, Tabs, Typography } from "@mui/material";
 import { useState } from "react";
-import Edit from "./components/Edit";
+import EditProfileButton from "./components/EditProfileButton";
 
 const skills = [
   {
@@ -56,7 +57,15 @@ export default function Profile() {
         <Typography gutterBottom variant="body2" color="text.secondary">
           Tokyo, Japan
         </Typography>
-        <Edit />
+        <Stack direction="row" gap={1}>
+          <EditProfileButton />
+          <IconButton size="small" color="primary">
+            <AccountCircle fontSize="small" color="primary" />
+          </IconButton>
+          <IconButton size="small" color="primary">
+            <Wallpaper fontSize="small" color="primary" />
+          </IconButton>
+        </Stack>
       </Container>
       <Box sx={{ width: '100%' }}>
         <Tabs value={value} onChange={handleChange} centered>
