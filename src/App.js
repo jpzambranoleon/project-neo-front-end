@@ -4,7 +4,7 @@ import { Box, Container, createTheme, Grid, ThemeProvider, } from "@mui/material
 import Explore from "./pages/Explore/Explore";
 import Home from "./pages/homePage/Home";
 import Profile from "./pages/profilePage/Profile";
-import SignInSide from "./SignInSide";
+import Login from "./Login";
 import SignUp from "./SignUp";
 import Navbar from "./components/Navbar";
 import LeftBar from "./components/LeftBar";
@@ -50,9 +50,9 @@ function App() {
           ) : (
             <Router>
               <Routes>
-                <Route path="*" element={<SignInSide />} />
+                <Route path="*" element={<Login />} />
                 <Route path="/sign-up" element={<SignUp />} />
-                <Route path="/sign-in" element={<SignInSide />} />
+                <Route path="/login" element={<Login />} />
               </Routes>
             </Router>
           )}
