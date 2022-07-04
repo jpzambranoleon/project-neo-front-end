@@ -52,7 +52,7 @@ export default function Profile() {
           Diana Ayi
         </Typography>
         <Typography variant="body1" color="text.primary">
-          Full Stack Web Developer at Leone Digitale
+          Full Stack Web Developer at Leone Digitale LLC
         </Typography>
         <Typography gutterBottom variant="body2" color="text.secondary">
           Tokyo, Japan
